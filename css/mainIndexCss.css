@@ -1,0 +1,80 @@
+body{
+	background-image: url(../img/WelcomePage/WelcomePage-bg.jpg);
+}
+
+.mainBox{
+	background-image: url(../img/WelcomePage/signupbox.png);
+	background-size: 460px 474px;
+	background-repeat: no-repeat;
+	min-width: 460px;
+	min-height: 474px;
+
+}
+
+.mainPadding{
+	padding-top: 20px;
+
+}
+
+.mainLogo{
+	background-image: url(../img/Logo.png);
+	background-repeat: no-repeat;
+	min-width: 401px;
+	min-height: 176px;
+	background-position: center;
+}
+
+@font-face {
+font-family: myFirstFont;
+src: url(../font/obelisque.otf);
+} 
+
+p.login { 
+	font-family: myFirstFont;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.formPadding{
+	text-align: center;
+}
+
+.signUp{
+	background: transparent;
+	border: none;
+	background-image: url(../img/WelcomePage/WelcomePage-Signup.png);
+	background-position: center;
+	min-width: 90px;
+	min-height: 40px;
+	background-repeat: no-repeat;
+}
+
+.signUp:hover{
+	background: transparent;
+	border: none;
+	background-image: url(../img/WelcomePage/WelcomePage-Signup-rollover.png);
+	background-position: center;
+	min-width: 90px;
+	min-height: 40px;
+	background-repeat: no-repeat;
+}
+
+.forgetPass{
+	background: transparent;
+	border: none;
+	background-image: url(../img/WelcomePage/Forgot.png);
+	background-position: center;
+	min-width: 180px;
+	min-height: 40px;
+	background-repeat: no-repeat;
+}
+
+.forgetPass:hover{
+	background-image: url(../img/WelcomePage/Forgot-rollover.png);
+	background-position: center;
+	min-width: 180px;
+	min-height: 40px;
+	background-repeat: no-repeat;
+}
+

@@ -1,0 +1,341 @@
+.pageOne{
+	background-color: #B7E7F9;
+
+}
+
+.center{
+	text-align: center;
+}
+
+.pageOneHeader{
+	background-image: url(../img/Signupstuff/page/header/00.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 300px;
+}
+
+.pageOneContainer{
+	padding-top: 3%;
+	background-color: #B7E7F9;
+
+}
+
+.pageOneContainerPublic{
+	background-image: url(../img/Signupstuff/page/1/publicAccount.png);
+	min-width: 163px;
+	min-height: 140px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #B7E7F9;
+	border: none;
+
+}
+
+.pageOneContainerNinja{
+	background-image: url(../img/Signupstuff/page/1/ninjaAccount.png);
+	min-width: 163px;
+	min-height: 140px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #B7E7F9;
+	border: none;
+
+}
+/*
+----------------------------- end of sign up first page css -----------------------------------*/
+
+.pageTwo{
+	background-color: #9AF7DA;
+	position: relative;
+
+}
+
+.pageTwoHeader{
+	background-image: url(../img/Signupstuff/page/header/01.png);
+	background-position: center;
+	height: 320px;
+	background-repeat: no-repeat;
+}
+
+.pageTwoContainer{
+	padding-top: 4%;
+	background-color: #9AF7DA;
+
+}
+
+.pageTwoContainerBox{
+	background-image: url(../img/Signupstuff/page/2/box.png);
+	height: 118px;
+	width: 382px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.emailAddressCss{
+	text-align: left;
+	padding: 10%;
+}
+
+/*
+----------------------------- end of sign up second page css -----------------------------------*/
+
+.pageThree{
+	background-color: #F9D498;
+	position: relative;
+}
+
+.pageThreeHeader{
+	background-image: url(../img/Signupstuff/page/header/02.png);
+	background-position: center;
+	height: 369px;
+	background-repeat: no-repeat;
+}
+
+.pageThreeContainer{
+	padding-top: 3%;
+	background-color: #F9D498;
+
+}
+
+.pageThreeContainerBox{
+	background-image: url(../img/Signupstuff/page/3/box.png);
+	height: 159px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.passwordCss{
+	text-align: left;
+	padding-top: 5%;
+}
+
+.rePasswordCss{
+	text-align: left;
+	padding-top: 3%;
+}
+
+/*
+----------------------------- end of sign up Third page css -----------------------------------*/
+
+.pageFour{
+	background-color: #FFDBD4;
+	position: relative;
+}
+
+.pageFourHeader{
+	background-image: url(../img/Signupstuff/page/header/03.png);
+	background-position: center;
+	height: 369px;
+	background-repeat: no-repeat;
+}
+
+.pageFourContainer{
+	padding-top: 3%;
+	background-color: #FFDBD4;
+
+}
+
+.pageFourContainerBox{
+	background-image: url(../img/Signupstuff/page/4/box.png);
+	height: 118px;
+	width: 382px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.userNameCss{
+	text-align: left;
+	padding: 10%;
+}
+
+/*
+----------------------------- end of sign up Forth page css -----------------------------------*/
+
+.pageFive{
+	background-color: #D2F7FF;
+	position: relative;
+}
+
+.pageFiveHeader{
+	background-image: url(../img/Signupstuff/page/header/04.png);
+	background-position: center;
+	height: 357px;
+	background-repeat: no-repeat;
+}
+
+.pageFiveContainer{
+	padding-top: 3%;
+	background-color: #D2F7FF;
+
+}
+
+.pageFiveContainerBox{
+	background-image: url(../img/Signupstuff/page/5/box.png);
+	height: 179px;
+	width: 382px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.stateCss{
+	margin-top: 9%;
+}
+
+
+/*
+----------------------------- end of sign up Fifth page css -----------------------------------*/
+
+.pageSix{
+	background-color: #CCFCAC;
+	position: relative;
+}
+
+.pageSixHeader{
+	background-image: url(../img/Signupstuff/page/header/05.png);
+	background-position: center;
+	height: 374px;
+	background-repeat: no-repeat;
+}
+
+.pageSixContainer{
+	padding-top: 3%;
+	background-color: #CCFCAC;
+}
+
+.pageSixContainerBox{
+	background-image: url(../img/Signupstuff/page/6/box.png);
+	height: 118px;
+	width: 453px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.phoneCss{
+	padding-top: 10%;
+}
+
+/*
+----------------------------- end of sign up Sixth page css -----------------------------------*/
+
+.pageSeven{
+	background-color: #FCF5B4;
+	position: relative;
+}
+
+.pageSevenHeader{
+	background-image: url(../img/Signupstuff/page/header/06.png);
+	background-position: center;
+	height: 392px;
+	background-repeat: no-repeat;
+}
+
+.pageSevenContainer{
+	padding-top: 3%;
+	background-color: #FCF5B4;
+}
+
+.pageSevenContainerPictureBox{
+	background-image: url(../img/Signupstuff/page/7/picbox.png);
+	height: 118px;
+	width: 118px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.uploadCss{
+	background-image: url(../img/Signupstuff/page/7/upload.png);
+	min-width: 105px;
+	min-height: 15px;
+	background-repeat: no-repeat;
+	background-position: left;
+	background-color: #FCF5B4;
+	border: none;
+}
+
+/*
+----------------------------- end of sign up Seven page css -----------------------------------*/
+
+.pageEight{
+	background-color: #FCCCB6;
+	position: relative;
+}
+
+.pageEightHeader{
+	background-image: url(../img/Signupstuff/page/header/07.png);
+	background-position: center;
+	height: 392px;
+	background-repeat: no-repeat;
+}
+
+/*
+----------------------------- end of sign up Eight page css -----------------------------------*/
+
+
+.backButtonCss{
+	background-image: url(../img/Signupstuff/page/buttons/backInactive.png);
+	min-height: 45px;
+	min-width: 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+
+}
+
+.backButtonCss:active{
+	background-image: url(../img/Signupstuff/page/buttons/backActive.png);
+	min-height: 45px;
+	min-width: 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+.skipButtonCss{
+	background-image: url(../img/Signupstuff/page/buttons/skipInactive.png);
+	min-height: 45px;
+	min-width: 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+.skipButtonCss:active{
+	background-image: url(../img/Signupstuff/page/buttons/skipActive.png);
+	min-height: 45px;
+	min-width: 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+.nextButtonCss{
+	background-image: url(../img/Signupstuff/page/buttons/nextInactive.png);
+	background-size: 100% 100%;
+	min-width: 42px;
+	min-height: 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+.nextButtonCss:active{
+	background-image: url(../img/Signupstuff/page/buttons/nextActive.png);
+	min-height: 44px;
+	min-width: 42px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+.finishButtonCss{
+	background-image: url(../img/Signupstuff/page/buttons/finish.png);
+	min-height: 44px;
+	min-width: 45px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+.additionalPaddingCss{
+	padding-top: 3%;
+}

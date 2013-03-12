@@ -1,0 +1,568 @@
+.container{
+	width:1080px;
+}
+
+.Background{
+	background-image: url(../img/bg.png);
+	background-size: 100% 100%;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+
+}
+
+
+.Header{
+	background-image: url(../img/MainElements/Footer-Header.png);
+	background-size: 100% 100%;
+	height: 48px;
+	background-repeat: no-repeat;
+}
+
+.headerContain{
+	margin-top: 10px;
+}
+
+.searchBox{
+	right: 0;
+}
+
+.Logo{
+	background-image: url(../img/Logo.png);
+	background-size: 80% 80%;
+	margin-top: 2%;
+	margin-left: 6%;
+	width: 321px;
+	height: 126px;
+	background-repeat: no-repeat;
+
+}
+
+
+.Footer{
+	background-color: #91DBF2;
+	background-size: 100% 100%;
+	height: 28px;
+	background-repeat: no-repeat;
+	opacity: 0.6;
+}
+
+.paddingLeft{
+	padding-left: 4%;
+}
+
+.margin-top{
+	margin-top: 3%;
+}
+
+
+
+/*
+Post Bar Css--------------------------------------------------*/
+
+.userPicture{
+	background-image: url(../img/post/profile.png);
+	background-size: 100% 100%;
+	height: 125px;
+	max-width: 132px;
+	background-repeat: no-repeat;
+	/*eric*/
+	padding: 10px;
+	vertical-align: middle;
+
+
+	line-height: 105px;
+	text-align: center;
+
+}
+.userPicture img {
+
+	width: 97px;
+
+	border-radius: 10px;
+
+	vertical-align: middle;
+
+}
+
+.userPost{
+	background-image: url(../img/post/container.png);
+	background-size: 100% 100%;
+	height: 131px;
+	background-repeat: no-repeat;
+}
+
+.postButton{
+	background-image:url(../img/post/button.png);
+	background-size: 100% 95%;
+	height: 63px;
+	margin-top: 20%;
+	margin-left: 10% !important;
+	background-repeat: no-repeat;
+	border: transparent;
+	background-position:right;
+	background-color: transparent;
+}
+
+.postArea{
+	margin-left: 6.5% !important;
+	margin-top: 2%;
+	min-height: 110px;
+}
+
+.textArea{
+	resize:none;
+	width: 440px;
+	height:66px;
+	border-radius: 10px;
+}
+
+.postBorderRadius{
+	border-radius: 20%;
+}
+
+.photoDiv{
+	max-width: 100px;
+	max-height: 100px;
+}
+
+#uploadbtn{ /*kerjaan eric*/
+	position: relative;
+	box-shadow: 0px 0px 2px #c0c0c0;
+	font-family: calibri;
+	width: 159px;
+	padding: 1px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 5px;
+	border: 1px  #BBB; 
+	text-align: center;
+	background-color: #DDD;
+	cursor:pointer;
+}
+
+/*Navigation Bar CSS----------------------------------------------------*/
+
+.homeButton{
+	background-image: url(../img/MainElements/Home-button.png);
+	height:74px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 2px #000000;
+	border-radius: 13px;
+}
+
+.homeButton:hover{
+	background-image: url(../img/MainElements/Home-button-rollover.png);
+	height:74px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.exploreButton{
+	background-image: url(../img/MainElements/Kids-button.png);
+	height:74px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 2px #000000;
+	border-radius: 13px;
+}
+
+.exploreButton:hover{
+	background-image: url(../img/MainElements/Kids-button-rollover.png);
+	height:74px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.notificationButton{
+	background-image: url(../img/MainElements/Notif-button.png);
+	height:74px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 2px #000000;
+	border-radius: 13px;
+}
+
+.notificationButton:hover{
+	background-image: url(../img/MainElements/Notif-button-rollover.png);
+	height:74px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+
+.coinButton{
+	background-image: url(../img/MainElements/Coins-button.png);
+	height:74px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 2px #000000;
+	border-radius: 13px;
+}
+
+.coinButton:hover{
+	background-image: url(../img/MainElements/Coins-button-rollover.png);
+	height:74px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.searchButton{
+	background-image: url(../img/MainElements/Search-button.png);
+	height:70px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 2px #000000;
+	border-radius: 13px;
+}
+
+.searchButton:hover{
+	background-image: url(../img/MainElements/Search-button-rollover.png);
+	height:70px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+/*Widget Bar Css---------------------------------------------------------*/
+
+.pickMeButton{
+	background-image: url(../img/MainElements/Pickme-160.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 70px !important;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.pickMeButton:hover{
+	background-image: url(../img/MainElements/Pickme-txt-160.png);
+	height: 70px;
+	width: 70px !important;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.recommendedButton{
+	background-image: url(../img/MainElements/Recommended-160.png);
+	height: 70px;
+	width: 70px !important;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.recommendedButton:hover{
+	background-image: url(../img/MainElements/Recommended-txt-160.png);
+	height: 70px;
+	width: 70px !important;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.emergencyButton{
+	background-image: url(../img/MainElements/Emergency-160.png);
+	height: 70px;
+	width: 70px !important;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.emergencyButton:hover{
+	background-image: url(../img/MainElements/Emergency-txt-160.png);
+	height: 70px;
+	width: 70px !important;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0px 1px 1px #000000;
+	border-radius: 13px;
+}
+
+.emergencyButtonBox{
+	background-image: url(../img/MainElements/Emergency-middlebox.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+	
+}
+
+/*News Feed Division------------------------------------------------*/
+
+.newsFeedBot{
+	background-image: url(../img/eric/Newsfeed-box-unknownbot.PNG);
+	background-size: 100% 100%;
+	height: 37px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-color: transparent;
+	border: transparent;
+}
+
+.newsFeedTop{
+	background-image: url(../img/eric/Newsfeed-box-unknowntop.PNG);
+	background-size: 100% 100%;
+	height: 118px;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+
+}
+
+.newsFeedMiddle{
+	background-image: url(../img/eric/Newsfeed-box-unknownmiddle.PNG);
+	background-size: 100% 100%;
+	min-height: 400px;
+	background-repeat: repeat;
+	background-color: transparent;
+	border: transparent;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+
+/*Notification Feed Division--------------------------------------*/
+.notifFeedBot{
+	background-image: url(../img/eric/Notif-box-unknown-bottom.png);
+	background-size: 100% 100%;
+	height: 37px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-color: transparent;
+	border: transparent;
+}
+
+.notifFeedTop{
+	background-image: url(../img/eric/Notif-box-unknown-top.png);
+	background-size: 100% 100%;
+	height: 118px;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+
+}
+
+.notifFeedMiddle{
+	background-image: url(../img/eric/Notif-box-unknown-middle.png);
+	background-size: 100% 100%;
+	min-height: 400px;
+	background-repeat: repeat;
+	background-color: transparent;
+	border: transparent;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+/*Coins feed DIVISION-------------------------------------------------*/
+
+.coinsFeedBot{
+	background-image: url(../img/eric/Coins-box-unknownbottom.PNG);
+	background-size: 100% 100%;
+	height: 37px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-color: transparent;
+	border: transparent;
+}
+
+.coinsFeedTop{
+	background-image: url(../img/eric/Coins-box-unknowntop.PNG);
+	background-size: 100% 100%;
+	height: 118px;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+
+}
+
+.coinsFeedMiddle{
+	background-image: url(../img/eric/Coins-box-unknown-middle.PNG);
+	background-size: 100% 100%;
+	min-height: 400px;
+	background-repeat: repeat;
+	background-color: transparent;
+	border: transparent;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+
+/*Kids feed Division ------------------------------------------------*/
+
+.kidsFeedBot{
+	background-image: url(../img/eric/Kids-box-unknownbottom.png);
+	background-size: 100% 100%;
+	height: 37px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-color: transparent;
+	border: transparent;
+}
+
+.kidsFeedTop{
+	background-image: url(../img/eric/Kids-box-unknowntop.png);
+	background-size: 100% 100%;
+	height: 118px;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+
+}
+
+.kidsFeedMiddle{
+	background-image: url(../img/eric/Kids-box-unknown-middle.png);
+	background-size: 100% 100%;
+	min-height: 400px;
+	background-repeat: repeat;
+	background-color: transparent;
+	border: transparent;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+/*Search feed Division ------------------------------------------------*/
+
+.searchFeedBot{
+	background-image: url(../img/eric/Search-box-unknownbottomcopy.png);
+	background-size: 100% 100%;
+	height: 37px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-color: transparent;
+	border: transparent;
+}
+
+.searchFeedTop{
+	background-image: url(../img/eric/Search-box-unknowntopcopy.png);
+	background-size: 100% 100%;
+	height: 118px;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: transparent;
+	border: transparent;
+
+}
+
+.searchFeedMiddle{
+	background-image: url(../img/eric/Search-box-unknownmiddlecopy.png);
+	background-size: 100% 100%;
+	min-height: 400px;
+	background-repeat: repeat;
+	background-color: transparent;
+	border: transparent;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+/*Modal division Division------------------------------------------- */
+
+.modal-body{
+	height: 300px !important;
+}
+
+
+.modal-radius{
+	border-radius: 10px 10px 0px 0px !important;
+}
+
+.modalPink{
+	background-color: #F4B3CE;
+
+}
+.padding{
+	padding-left: 3%;
+}
+
+.modal{
+	border-radius: 10px !important;
+}
+
+
+
+/*FONT -----------------------------------------------------------*/
+
+@font-face {
+	font-family: myFont;
+	src: url(obelisque.otf);
+} 
+
+.myFont { 
+	font-family: myFont;
+	font-size: 30px;
+	text-align: left;
+	padding-top: 20px;
+	padding-left: 2%;
+
+}
+
+.foundationFont { 
+	font-family: myFont;
+	font-size: 30px;
+	text-align: left;
+	padding-left: 2%;
+
+}
+
+
+/*My Profile Division----------------------------------------------------*/
+
+.newsFeedProfile{
+	max-width: 400px;
+}

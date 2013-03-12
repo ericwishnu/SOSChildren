@@ -1,0 +1,25 @@
+.foundationPage{
+	background-image: url(../img/FoundationMap/worldmap.png);
+	min-width: 1366px;
+	min-height: 768px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.worldMapContainer{
+	max-width: 1080px;
+	max-height: 600px;
+}
+
+.worldMap{
+	background-image: url(../img/FoundationMap/worldmap-colors.png);
+	background-size: 100% 80%;
+	height: 600px;
+	border: none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+.asiaPos{
+	
+}
