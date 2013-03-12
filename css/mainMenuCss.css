@@ -18,12 +18,17 @@
 	background-repeat: no-repeat;
 }
 
-.headerContain{
-	margin-top: 10px;
+.margin-rightHeader{
+	margin-right: -50px;
 }
 
-.searchBox{
-	right: 0;
+.margin-leftHeader{
+	margin-left: 20%;
+}
+
+
+.margin-topHeader{
+ margin-top: 10px;
 }
 
 .Logo{

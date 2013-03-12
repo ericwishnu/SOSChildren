@@ -93,6 +93,10 @@ class KidsCtrl {
             }
         }
         
+       
+        
+         $_SESSION['foundationname'] = serialize($this->kids_db_class->foundationgetname_db ($kidsSelected));        
+        
         $_SESSION['kidsdataobj'] = serialize($this->kids_db_class->kidsprofile_db ($kidsSelected));        
         
         header("location: KidsProfile.php");
