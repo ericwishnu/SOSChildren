@@ -2,6 +2,13 @@
 session_start();
 $p_id = $_GET['p_id'];
 if ($p_id == 1) {
+    $script = '
+    <script>
+    function setFocus(id){
+     document.getElementById(id).focus();
+    }
+    </script>
+    ';
     $title = 'Sign up Step One';
     $body = 'pageOne';
     $content = '
@@ -120,7 +127,7 @@ if ($p_id == 1) {
 					
 						<input type="button" class="backButtonCss pageThree" id="backButton" name="backButton">
 						<input type="button" class="skipButtonCss pageThree"id="skipButton" name="skipButton">
-						<input type="submit" class="nextButtonCss pageThree" id="nextButton" name="nextButton" >
+						<input type="submit" value="" class="nextButtonCss pageThree" id="nextButton" name="nextButton" >
 					</form>
 				</div>
 			</div>
@@ -162,7 +169,7 @@ if ($p_id == 1) {
 					
 						<input type="button" class="backButtonCss pageFour" id="backButton" name="backButton">
 						<input type="button" class="skipButtonCss pageFour" id="skipButton" name="skipButton">
-						<input type="submit" class="nextButtonCss pageFour" id="nextButton" name="nextButton">
+						<input type="submit" value="" class="nextButtonCss pageFour" id="nextButton" name="nextButton">
 					</form>
 				</div>
 			</div>
@@ -183,18 +190,19 @@ if ($p_id == 1) {
 		<div class="row">
 			<div class="pageFiveContainer span12">
 				<div class="row">
-					<div class="pageFiveContainerBox span6 offset3">
+					<div class="pageFiveContainerBox span8 offset3">
 						<div class="row stateCss span12">
 							<form action="UserSignUp.php?p_id=6" id="signupform" method="POST">
 								<input type="text" class="input-medium" id="country" name="country" placeholder="Country">
-								<input type="text" class="input-medium" id="state" name="state" placeholder="state">
+								<input type="text" class="input-medium" id="state" name="state" placeholder="State">
 							
 						</div>
 
 						<div class="row span12">
-							
-								<input type="text" class="input-xlarge" id="address" name="address" placeholder="Address">
-								<br>
+							<input type="text" class="input-small" id="city" name="city" placeholder="City">
+								<input type="text" class="input-large" id="address" name="address" placeholder="Address">
+								</div>
+                                                                <div class="row span3">
 								<input type="text" class="input-small" id="zipCode" name="zipCode" placeholder="Zip Code">
 							
 						</div>
@@ -210,7 +218,7 @@ if ($p_id == 1) {
 					
 						<input type="button" class="backButtonCss pageFive" id="backButton" name="backButton">
 						<input type="button" class="skipButtonCss pageFive" id="skipButton" name="skipButton">
-						<input type="submit" class="nextButtonCss pageFive" id="nextButton" name="nextButton">
+						<input type="submit" value="" class="nextButtonCss pageFive" id="nextButton" name="nextButton">
 					</form>
 				</div>
 			</div>
@@ -231,8 +239,8 @@ if ($p_id == 1) {
 					<div class="pageSixContainerBox span7 offset3">
 						<div class="row phoneCss span8">
 							<form action="UserSignUp.php?p_id=7" id="signupform" method="POST">
-								<input type="text" class="input-small" name="phoneCode" id="phoneCode" placeholder="Country Code">
-								<input type="text" class="input-large" name="phoneNumber" id="phoneNumber" placeHolder="Phone Number">
+								<input type="text" class="input-small text-right"  name="phoneCode" id="phoneCode" placeholder="Country Code"/>
+								<input type="text" class="input-large" name="phoneNumber" id="phoneNumber" placeHolder="Phone Number"/>
 							
 						</div>
 					</div>
@@ -246,7 +254,7 @@ if ($p_id == 1) {
 						
 							<input type="button" class="backButtonCss pageSix" id="backButton" name="backButton">
 							<input type="button" class="skipButtonCss pageSix" id="skipButton" name="skipButton">
-							<input type="submit" class="nextButtonCss pageSix" id="nextButton" name="nextButton">
+							<input type="submit" value="" class="nextButtonCss pageSix" id="nextButton" name="nextButton">
 						</form>
 					</div>
 				</div>
@@ -270,8 +278,18 @@ if ($p_id == 1) {
 			</div>
 
 			<div class="span6">
-				<form action="UserSignUp.php?p_id=8" id="signupform" method="POST">
-					<input type="file" class="uploadCss" id="uploadPicture" name="photo">
+				<form action="UserCtrl.php" id="signupform" method="POST" enctype="multipart/form-data">
+					<input type="hidden" name="action" value="usersignup"/>
+<div id="uploadbtn" onclick="getFile()"><i class="icon-picture"></i>&nbsp;Upload Photo</div>
+
+                                            <div style="height: 0px; width: 0px;overflow:hidden;">
+                                            <div id="uploadbtn" onclick="getFile()"><i class="icon-picture"></i>&nbsp;Upload Photo</div>
+
+                                                <input id="upfile" type="file" name="photo" onchange="sub(this)"/>
+                                             <script src="../js/js-script.js"></script>
+</div>
+
+
 				
 			</div>
 		</div>
@@ -282,11 +300,9 @@ if ($p_id == 1) {
 					
 						<input type="button" class="backButtonCss pageSeven" id="backButton" name="backButton">
 						<input type="button" class="skipButtonCss pageSeven" id="skipButton" name="skipButton">
-						<input type="button" class="nextButtonCss pageSeven" id="nextButton" name="nextButton">
-                                                <input type="submit" style="dislay:none" onclick="submitform()"/>
-                                                <script>
+						<input type="submit"value=""  class="nextButtonCss pageSeven" id="nextButton" name="nextButton">
+                                             
                                                 
-                                                </script>
 					</form>
 				</div>
 			</div>
@@ -304,10 +320,10 @@ if ($p_id == 1) {
 						<div id="footer">
 			<div class="row additionalPaddingCss">
 				<div class="row offset5 span6">
-					<form action="UserCtrl.php" id="signupform" method="POST">
+					<form action="UserLogin.php" id="signupform" method="POST">
                                         <input type="hidden" name="action" value="usersignup"/>
 						<input type="button" class="backButtonCss pageEight" id="backButton" name="backButton">
-						<input type="submit" class="finishButtonCss pageEight" id="skipButton" name="skipButton">
+						<input type="submit" value="" class="finishButtonCss pageEight" id="skipButton" name="skipButton">
 						
 					</form>
 				</div>
@@ -325,7 +341,28 @@ if ($p_id == 1) {
         <title><?php echo $title ?></title>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../css/signUp.css">
-
+      <script>
+	function setfocus(){
+		var p_id=<?php echo $_GET['p_id']?>;
+		
+		if(p_id==2){
+			document.getElementById('emailAddress').focus();
+		}
+		else if(p_id==3){
+			document.getElementById('userPassword').focus();
+		}
+                else if(p_id==4){
+			document.getElementById('userName').focus();
+		}
+                else if(p_id==5){
+			document.getElementById('country').focus();
+		}
+                else if(p_id==6){
+			document.getElementById('phoneCode').focus();
+		}
+               
+	}
+	</script>
         <script>
             function signup() {
                 var pass = document.forms["signupform"]["password"].value;
@@ -353,115 +390,41 @@ if ($p_id == 1) {
             }
         </script>
     </head>
-    <body class='<?php echo $body ?>'>
+    <body class='<?php echo $body ?>' onload="setfocus()">
 
 
-<?php
-if ($p_id == 1) {
-    echo $content;
-    ?>
+        <?php
+        if ($p_id == 1) {
+            echo $content;
+        } else if ($p_id == "2") {
+            $_SESSION['sponsortype'] = $_POST['sponsortype'];
+            echo $content;
+        } else if ($p_id == "3") {
 
-            <!--            <form action="UserSignUp.php?&p_id=2" id="signupform" method="POST">
-                            <input type="hidden" name="sponsortype" value="public"/>
-                            <input type="submit" value="public"/>
-                        </form>-->
-    <?php
-} else if ($p_id == "2") {
-    $_SESSION['sponsortype'] = $_POST['sponsortype'];
-    echo $content;
-    ?>
-            <!--            <form action="UserSignUp.php?p_id=3" id="signupform"  method="POST">
-                            e-mail<input type="email" name="email" />
-            
-                            <input type="submit" value="next"/>
-                        </form>-->
-    <?php
-} else if ($p_id == "3") {
-
-    $_SESSION['email'] = $_POST['emailAddress'];
-    echo $content;
-    //echo $_SESSION['sponsortype'] . "<br/>";
-    ?>
-            <!--            <form action="UserSignUp.php?p_id=4" id="signupform"  method="POST">
-                            Password<input type="password" name="password1" /></br>
-                            Confirm Password<input type="password" name="password2" />
-                            <input type="submit" value="next"/>
-                        </form>-->
-    <?php
-} else if ($p_id == "4") {
-    $_SESSION['password1'] = $_POST['password1'];
-    echo $content;
-    ?>
-            <!--            <form action="UserSignUp.php?p_id=5" id="signupform" method="POST">
-                            Name<input type="text" name="name" />
-                            <input type="submit" value="next" />
-                        </form>-->
-    <?php
-} else if ($p_id == "5") {
-    $_SESSION['name'] = $_POST['userName'];
-    echo $content;
-    ?>
-            <!--            <form action="UserSignUp.php?p_id=6" id="signupform" method="POST">
-                            Country<input type="text" name="country" /></br>
-                            State<input type="text" name="state" /></br>
-                            Address<input type="text" name="address" /></br>
-                            Zip Code<input type="text" name="zipcode" />
-                            <input type="submit" value="next" />
-                        </form>-->
-    <?php
-} else if ($p_id == "6") {
-    $_SESSION['country'] = $_POST['country'];
-    $_SESSION['state'] = $_POST['state'];
-    $_SESSION['address'] = $_POST['address'];
-    $_SESSION['zipcode'] = $_POST['zipCode'];
-    echo $content;
-    ?>
-            <!--            <form action="UserSignUp.php?p_id=7" id="signupform" method="POST">
-                            Country Code<input type="text" name="countrycode" cols="3"/></br>
-                            Phone<input type="text" name="phone" />
-                            <input type="submit" value="next" />
-                        </form>-->
-            <?php
+            $_SESSION['email'] = $_POST['emailAddress'];
+            echo $content;
+        } else if ($p_id == "4") {
+            $_SESSION['password1'] = $_POST['password1'];
+            echo $content;
+        } else if ($p_id == "5") {
+            $_SESSION['name'] = $_POST['userName'];
+            echo $content;
+        } else if ($p_id == "6") {
+            $_SESSION['city'] = $_POST['city'];
+            $_SESSION['country'] = $_POST['country'];
+            $_SESSION['state'] = $_POST['state'];
+            $_SESSION['address'] = $_POST['address'];
+            $_SESSION['zipcode'] = $_POST['zipCode'];
+            echo $content;
         } else if ($p_id == "7") {
             $_SESSION['phone'] = $_POST['phoneCode'] . $_POST['phoneNumber'];
             echo $content;
-            ?>
-<!--            <form action="UserSignUp.php?p_id=8" id="signupform" method="POST">
-                Upload Photo<input type="file" name="photo" />
-
-                <input type="submit" value="next" />
-            </form>-->
-    <?php
-} else if ($p_id == "8") {
-    $_SESSION['photo'] = serialize($_FILES['photo']);
-    echo $content;
-    ?>
-<!--            <form action="UserCtrl.php" id="signupform" method="POST">
-                <input type="hidden" name="action" value="usersignup"/>
-
-
-                <input type="submit" value="next" />
-            </form>-->
-    <?php
-}
-?>
-        <!--        <form action="UserCtrl.php" id="signupform" method="POST" onsubmit="return signup();">
-                    <input type="hidden" name="action" value="usersignup">
-                    Sponsor ID : <input type="text" name="sponsorID"><br>
-                    Password : <input id="password" type="password" name="password"><br>
-                    Confirm Password : <input id="cpassword" type="password" name="confirmpassword"><br>
-                    Email : <input id="email" type="email" name="email"><br>
-                    Name : <input id="name" type="text" name="name"><br>
-                    Address : <input type="text" name="address"><br>
-                    City : <input type="text" name="city"><br>
-                    State : <input type="text" name="state"><br>
-                    Country : <input type="text" name="country"><br>
-                    Postal Code : <input type="text" name="postalcode"><br>
-                    Phone : <input type="text" name="phone"><br>
-                    <input type="submit" value="SignUp">
-                </form>-->
-        <?php
-// put your code here
+        } else if ($p_id == "8") {
+            // $_SESSION['photo'] = serialize($_FILES['photo']['name']);
+            echo $content;
+        }
         ?>
+
+
     </body>
 </html>

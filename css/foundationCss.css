@@ -1,62 +1,21 @@
-/*User Profile Box  Division------------------------------------------------*/
-
-.foundationProfileBot{
-	background-image: url(../img/eric/bottom-box-gray.png);
-	background-size: 100% 100%;
-	height: 37px;
+.foundationPage{
+	background-image: url(../img/FoundationMap/worldmap.png);
+	min-width: 1366px;
+	min-height: 768px;
 	background-repeat: no-repeat;
-	background-position: bottom;
+	background-position: center;
+}
+
+.worldMapContainer{
+	max-width: 1080px;
+	max-height: 600px;
+}
+
+.worldMap{
+	background-image: url(../img/FoundationMap/worldmap-colors.png);
+	background-size: 100% 80%;
+	height: 600px;
+	border: none;
 	background-color: transparent;
-	border: transparent;
-}
-
-.foundationProfileTop{
-	background-image: url(../img/eric/top-box-gray.png);
-	background-size: 100% 100%;
-	height: 118px;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-color: transparent;
-	border: transparent;
-
-}
-
-.foundationProfileMiddle{
-	background-image: url(../img/eric/middle-box-gray.png);
-	background-size: 100% 100%;
-	min-height: 400px;
-	background-repeat: repeat;
-	background-color: transparent;
-	border: transparent;
-	padding-left: 5%;
-	padding-right: 5%;
-}
-
-.foundationProfilePicture{
-	background-image: url(../img/eric/profile-gray.png);
-	background-size: 100% 100%;
-	height: 125px;
-	max-width: 132px;
-	background-repeat: no-repeat;
-	/*eric*/
-	padding: 10px;
-	vertical-align: middle;
-
-
-	line-height: 105px;
-	text-align: center;
-
-}
-
-.foundationProfilePost{
-	background-image: url(../img/eric/container-gray.png);
-	background-size: 100% 100%;
-	height: 131px;
 	background-repeat: no-repeat;
 }
-
-.foundationProfileContainer{
-	margin-left: 5%;
-	margin-right: 5%;
-}
-

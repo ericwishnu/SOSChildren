@@ -36,21 +36,24 @@ $userdata = unserialize($_SESSION['userdata']);
     <body class="Background">
 
 
-        <div class="Header">
+          <div class="Header" >
             <!-- Header class -->
             <div class="row">
+                <div class="span12 margin-leftHeader margin-topHeader">
 
-                <div class="offset10 headerContain">
                     <div class="row-fluid">
-                        <div class="span6">
+                        <div class="offset7 span4 margin-rightHeader">
                             <?php include 'GlobalSearch.php' ?>
                         </div>
-                        <div class="span3">
+
+                        <div class="span1">
                             <?php include 'UserDropdownMenu.php'; ?>
                         </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
 
         <div class="row">
@@ -98,23 +101,23 @@ $userdata = unserialize($_SESSION['userdata']);
 
                                         if (count($kidsList) > 0) {
                                             ?>
-    <!--                                                <table style="border:1px solid">
-                                                        <tr bgcolor="#c0c0c0">
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Kids ID</td>                
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Name</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Photo</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">DOB</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Background</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Region</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Origin</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Aspiration</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Health</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Education</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Nutrition</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center">Foundation ID</td>
-                                                            <td height="30px" style="min-width: 90px" valign="middle" align="center"></td>
+        <!--                                                <table style="border:1px solid">
+                                                            <tr bgcolor="#c0c0c0">
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Kids ID</td>                
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Name</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Photo</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">DOB</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Background</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Region</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Origin</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Aspiration</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Health</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Education</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Nutrition</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center">Foundation ID</td>
+                                                                <td height="30px" style="min-width: 90px" valign="middle" align="center"></td>
 
-                                                        </tr>-->
+                                                            </tr>-->
 
                                             <?
                                             for ($i = 0; $i < count($kidsList); $i++) {
@@ -157,7 +160,7 @@ $userdata = unserialize($_SESSION['userdata']);
                                                             }
                                                         </script>
 
-                                                                                <!--<input type="submit" value="View Profile"/>-->
+                                                                                        <!--<input type="submit" value="View Profile"/>-->
 
 
 
@@ -190,29 +193,30 @@ $userdata = unserialize($_SESSION['userdata']);
                         </div>
 
                     </div>
+                    <div class="span1">
+
+                        <div class="row-fluid">
+                            <form>
+                                <input type="button" class="span12 pickMeButton" id="pickme" name="pickme" data-toggle="modal" href="#pickMeModal">
+                            </form>
+                        </div>
+
+                        <div class="row-fluid">
+                            <form>
+                                <input type="button" class="span12 recommendedButton" id="recommended" name="recommended" data-toggle="modal" href="#Recomended">
+                            </form>
+                        </div>
+
+                        <div class="row-fluid">
+                            <form>
+                                <input type="button" class="span12 emergencyButton" id="emergency" name="emergency" data-toggle="modal" href="#Emergency">
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="span1">
 
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 pickMeButton" id="pickme" name="pickme" data-toggle="modal" href="#pickMeModal">
-                        </form>
-                    </div>
-
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 recommendedButton" id="recommended" name="recommended" data-toggle="modal" href="#Recomended">
-                        </form>
-                    </div>
-
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 emergencyButton" id="emergency" name="emergency" data-toggle="modal" href="#Emergency">
-                        </form>
-                    </div>
-
-                </div>
 
             </div>
         </div>

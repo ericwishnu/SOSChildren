@@ -19,7 +19,7 @@ if (count($postlist) > 0) {
         $datetime = $temp->getDateTime();
         $userpostID = $temp->getUserPostID();
         ?>  
-        <table style=" width: 100%;" >
+        <table style="width: 100%;" >
             <tr>
                 <td><div  style="float:left">
                         <?php
@@ -70,8 +70,8 @@ if (count($postlist) > 0) {
 
             <? if ($photo != null || $photo != '') { ?>
                 <tr>
-                    <td valign="middle" style="width:300px">
-                        <img style=" max-width:70%;max-height: 400px;"  src='../Database/Images/<?php echo $usertype . '/' . $photo; ?>'/>
+                    <td valign="middle" >
+                        <img style=" max-width:723px  ;max-height: 400px;"  src='../Database/Images/<?php echo $usertype . '/' . $photo; ?>'/>
                     </td>
                 </tr>
             <? } ?>

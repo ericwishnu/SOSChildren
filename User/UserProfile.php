@@ -29,16 +29,18 @@ $phone = $userinfo->getPhone();
         <div class="Header" >
             <!-- Header class -->
             <div class="row">
+                <div class="span12 margin-leftHeader margin-topHeader">
 
-                <div class="offset10 headerContain">
                     <div class="row-fluid">
-                        <div class="span6">
+                        <div class="offset7 span4 margin-rightHeader">
                             <?php include 'GlobalSearch.php' ?>
                         </div>
-                        <div class="span3">
-                           <?php include 'UserDropdownMenu.php';?>
+
+                        <div class="span1">
+                            <?php include 'UserDropdownMenu.php'; ?>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -69,8 +71,8 @@ $phone = $userinfo->getPhone();
                             <div class="userProfilePost span9">
                                 <div class="row-fluid"> 
                                     <div class="span11 offset1">
-                                    <h2><? echo $name; ?></h2>
-                                    <? echo $email; ?>
+                                        <h2><? echo $name; ?></h2>
+                                        <? echo $email; ?>
                                     </div>
                                 </div>
                             </div>
@@ -227,6 +229,27 @@ $phone = $userinfo->getPhone();
                         </div>
                     </div>
 
+                    <div class="span1">
+
+                        <div class="row-fluid">
+                            <form>
+                                <input type="button" class="span12 pickMeButton" id="pickme" name="pickme" data-toggle="modal" href="#pickMeModal">
+                            </form>
+                        </div>
+
+                        <div class="row-fluid">
+                            <form>
+                                <input type="button" class="span12 recommendedButton" id="recommended" name="recommended" data-toggle="modal" href="#Recomended">
+                            </form>
+                        </div>
+
+                        <div class="row-fluid">
+                            <form>
+                                <input type="button" class="span12 emergencyButton" id="emergency" name="emergency" data-toggle="modal" href="#Emergency">
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 

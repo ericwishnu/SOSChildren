@@ -7,7 +7,7 @@
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-        <li>
+        <li class="list-drop">
             <form name="profile" action="UserCtrl.php" method="post">
                 <input type="hidden" name="action" value="viewprofile">
                 <a href="javascript: profile()">Profile</a>
@@ -19,7 +19,7 @@
                 </script>
             </form>
         </li>
-        <li>
+        <li class="list-drop">
             <form name="listmykids" action="KidsCtrl.php" method="post">
                 <input type="hidden" name="action" value="listmykids">
                 <a href="javascript: listmykids()">My Kids</a>
@@ -33,7 +33,7 @@
         </li>
 
         <li class="divider"></li>
-        <li>
+        <li class="list-drop">
             <form name="logout" action="UserCtrl.php" method="post">
                 <input type="hidden" name="action" value="logout">
                 <a href="javascript: logout()">Log Out</a>

@@ -21,7 +21,7 @@ class UserDAO {
         return false;
     }
 
-    function signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone) {
+    function signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone, $urlphoto) {
         $this->conf = new Config();
         $this->conf->db_connect();
 
@@ -36,8 +36,8 @@ class UserDAO {
             return false;
         }
 
-        $query = "INSERT INTO Sponsor (SponsorID, Password, Email, Name, Address, City, State, Country, PostalCode, Phone, Coins) 
-            VALUES ('$sponsorID', md5('$password'), '$email', '$name', '$address', '$city', '$state', '$country', '$postalcode', '$phone', 0)";
+        $query = "INSERT INTO Sponsor (SponsorID, Password, Email, Name, Address, City, State, Country, PostalCode, Phone, Coins, Photo) 
+            VALUES ('$sponsorID', md5('$password'), '$email', '$name', '$address', '$city', '$state', '$country', '$postalcode', '$phone', 0, '$urlphoto')";
         $result = $this->conf->db_query($query);
 
         if (!$result) {
@@ -240,7 +240,7 @@ class UserDAO {
 
             while ($row2 = mysql_fetch_array($result2, MYSQL_NUM)) {
 
-                $resultArray[] = new PostData('Foundation', $row2[5], $row2[7], ' ', $row2[2], $row2[3], $row2[4], $row2[0]);
+                $resultArray[] = new PostData('Foundation', $row2[5], $row2[7], ' ', $row2[2], $row2[4], $row2[3], $row2[0]);
             }
         }
 

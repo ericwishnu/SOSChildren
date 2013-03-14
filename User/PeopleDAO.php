@@ -387,7 +387,7 @@ class PeopleDAO {
     }
 
 
-function globalsearchfoundation_db($searchby, $keyword){
+function globalsearchfoundation_db($keyword){
         
         $resultArray;
         $this->conf = new Config();

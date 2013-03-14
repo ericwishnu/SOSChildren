@@ -79,7 +79,7 @@ for ($i = 0; $i < count($foundationname); $i++) {
                     <div class="span9">
                         <div class="row-fluid">
                             <div class="kidsProfilePicture span2">
-                                <img width="100%"src="../Database/Images/Kids/<? echo $photo ?>" alt="<? $kidsData->getName() ?>"/>
+                                <img width="100%" style="border-radius:10px" src="../Database/Images/Kids/<? echo $photo ?>" alt="<? $kidsData->getName() ?>"/>
 
                             </div>
 
@@ -170,8 +170,8 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                                 <tr>
                                                     <td valign="top" frame="box"align="center" rowspan="7" width="200px">
 
-                                                        <input type="submit" value="Yes">
-                                                        <input type="button" value="No" onclick="no()"><br/>
+                                                        <input type="submit" value="Yes" class="myFont-button">
+                                                        <input type="button" value="No" onclick="no()" class="myFont-button"><br/>
                                                         <input type="hidden" name="kidsSelected" value="<? echo $kidsData->getKidsID() ?>">
                                                         <input type="hidden" name="foundationID" value="<? echo $kidsData->getFoundationID() ?>"/>
                                                         <input type="hidden" name="kidsID" value="<? echo $kidsData->getKidsID() ?>">

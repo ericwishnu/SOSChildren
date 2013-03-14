@@ -14,7 +14,7 @@
 
                                             <textarea class="textArea" name="content"></textarea>
                                             <div id="uploadbtn" onclick="getFile()"><i class="icon-picture"></i>&nbsp;Upload Photo</div>
-                                            <div style='height: 0px; width: 0px;overflow:hidden;'>
+                                            <div style="height: 0px; width: 0px;overflow:hidden;">
                                                 <input id="upfile" type="file" name="photo" value="upload" onchange="sub(this)"/>
                                             </div>
 

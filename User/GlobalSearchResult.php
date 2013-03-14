@@ -75,6 +75,73 @@ $userdata = unserialize($_SESSION['userdata']);
 
                                             <?php
                                             if ($_SESSION['globalsearchresult'] == "1") {
+                                                
+                                                
+                                                $foundationList = unserialize($_SESSION['searchfoundationdataobj']);
+
+                                                if (count($foundationList) > 0) {
+                                                    ?>
+
+
+                                                    <?
+                                                    for ($i = 0; $i < count($foundationList); $i++) {
+                                                        $temp = $foundationList[$i]; //get the foundation object from array
+                                                        //store the object to separate variable
+                                                        $foundationID = $temp->getFoundationID();
+                                                        $password = $temp->getPassword();
+                                                        $name = $temp->getName();
+                                                        $photo = $temp->getPhoto();
+                                                        $address = $temp->getAddress();
+                                                        $city = $temp->getCity();
+                                                        $state = $temp->getState();
+                                                        $country = $temp->getCountry();
+                                                        $postalCode = $temp->getPostalCode();
+                                                        $accountNo = $temp->getAccountNo();
+                                                        $phone = $temp->getPhone();
+                                                        $description = $temp->getDescription();
+                                                        if ($description == "" | $description == null)
+                                                            $description = "-";
+                                                        ?>
+                                                        <div style="float:left" >
+                                                            <div>
+                                                                <img  style="width:150px;margin:15px; height:150px; float:left" src="<? echo "../Database/Images/Foundation/" . $photo; ?>" />
+                                                                <form name="foundationprofile<?php echo md5($i) ?>" action="FoundationCtrl.php" method="post">
+                                                                    <input type="hidden" name="action" value="foundationprofile">
+                                                                    <input type="hidden" name="foundationSelectedID" value="<? echo $foundationID ?>">
+
+                                                                </form>
+                                                            </div>
+
+                                                            <div  >
+                                                                <p style="padding:25px; text-align:left; position: relative; vertical-align: middle; width:400px" >
+                                                                    <a href="javascript: foundationprofile<?php echo md5($i) ?>()"><font size="5"><?php echo $name; ?></font></br></a>
+                                                                    <script>
+                                                                        function foundationprofile<?php echo md5($i) ?>() {
+                                                                            document.foundationprofile<?php echo md5($i) ?>.submit();
+                                                                        }
+                                                                    </script>
+                                                                    <?php echo $address; ?></br>
+                                                                    <?php if ($city != "") echo $city . "</br>"; ?>
+                                                                    <?php if ($state != "") echo $state . "</br>"; ?>
+                                                                    <?php if ($country != "") echo $country . "</br>"; ?>
+                                                                    <?php if ($phone != "") echo $phone . "</br>"; ?>
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div style="clear:both"></div>
+
+
+
+                                                        <?
+                                                    }
+                                                    ?>
+
+                                                    <?
+                                                }
+                                                else {
+                                                    echo 'Foundation Not Avaiable<br>';
+                                                }
                                                 $peopleList = unserialize($_SESSION['searchpeopledataobj']);
 
                                                 if (count($peopleList) > 0) {
@@ -150,71 +217,7 @@ $userdata = unserialize($_SESSION['userdata']);
                                                     echo 'People Not Avaiable<br>';
                                                 }
 
-                                                $foundationList = unserialize($_SESSION['searchfoundationdataobj']);
-
-                                                if (count($foundationList) > 0) {
-                                                    ?>
-
-
-                                                    <?
-                                                    for ($i = 0; $i < count($foundationList); $i++) {
-                                                        $temp = $foundationList[$i]; //get the foundation object from array
-                                                        //store the object to separate variable
-                                                        $foundationID = $temp->getFoundationID();
-                                                        $password = $temp->getPassword();
-                                                        $name = $temp->getName();
-                                                        $photo = $temp->getPhoto();
-                                                        $address = $temp->getAddress();
-                                                        $city = $temp->getCity();
-                                                        $state = $temp->getState();
-                                                        $country = $temp->getCountry();
-                                                        $postalCode = $temp->getPostalCode();
-                                                        $accountNo = $temp->getAccountNo();
-                                                        $phone = $temp->getPhone();
-                                                        $description = $temp->getDescription();
-                                                        if ($description == "" | $description == null)
-                                                            $description = "-";
-                                                        ?>
-                                                        <div style="float:left" >
-                                                            <div>
-                                                                <img  style="width:150px;margin:15px; height:150px; float:left" src="<? echo "../Database/Images/Foundation/" . $photo; ?>" />
-                                                                <form name="foundationprofile<?php echo md5($i) ?>" action="FoundationCtrl.php" method="post">
-                                                                    <input type="hidden" name="action" value="foundationprofile">
-                                                                    <input type="hidden" name="foundationSelectedID" value="<? echo $foundationID ?>">
-
-                                                                </form>
-                                                            </div>
-
-                                                            <div  >
-                                                                <p style="padding:25px; text-align:left; position: relative; vertical-align: middle; width:400px" >
-                                                                    <a href="javascript: foundationprofile<?php echo md5($i) ?>()"><font size="5"><?php echo $name; ?></font></br></a>
-                                                                    <script>
-                                                                        function foundationprofile<?php echo md5($i) ?>() {
-                                                                            document.foundationprofile<?php echo md5($i) ?>.submit();
-                                                                        }
-                                                                    </script>
-                                                                    <?php echo $address; ?></br>
-                                                                    <?php if ($city != "") echo $city . "</br>"; ?>
-                                                                    <?php if ($state != "") echo $state . "</br>"; ?>
-                                                                    <?php if ($country != "") echo $country . "</br>"; ?>
-                                                                    <?php if ($phone != "") echo $phone . "</br>"; ?>
-
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div style="clear:both"></div>
-
-
-
-                                                        <?
-                                                    }
-                                                    ?>
-
-                                                    <?
-                                                }
-                                                else {
-                                                    echo 'Foundation Not Avaiable<br>';
-                                                }
+                                                
                                             } else if ($_SESSION['searchpeopleresult'] == "0") {
                                                 echo 'Not Avaiable';
                                             } else {
@@ -260,7 +263,7 @@ $userdata = unserialize($_SESSION['userdata']);
 
                             </div>
                         </div>
-                    </div>F
+                    </div>
 
                     <div class="span1">
 

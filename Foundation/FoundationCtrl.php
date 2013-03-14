@@ -3,6 +3,7 @@
 session_start();
 include 'FoundationDAO.php';
 include 'Foundation.php';
+include 'Kids.php';
 $test = new FoundationCtrl();
 $test->run();
 

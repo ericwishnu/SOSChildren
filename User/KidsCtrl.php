@@ -31,6 +31,8 @@ class KidsCtrl {
             $this->prepareFosterKid();   
         } elseif ($page == "fosterKid") {
             $this->fosterKid();
+        }elseif ($page == "listkidsbyfoundation") {
+            $this->listkidsbyfoundation();
         }
     }
     
@@ -58,7 +60,12 @@ class KidsCtrl {
     }
     
     private function listkidsbyfoundation(){
+        $foundationID=$_POST['foundationid'];
+        $_SESSION['kidslistdataobj']=serialize($this->kids_db_class->listkidsbyfoundation_db($foundationID));
+        //$temp=$this->kids_db_class->listkidsbyfoundation_db($foundationID);
+        //echo $temp[0]->getKidsID();
         
+        header("location: KidsList.php");
     }
     
     private function listmykids(){

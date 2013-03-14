@@ -84,7 +84,7 @@ class UserCtrl {
 
     private function signup() {
         $sponsorID = $_SESSION['email'];
-        $password = $_SESSION['password'];
+        $password = $_SESSION['password1'];
         $email = $_SESSION['email'];
         $name = $_SESSION['name'];
         $address = $_SESSION['address'];
@@ -93,12 +93,12 @@ class UserCtrl {
         $country = $_SESSION['country'];
         $postalcode = $_SESSION['zipcode'];
         $phone = $_SESSION['phone'];
-        $photo=$_SESSION['photo'];
+        $photo=$_FILES['photo']['name'];
         mkdir("../Database/Images/Sponsor/" . $sponsorID . "");
-        mkdir("../Database/Images/Sponsor/" . $sponsorID . "__Post");
+        mkdir("../Database/Images/Sponsor/" . $sponsorID . "/__Post");
         //=============
 
-        if ($photo == '') {
+        if ($photo == '' || $photo==null) {
             $urlphoto = 'DefaultUser.jpg';
 
             $defaultpath = "../Database/Images/Sponsor/DefaultUser.jpg";
@@ -121,13 +121,15 @@ class UserCtrl {
             }
         }
         $this->user_db_class = new userDAO();
-        $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone);
+        //echo $sponsorID. $password. $email. $name. $address. $city. $state. $country. $postalcode. $phone;
+        
+        $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone,$urlphoto);
         if (!$result) {
             $_SESSION['message'] = "Sign Up Failed!";
             header('location: UserLogin.php');
         } else {
             $_SESSION['message'] = "Sign Up Success!";
-            header('location: UserLogin.php');
+            header('location: UserSignUp.php?p_id=8');
         }
     }
 

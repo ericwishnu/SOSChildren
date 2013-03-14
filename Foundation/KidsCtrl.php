@@ -31,6 +31,7 @@ class KidsCtrl {
         } elseif ($page == "changepicture") {
             $this->changePicture();
         }
+        
     }
 
     private function listKids() {
@@ -164,7 +165,7 @@ class KidsCtrl {
     private function prepareChangePicture() {
 
         $username = $_POST['id'];
-        $_SESSION['kidsdataobj'] = serialize($this->kids_db_class->kidsinfo_db($username));
+        $_SESSION['kidslistdataobj'] = serialize($this->kids_db_class->kidsinfo_db($username));
         header("location: KidsChangePicture.php");
     }
 
