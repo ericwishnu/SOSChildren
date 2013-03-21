@@ -133,14 +133,14 @@ $description=$foundationdata->getDescription();
                                                     <tr>
                                                         <td><div style="float:left"><a><?php echo $title; ?></a></div>
 
-                                                            <form   onsubmit="return deletepost();" action="FoundationCtrl.php" method="post">
-                                                                <input type="hidden" name="foundationid" value="<? echo $_SESSION['usernameF']; ?>"/>
-                                                                <input type="hidden" name="postid" value="<? echo $id; ?>"/>
+<!--                                                            <form   onsubmit="return deletepost();" action="FoundationCtrl.php" method="post">
+                                                                <input type="hidden" name="foundationid" value="<?// echo $_SESSION['usernameF']; ?>"/>
+                                                                <input type="hidden" name="postid" value="<?// echo $id; ?>"/>
                                                                 <input type="hidden" name="action" value="deletepost"/>
                                                                 <input style="float:right" type="submit" value="x"/>
-                                                                <!--<a style="float:right" href="javascript: deletepost()">x</a>-->
+                                                                <a style="float:right" href="javascript: deletepost()">x</a>
 
-                                                            </form>
+                                                            </form>-->
 
                                                         </td>
                                                     </tr>

@@ -121,11 +121,11 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                 <div class="row-fluid">
                                     <div class="kidsFeedMiddle" >
                                         <table>
-                                            <tr>
+<!--                                            <tr>
                                                 <td>Foundation ID</td>
                                                 <td>:</td>
-                                                <td><? echo $kidsData->getFoundationID() ?></td>
-                                            </tr>
+                                                <td><? //echo $kidsData->getFoundationID() ?></td>
+                                            </tr>-->
 
                                             <tr>
                                                 <td>DOB</td>
