@@ -185,7 +185,9 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                                 if (isset($_SESSION['usernameU']) && $_SESSION['usernameU'] != "") {
                                                     if (isset($_SESSION['checkFoster']) && $_SESSION['checkFoster'] == "false") {
                                                         ?>
-                                                        <input type="submit" value="Foster Me" class="myFont-button">
+                                                        <input type="text" name="quantity" class="input-small marginDonate" id="coinDonate"/>
+                                                        <span class="add-on">Coins</span>
+                                                        <input type="submit" class="span4 donateButton" value=""/>
 
                                                         <?
                                                     }
@@ -198,6 +200,8 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                         </tr>
                                     </table><!-- END OF TABLE AFTER FIRST TABLE -->
                                 </form>
+                                
+                                
 
 
                                 <div class="row">
