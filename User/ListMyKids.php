@@ -118,17 +118,17 @@ $kids_list = unserialize($_SESSION['mykidslistdataobj']);
                                                     ?>
                                                     <div class="thumbnail">
                                                         <div>
-                                                            <form name="kidsprofile" action="KidsCtrl.php" method="POST">
+                                                            <form name="kidsprofile<?php echo md5($i)?>" action="KidsCtrl.php" method="POST">
                                                                 <input type="hidden" name="action" value="kidsprofile"/>
                                                                 <input type="hidden" name="kidsSelectedID" value="<?php echo $kidsID; ?>"/>
 
                                                             </form>
-                                                            <a href="javascript: viewkidsprofile()">
+                                                            <a href="javascript: viewkidsprofile<?php echo md5($i)?>()">
                                                                 <img class="kidsphoto" src="../Database/Images/Kids/<?php echo $photo ?>"/>
                                                             </a>
                                                             <script>
-                                                                function viewkidsprofile() {
-                                                                    document.kidsprofile.submit();
+                                                                function viewkidsprofile<?php echo md5($i)?>() {
+                                                                    document.kidsprofile<?php echo md5($i)?>.submit();
                                                                 }
                                                             </script>
                                                         </div>

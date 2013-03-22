@@ -83,6 +83,7 @@ class UserCtrl {
     }
 
     private function signup() {
+        $sponsortype=$_SESSION['sponsortype'];
         $sponsorID = $_SESSION['email'];
         $password = $_SESSION['password1'];
         $email = $_SESSION['email'];
