@@ -10,7 +10,7 @@ $userdata = unserialize($_SESSION['userdata']);
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../css/mainMenuCss.css">
-        <title>Hello User</title>
+        <title>Hello <?php echo $userdata[1] ?></title>
 
     </head>
 

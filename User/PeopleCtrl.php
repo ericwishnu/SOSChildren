@@ -114,7 +114,7 @@ class PeopleCtrl {
     private function neighbourrequest() {
         $username = $_SESSION['usernameU'];
         $_SESSION['peoplelistdataobj'] = serialize($this->people_db_class->neighbourrequest_db($username));
-        header("location: PeopleRequestList.php");
+        header("location: UserNotification.php");
     }
 
     private function approveneighbour() {
