@@ -25,7 +25,7 @@ $description=$foundationdata->getDescription();
     <title>Foundation Profile</title>
 </head>
 <body class="Background">
- <div class="Header" >
+   <div class="Header" >
     <!-- Header class -->
     <div class="row">
         <div class="span12 margin-leftHeader margin-topHeader">
@@ -210,10 +210,10 @@ $description=$foundationdata->getDescription();
                                         </ol>
                                         <!-- Carousel items -->
                                         <div class="carousel-inner">
-                                            <div class="active item"><img src="../img/Foundation/limaRoti/1.jpg"></div>
-                                            <div class="item"><img src="../img/Foundation/limaRoti/2.jpg"></div>
-                                            <div class="item"><img src="../img/Foundation/limaRoti/3.jpg"></div>
-                                            <div class="item"><img src="../img/Foundation/limaRoti/4.jpg"></div>
+                                            <div class="active item"><img class="pictureSlide" src="../img/Foundation/limaRoti/1.jpg"></div>
+                                            <div class="item"><img class="pictureSlide" src="../img/Foundation/limaRoti/2.jpg"></div>
+                                            <div class="item"><img class="pictureSlide" src="../img/Foundation/limaRoti/3.jpg"></div>
+                                            <div class="item"><img  class="pictureSlide" src="../img/Foundation/limaRoti/4.jpg"></div>
                                         </div>
                                         <!-- Carousel nav -->
                                         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
