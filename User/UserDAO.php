@@ -56,7 +56,7 @@ class UserDAO {
 
         if (mysql_num_rows($result) > 0) {
             $temp = mysql_fetch_array($result);
-           // return new User($temp[0], $temp[1], $temp[2], $temp[3], $temp[4], $temp[5], $temp[6], $temp[7], $temp[8], $temp[9], $temp[10]);
+            return new User($temp[0], $temp[1], $temp[2], $temp[3], $temp[4], $temp[5], $temp[6], $temp[7], $temp[8], $temp[9], $temp[10]);
         }
 
         return null;

@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include 'User.php';
 $userdata = unserialize($_SESSION['userdata']);
