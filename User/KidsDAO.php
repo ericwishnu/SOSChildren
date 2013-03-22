@@ -13,7 +13,7 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query = "SELECT * FROM Kids WHERE $searchby LIKE '%$keyword%'";
+        $query = "SELECT * FROM Kids WHERE $searchby LIKE '%$keyword%' AND Name != ALL(SELECT Name FROM Foundation) AND NeededCoin > 0";
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) > 0) {
@@ -31,7 +31,7 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query = "SELECT * FROM Kids";
+        $query = "SELECT * FROM Kids WHERE Name != ALL(SELECT Name FROM Foundation) AND NeededCoin > 0";
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) == 0) {
@@ -58,7 +58,7 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query = "SELECT * FROM Kids";
+        $query = "SELECT * FROM Kids WHERE Name != ALL(SELECT Name FROM Foundation) AND NeededCoin > 0";
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) == 0) {
@@ -85,7 +85,7 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query2 = "SELECT * FROM Donorship WHERE SponsorID = '$sponsorID'";
+        $query2 = "SELECT * FROM Donorship WHERE SponsorID = '$sponsorID' AND KidsID = SOME(SELECT KidsID FROM Kids WHERE Name != ALL(SELECT Name FROM Foundation))";
         $result2 = $this->conf->db_query($query2);
 
         if (mysql_num_rows($result2) > 0) {
@@ -140,7 +140,7 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query = "SELECT * FROM Kids WHERE KidsID = $kidsID";
+        $query = "SELECT * FROM Kids WHERE KidsID = $kidsID AND Name != ALL(SELECT Name FROM Foundation)";
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) > 0) {
@@ -160,13 +160,13 @@ class KidsDAO {
         return null;
     }
 
-    function fosterKid_db($sponsorID, $foundationID, $kidsID) {
+    function fosterKid_db($sponsorID, $foundationID, $kidsID, $quantity) {
         $this->conf = new Config();
         $this->conf->db_connect();
 
         $currentdatetime = date('Y-m-d') . " " . date("H:i:s");
-        $query = "INSERT INTO Donorship (SponsorID, FoundationID, KidsID, DateTime) 
-            VALUES ('$sponsorID', '$foundationID', $kidsID, '$currentdatetime')";
+        $query = "INSERT INTO Donorship (SponsorID, FoundationID, KidsID, DateTime, Quantity) 
+            VALUES ('$sponsorID', '$foundationID', $kidsID, '$currentdatetime', $quantity)";
         $result = $this->conf->db_query($query);
 
         if (!$result) {
@@ -189,8 +189,8 @@ class KidsDAO {
         return false;
     }
 
-        function foundationgetname_db(){
-                $resultArray;
+    function foundationgetname_db(){
+        $resultArray;
         $this->conf = new Config();
         $this->conf->db_connect();
 
