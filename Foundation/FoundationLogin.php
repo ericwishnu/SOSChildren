@@ -49,8 +49,8 @@ else
         ?>
         <form action="FoundationCtrl.php" id="loginform" method="POST" onsubmit="return login();">
            <input type="hidden" name="action" value="login">
-           Username : <input id="username" type="text" name="username" value="CO23"><br>
-           Password : <input id="password" type="password" name="password" value="123456"><br>
+           Username : <input id="username" type="text" name="username" /><br>
+           Password : <input id="password" type="password" name="password" /><br>
            <input type="submit" value="Login">
         </form>
         <!--<a href="UserSignUp.php">Sign Up</a>-->
