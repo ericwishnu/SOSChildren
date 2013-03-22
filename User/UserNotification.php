@@ -128,7 +128,7 @@ include 'User.php';
                                                             </form>
                                                         </div>
 
-                                                        <div  >
+                                                        <div>
                                                             <p style="padding:25px; text-align:left; position: relative; vertical-align: middle; width:400px" >
                                                                 <a href="javascript: sponsorprofile<?php echo md5($i) ?>()"><font size="5"><?php echo $name; ?></font></br></a>
                                                                 <script>
@@ -144,36 +144,34 @@ include 'User.php';
 
                                                             </p>
                                                         </div>
+
+
                                                         <div style="float:right">
-                                                            
-                                                          
-                                                         
-                                                          
-                                                         <form action="PeopleCtrl.php" method="post">
-                                                             <input type="hidden" name="action" value="approveneighbour">
-                                                             <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
-                                                             <input type="submit" value="Approve">
-                                                         </form>
-                                                         <form action="PeopleCtrl.php" method="post">
-                                                             <input type="hidden" name="action" value="removeneighbour">
-                                                             <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
-                                                             <input type="submit" value="Decline">
-                                                         </form>
-                                                         
-                                                     </div>
-                                                 </div>
-                                                 <div style="clear:both">
+                                                           <form action="PeopleCtrl.php" method="post">
+                                                               <input type="hidden" name="action" value="approveneighbour">
+                                                               <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
+                                                               <input type="submit" value="Approve">
+                                                           </form>
+                                                           <form action="PeopleCtrl.php" method="post">
+                                                               <input type="hidden" name="action" value="removeneighbour">
+                                                               <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
+                                                               <input type="submit" value="Decline">
+                                                           </form>
 
-                                                 </div>
-                                                 
-                                                 
+                                                       </div>
+                                                   </div>
+                                                   <div style="clear:both">
 
-                                                 <?
-                                             }
-                                             ?>
-                                             
-                                             <?
-                                         } else {
+                                                   </div>
+
+
+
+                                                   <?
+                                               }
+                                               ?>
+
+                                               <?
+                                           } else {
                                             echo 'Not Avaiable';
                                         }
                                         ?>
