@@ -2,16 +2,16 @@
 session_start();
 $p_id = $_GET['p_id'];
 if ($p_id == 1) {
-	$script = '
+    $script = '
 	<script>
 	function setFocus(id){
 		document.getElementById(id).focus();
 	}
 	</script>
 	';
-	$title = 'Sign up Step One';
-	$body = 'pageOne';
-	$content = '
+    $title = 'Sign up Step One';
+    $body = 'pageOne';
+    $content = '
 	<div class="container">
 
 	<div class="row">
@@ -51,9 +51,9 @@ if ($p_id == 1) {
 	</div>
 	';
 } else if ($p_id == 2) {
-	$title = 'Sign up Step Two';
-	$body = 'pageTwo';
-	$content = '
+    $title = 'Sign up Step Two';
+    $body = 'pageTwo';
+    $content = '
 	<div class="container">
 	<div class="row">
 	<div class="pageTwoHeader span12">
@@ -88,9 +88,9 @@ if ($p_id == 1) {
 
 	</div>';
 } else if ($p_id == 3) {
-	$title = 'Sign up Step Three';
-	$body = 'pageThree';
-	$content = '
+    $title = 'Sign up Step Three';
+    $body = 'pageThree';
+    $content = '
 	<div class="container">
 	<div class="row">
 	<div class="pageThreeHeader span12">
@@ -133,9 +133,9 @@ if ($p_id == 1) {
 	</div>
 	';
 } else if ($p_id == 4) {
-	$title = 'Sign up Step Four';
-	$body = 'pageFour';
-	$content = '
+    $title = 'Sign up Step Four';
+    $body = 'pageFour';
+    $content = '
 	<div class="container">
 	<div class="row">
 	<div class="pageFourHeader span12">
@@ -173,9 +173,9 @@ if ($p_id == 1) {
 
 	</div>';
 } else if ($p_id == 5) {
-	$title = 'Sign up Step Five';
-	$body = 'pageFive';
-	$content = '
+    $title = 'Sign up Step Five';
+    $body = 'pageFive';
+    $content = '
 	<div class="container">
 
 	<div class="row">
@@ -222,9 +222,9 @@ if ($p_id == 1) {
 
 	</div>';
 } else if ($p_id == 6) {
-	$title = 'Sign up Step Six';
-	$body = 'pageSix';
-	$content = '<div class="container">
+    $title = 'Sign up Step Six';
+    $body = 'pageSix';
+    $content = '<div class="container">
 	<div class="row">
 	<div class="pageSixHeader span12">
 	</div>
@@ -259,9 +259,9 @@ if ($p_id == 1) {
 	</div>
 	';
 } else if ($p_id == 7) {
-	$title = 'Sign up Step Seven';
-	$body = 'pageSeven';
-	$content = '
+    $title = 'Sign up Step Seven';
+    $body = 'pageSeven';
+    $content = '
 	<div class="container">
 	<div class="row">
 	<div class="pageSevenHeader span12">
@@ -306,9 +306,9 @@ if ($p_id == 1) {
 
 	</div>';
 } else if ($p_id == 8) {
-	$title = 'Sign up Step Eight';
-	$body = 'pageEight';
-	$content = '<div class="container">
+    $title = 'Sign up Step Eight';
+    $body = 'pageEight';
+    $content = '<div class="container">
 	<div class="row">
 	<div class="pageEightHeader span12">
 	</div>
@@ -327,10 +327,10 @@ if ($p_id == 1) {
 	</div>
 
 	</div>';
-} else if ($p_id == nin1) {
-	$title = 'Sign up Ninja Step 1';
-	$body = 'pageTwo';
-	$content = ' <div class="container">
+} else if ($p_id == "nin1") {
+    $title = 'Sign up Ninja Step 1';
+    $body = 'pageTwo';
+    $content = ' <div class="container">
 
 	<div class="row">
 	<div class="pageTwoHeaderninja span12">
@@ -346,9 +346,9 @@ if ($p_id == 1) {
 
 	<div class="emailAddressCss">
 	<form action="UserSignUp.php?p_id=nin2" id="signupform" method="POST">
-	<input type="email" class="input-xlarge emailAddressCss" name="emailAddress" id="emailAddress" 
-	placeholder="email@domain.com">
-	</form>
+            <input type="email" class="input-xlarge emailAddressCss" name="emailAddress" id="emailAddress" 
+            placeholder="email@domain.com">
+
 	</div>
 
 	</div> <!-- end of span 4 -->
@@ -359,10 +359,10 @@ if ($p_id == 1) {
 	<div id="footer">
 	<div class="row additionalPaddingCss">
 	<div class="row offset5 span6">
-	<form>
-	<input type="button" class="backButtonCss pageTwo" id="backButton" name="backButton">
-	<input type="button" class="skipButtonCss pageTwo" id="skipButton" name="skipButton">
-	<input type="submit" value="" class="nextButtonCss pageTwo" id="nextButton" name="nextButton">
+
+	<input type="button" class="backButtonCss pageTwo" id="backButton" name="backButton"/>
+	<input type="button" class="skipButtonCss pageTwo" id="skipButton" name="skipButton"/>
+	<input type="submit" value="" class="nextButtonCss pageTwo" id="nextButton" name="nextButton"/>
 	</form>
 	</div>
 	</div>
@@ -370,11 +370,10 @@ if ($p_id == 1) {
 
 	</div>
 	';
-
-} else if ($p_id == nin2) {
-	$title = 'Sign up Ninja Step 2';
-	$body = 'pageThree';
-	$content = '<div class="container">
+} else if ($p_id == "nin2") {
+    $title = 'Sign up Ninja Step 2';
+    $body = 'pageThree';
+    $content = '<div class="container">
 	<div class="row">
 	<div class="pageThreeHeaderninja span12">
 	</div>
@@ -413,10 +412,10 @@ if ($p_id == 1) {
 
 
 	</div>';
-} else if ($p_id == nin3) {
-	$title = 'Sign up Ninja Step 3';
-	$body = 'pageEight';
-	$content = '	<div class="container">
+} else if ($p_id == "nin3") {
+    $title = 'Sign up Ninja Step 3';
+    $body = 'pageEight';
+    $content = '	<div class="container">
 	<div class="row">
 	<div class="pageEightHeaderNinja span12">
 	</div>
@@ -441,111 +440,113 @@ if ($p_id == 1) {
 
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title><?php echo $title ?></title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/signUp.css">
-	<script>
-	function setfocus(){
-		var p_id=<?php echo $_GET['p_id']?>;
-		
-		if(p_id==2){
-			document.getElementById('emailAddress').focus();
-		}
-		else if(p_id==3){
-			document.getElementById('userPassword').focus();
-		}
-		else if(p_id==4){
-			document.getElementById('userName').focus();
-		}
-		else if(p_id==5){
-			document.getElementById('country').focus();
-		}
-		else if(p_id==6){
-			document.getElementById('phoneCode').focus();
-		}
-		else if(p_id==nin1){
-			document.getElementById('emailAddress').focus();
-		}  
-		else if(p_id==nin2){
-			document.getElementById('userPassword').focus();
-		} 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title><?php echo $title ?></title>
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/signUp.css">
+        <script>
+            function setfocus() {
+                var p_id =<?php echo $_GET['p_id'] ?>;
 
-		
-	}
-	</script>
-	<script>
-	function signup() {
-		var pass = document.forms["signupform"]["password"].value;
-		var cpass = document.forms["signupform"]["cpassword"].value;
-		var email = document.forms["signupform"]["email"].value;
-		var name = document.forms["signupform"]["name"].value;
-
-		if (pass != cpass)
-		{
-			alert('Your password is not same');
-			return false;
-		}
-		else if (email == null || email == "")
-		{
-			alert('Email cannot blank');
-			return false;
-		}
-		else if (name == null || name == "")
-		{
-			alert('Name cannot blank');
-			return false;
-		}
+                if (p_id == 2) {
+                    document.getElementById('emailAddress').focus();
+                }
+                else if (p_id == 3) {
+                    document.getElementById('userPassword').focus();
+                }
+                else if (p_id == 4) {
+                    document.getElementById('userName').focus();
+                }
+                else if (p_id == 5) {
+                    document.getElementById('country').focus();
+                }
+                else if (p_id == 6) {
+                    document.getElementById('phoneCode').focus();
+                }
+                else if (p_id == nin1) {
+                    document.getElementById('emailAddress').focus();
+                }
+                else if (p_id == nin2) {
+                    document.getElementById('userPassword').focus();
+                }
 
 
-	}
-	</script>
-</head>
-<body class='<?php echo $body ?>' onload="setfocus()">
+            }
+        </script>
+        <script>
+            function signup() {
+                var pass = document.forms["signupform"]["password"].value;
+                var cpass = document.forms["signupform"]["cpassword"].value;
+                var email = document.forms["signupform"]["email"].value;
+                var name = document.forms["signupform"]["name"].value;
+
+                if (pass != cpass)
+                {
+                    alert('Your password is not same');
+                    return false;
+                }
+                else if (email == null || email == "")
+                {
+                    alert('Email cannot blank');
+                    return false;
+                }
+                else if (name == null || name == "")
+                {
+                    alert('Name cannot blank');
+                    return false;
+                }
 
 
-	<?php
-	if ($p_id == 1) {
-		echo $content;
-	} else if ($p_id == "2") {
-		$_SESSION['sponsortype'] = $_POST['sponsortype'];
-		echo $content;
-	} else if ($p_id == "3") {
+            }
+        </script>
+    </head>
+    <body class='<?php echo $body ?>' onload="setfocus()">
 
-		$_SESSION['email'] = $_POST['emailAddress'];
-		echo $content;
-	} else if ($p_id == "4") {
-		$_SESSION['password1'] = $_POST['password1'];
-		echo $content;
-	} else if ($p_id == "5") {
-		$_SESSION['name'] = $_POST['userName'];
-		echo $content;
-	} else if ($p_id == "6") {
-		$_SESSION['city'] = $_POST['city'];
-		$_SESSION['country'] = $_POST['country'];
-		$_SESSION['state'] = $_POST['state'];
-		$_SESSION['address'] = $_POST['address'];
-		$_SESSION['zipcode'] = $_POST['zipCode'];
-		echo $content;
-	} else if ($p_id == "7") {
-		$_SESSION['phone'] = $_POST['phoneCode'] . $_POST['phoneNumber'];
-		echo $content;
-	} else if ($p_id == "8") {
+
+        <?php
+        if ($p_id == 1) {
+            echo $content;
+        } else if ($p_id == "2") {
+            $_SESSION['sponsortype'] = $_POST['sponsortype'];
+            echo $content;
+        } else if ($p_id == "3") {
+
+            $_SESSION['email'] = $_POST['emailAddress'];
+            echo $content;
+        } else if ($p_id == "4") {
+            $_SESSION['password1'] = $_POST['password1'];
+            echo $content;
+        } else if ($p_id == "5") {
+            $_SESSION['name'] = $_POST['userName'];
+            echo $content;
+        } else if ($p_id == "6") {
+            $_SESSION['city'] = $_POST['city'];
+            $_SESSION['country'] = $_POST['country'];
+            $_SESSION['state'] = $_POST['state'];
+            $_SESSION['address'] = $_POST['address'];
+            $_SESSION['zipcode'] = $_POST['zipCode'];
+            echo $content;
+        } else if ($p_id == "7") {
+            $_SESSION['phone'] = $_POST['phoneCode'] . $_POST['phoneNumber'];
+            echo $content;
+        } else if ($p_id == "8") {
             // $_SESSION['photo'] = serialize($_FILES['photo']['name']);
-		echo $content;
-	} else if ($p_id == "nin1") {
+            echo $content;
+        } else if ($p_id == "nin1") {
+             $_SESSION['sponsortype'] = $_POST['sponsortype'];
 
-		$_SESSION['email'] = $_POST['emailAddress'];
-		echo $content;
-	} else if ($p_id == "nin2") {
-		$_SESSION['password1'] = $_POST['password1'];
-		echo $content;
-	} else if ($p_id == "nin3") {
-		echo $content;
-	}
-	?>
+            echo $content;
+        } else if ($p_id == "nin2") {
+            $_SESSION['email'] = $_POST['emailAddress'];
+
+            echo $content;
+        } else if ($p_id == "nin3") {
+            $_SESSION['password1'] = $_POST['password1'];
+            echo $content;
+        }
+        ?>
 
 
-</body>
+    </body>
 </html>

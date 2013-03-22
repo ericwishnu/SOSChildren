@@ -62,8 +62,8 @@ class UserDAO {
             return false;
         }
 
-        $query = "INSERT INTO Sponsor (SponsorID, Password, Email, Coins, Photo) 
-        VALUES ('$sponsorID', md5('$password'), '$email', 100, '$urlphoto')";
+        $query = "INSERT INTO Sponsor (SponsorID, Password, Email,Name, Coins, Photo) 
+        VALUES ('$sponsorID', md5('$password'), '$email', 'Ninja' , 100, '$urlphoto')";
         $result = $this->conf->db_query($query);
 
         if (!$result) {
