@@ -306,6 +306,21 @@ function getusercoin_db($sponsorID){
     return null;
 }
 
+function addcoin_db($sponsorID,$quantity){
+    $this->conf = new Config();
+    $this->conf->db_connect();
+
+    $query = "UPDATE Sponsor SET Coins = Coins + $quantity WHERE SponsorID = '$sponsorID'";
+        $result = $this->conf->db_query($query);
+
+        if (!$result) {
+            return false;
+        }
+        $this->conf->db_close();
+        return true;
+        
+}
+
 }
 
 ?>

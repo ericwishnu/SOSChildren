@@ -109,6 +109,13 @@ class FoundationDAO {
         if (!$result) {
             //throw new Exception('Could not register it in database - please try again later.\n');
         }
+        
+        $query5 = "UPDATE Sponsor SET Coins = Coins - $quantity WHERE SponsorID = '$sponsorID'";
+        $result5 = $this->conf->db_query($query5);
+
+        if (!$result5) {
+            //throw new Exception('Could not register it in database - please try again later.\n');
+        }
 
         return true;
     }

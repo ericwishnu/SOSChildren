@@ -51,6 +51,8 @@ class UserCtrl {
             $this->post();
         } elseif ($page == "coinpage") {
             $this->coinpage();
+        } elseif ($page == "addcoin") {
+            $this->addcoin();
         } elseif ($page == "deletepost") {
             $this->deletePost();
         }
@@ -293,10 +295,25 @@ class UserCtrl {
         header("location: CoinMenu.php");
     }
 
+<<<<<<< HEAD
     private function changePicture() {
         $sponsorID = $_POST['id'];
         $photo = $_FILES['photo']['name'];
         $prevphoto = $_POST['prevphoto'];
+=======
+private function addcoin() {
+    $username = $_SESSION['usernameU'];
+    $quantity = $_POST['quantityadd'];
+    $this->user_db_class->addcoin_db($username,$quantity);
+    $_SESSION['mycoinamount'] = $this->user_db_class->getusercoin_db($username);
+    header("location: CoinMenu.php");
+}
+
+private function changePicture() {
+    $sponsorID = $_POST['id'];
+    $photo = $_FILES['photo']['name'];
+    $prevphoto = $_POST['prevphoto'];
+>>>>>>> Hahhahahahhahahahahaha jam 3
 
         if ($photo == "") {
             $urlphoto = $prevphoto;
