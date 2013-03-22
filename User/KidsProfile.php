@@ -215,11 +215,6 @@ for ($i = 0; $i < count($foundationname); $i++) {
                 </div>
             </div>
 
-
-
-
-
-
             <?php include 'Footer.php' ?>
             <?php include 'Script.php' ?>
     </body>
