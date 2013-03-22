@@ -181,7 +181,7 @@ class KidsCtrl {
         else
         {
             $_SESSION['fosterKids']="Not Enough Coins";
-            $_SESSION['mycoinamount']=$this->kids_db_class->getusercoin_db($username);
+            $_SESSION['mycoin']=$this->kids_db_class->getusercoin_db($username);
             
             if(isset($_SESSION['usernameU'])&& $_SESSION['usernameU']!="") 
             {

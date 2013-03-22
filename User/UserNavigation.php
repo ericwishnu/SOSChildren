@@ -1,7 +1,7 @@
 <?
 $_SESSION['fosterKids']="";
 $_SESSION['receivedamount']="";
-$_SESSION['mycoinamount']="";
+$_SESSION['mycoin']="";
 
 ?>
 
