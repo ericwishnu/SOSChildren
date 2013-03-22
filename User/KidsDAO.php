@@ -215,6 +215,21 @@ class KidsDAO {
             return $resultArray;
         }
     }
+    
+    function getusercoin_db($sponsorID){
+        $this->conf = new Config();
+        $this->conf->db_connect();
+
+        $query = "SELECT Coins FROM Sponsor WHERE SponsorID = '$sponsorID'";
+        $result = $this->conf->db_query($query);
+        if (mysql_num_rows($result) > 0) {
+            $temp = mysql_fetch_array($result);
+            return $temp[0];
+        }
+        
+            $this->conf->db_close();
+            return null;
+    }
 }
 
 ?>

@@ -107,7 +107,7 @@ $relationship = $_SESSION['relationship'];
                                         <tr>
                                             <td>Name</td>
                                             <td> : &nbsp; </td>
-                                            <td><? echo $name; ?></td>
+                                            <td><? echo $peoplename; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Address</td>

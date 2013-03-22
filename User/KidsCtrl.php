@@ -127,19 +127,50 @@ class KidsCtrl {
         
         $this->kids_db_class = new KidsDAO();
 
-        $dbCondition = $this->kids_db_class->fosterKid_db ($username, $foundationID, $kidsID, $quantity);
-
-        if($dbCondition == true)
+        if($this->user_db_class->getusercoin_db($username) > $quantity)
         {
-            $username=$_SESSION['usernameU'];
-            $_SESSION['mykidslistdataobj'] = serialize($this->kids_db_class->listMyKids_db ($username));
-            header("location: ListMyKids.php");
+            $dbCondition = $this->kids_db_class->fosterKid_db ($username, $foundationID, $kidsID, $quantity);
+
+            if($dbCondition == true)
+            {
+                $username=$_SESSION['usernameU'];
+                $_SESSION['mykidslistdataobj'] = serialize($this->kids_db_class->listMyKids_db ($username));
+                header("location: ListMyKids.php");
+            }
+            else
+            {
+                $_SESSION['fosterKids']="failed";
+                header("location: ListMyKids.php");
+            }
         }
         else
         {
-            $_SESSION['fosterKids']="failed";
-            header("location: KidsList.php");
+            $_SESSION['fosterKids']="Not Enough Coins";
+            
+            $kidsSelected=$_POST['kidsSelectedID'];
+            if(isset($_SESSION['usernameU'])&& $_SESSION['usernameU']!="") 
+            {
+                $sponsorID = $_SESSION['usernameU'];
+                $dbCondition = $this->kids_db_class->checkFoster_db ($sponsorID, $kidsSelected);
+
+                if($dbCondition == true)
+                {
+                    $_SESSION['checkFoster'] = "true";
+                }
+                else
+                {
+                    $_SESSION['checkFoster']= "false";
+                }
+            }
+
+            $_SESSION['foundationname'] = serialize($this->kids_db_class->foundationgetname_db ($kidsSelected));        
+
+            $_SESSION['kidsdataobj'] = serialize($this->kids_db_class->kidsprofile_db ($kidsSelected));        
+
+            header("location: KidsProfile.php");
         }
+        
+        
         
     }
     

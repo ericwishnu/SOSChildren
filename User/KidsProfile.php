@@ -172,7 +172,9 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                     </tr>
                                 </table>               
 
-
+                                <? if(isset($_SESSION['fosterKids']) && $_SESSION['fosterKids']=="Not Enough Coins"){ ?>
+                                     You Have Not Enough Coins to Donate
+                                <? } ?>
 
                                 <form action='KidsCtrl.php' method="post">
                                     <input type="hidden" name="action" value="prepareFosterKids">
