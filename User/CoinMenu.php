@@ -19,11 +19,7 @@ include 'User.php';
 
         <?php include 'UserHeader.php' ?>
 
-        <div class="row">
-            <div class="span3 Logo">
-                <!-- Logo Div  -->
-            </div>
-        </div>
+        <?php include 'Logo.php' ?>
 
         <div class="row">
 
@@ -124,9 +120,6 @@ include 'User.php';
 
             <?php include 'Footer.php' ?>
             <?php include 'Script.php' ?>
-
-
-
 
     </body>
 

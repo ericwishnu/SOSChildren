@@ -15,11 +15,7 @@ $userdata = unserialize($_SESSION['userdata']);
     <body class="Background">
         <?php include 'UserHeader.php' ?>
 
-        <div class="row">
-            <div class="span3 Logo">
-                <!-- Logo Div  -->
-            </div>
-        </div>
+        <?php include 'Logo.php' ?>
 
         <div class="row">
 
@@ -62,10 +58,11 @@ $userdata = unserialize($_SESSION['userdata']);
 
                         </div>
                     </div>
-                    <?php include 'UserModal.php' ?>
+                    
 
 
                 </div>
+                <?php include 'UserModal.php' ?>
             </div>
             <?php include 'Footer.php' ?>
             <?php include 'Script.php' ?>
