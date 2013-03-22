@@ -65,75 +65,9 @@ $userdata = unserialize($_SESSION['userdata']);
                 
                
             </div>
-<<<<<<< HEAD
             
             <?php include 'Footer.php' ?>
             <?php include 'Script.php' ?>
-=======
-        </div>
-
-        <!-- Modal for Widget button -->
-
-        <!-- Pick Me Modal Division -->
-
-        <div id="pickMeModal" class="modal hide fade in" style="display: none; ">  
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h3>This is a Pick Me Modal Example</h3>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>You can add some text here.</p>                
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-        </div>  
-
-        <!-- Recommended Modal Division -->
-
-        <div id="Recomended" class="modal hide fade in" style="display: none; ">  
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h3>Recommended</h3>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>You can add some text here.</p>                
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-        </div>  
-
-        <!-- Emergency Button -->
-
-        <div id="Emergency" class="modal hide fade in" style="display: none;">
-
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h2>Emergency</h2>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>Add some Text Here</p>
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-
-        </div>  
-
-        <!-- SCRIPT !!!  -->
-
-        <script src="../js/jquery.js"></script>  
-        <script src="../js/js-script.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
->>>>>>> mainpage and userpage commit
-
 
     </body>
 </html>
