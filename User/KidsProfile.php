@@ -146,8 +146,11 @@ for ($i = 0; $i < count($foundationname); $i++) {
 
                                         <? if (isset($_SESSION['fosterKids']) && $_SESSION['fosterKids'] == "Not Enough Coins") { ?>
                                         <br>You Have Not Enough Coins to Donate<br>Your Current Coins is : <? echo $_SESSION['mycoinamount']?><br>
+                                        <? } else if (isset($_SESSION['fosterKids']) && $_SESSION['fosterKids'] == "Over Limit") {?>
+                                        <br>Your donation is over limit, only <? echo $_SESSION['receivedamount'] ?> that are successfully donated.<br>
+                                        You can use remaining coins to donate to other children. Thankyou :)<br>
                                         <? } ?>
-
+                                        
                                         <form action='KidsCtrl.php' method="post">
                                             <input type="hidden" name="action" value="prepareFosterKids">
 

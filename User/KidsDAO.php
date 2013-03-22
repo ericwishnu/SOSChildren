@@ -230,6 +230,21 @@ class KidsDAO {
             $this->conf->db_close();
             return null;
     }
+    
+    function getkidsneededcoin_db($kidsID){
+        $this->conf = new Config();
+        $this->conf->db_connect();
+
+        $query = "SELECT NeededCoin FROM Kids WHERE KidsID = $kidsID";
+        $result = $this->conf->db_query($query);
+        if (mysql_num_rows($result) > 0) {
+            $temp = mysql_fetch_array($result);
+            return $temp[0];
+        }
+        
+            $this->conf->db_close();
+            return null;
+    }
 }
 
 ?>
