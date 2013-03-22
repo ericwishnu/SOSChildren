@@ -47,6 +47,8 @@ class UserCtrl {
             $this->post();
         } elseif ($page == "coinpage") {
             $this->coinpage();
+        } elseif ($page == "showmycoin") {
+            $this->showmycoin();
         } elseif ($page == "deletepost") {
             $this->deletePost();
         }
@@ -254,9 +256,14 @@ private function prepareChangePicture() {
 }
 
 private function coinpage() {
-        $_SESSION['coinstatus']= "page1";
-        header("location: CoinMenu.php");
-    }
+    $_SESSION['coinstatus']= "page1";
+    header("location: CoinMenu.php");
+}
+
+private function showmycoin() {
+    $_SESSION['coinstatus']= "page2";
+    header("location: CoinMenu.php");
+}
 
 private function changePicture() {
     $sponsorID = $_POST['id'];
