@@ -25,7 +25,7 @@ $description=$foundationdata->getDescription();
     <title>Foundation Profile</title>
 </head>
 <body class="Background">
-   <div class="Header" >
+ <div class="Header" >
     <!-- Header class -->
     <div class="row">
         <div class="span12 margin-leftHeader margin-topHeader">
@@ -354,11 +354,13 @@ $description=$foundationdata->getDescription();
 
 
 
+
         <div class="Footer margin-top">
             <!-- footer div -->
-
+            <div id="footer" style="float:right; margin:5px">
+                Copyright © Crying Onion 2013
+            </div>
         </div>
-
 
 
 
@@ -369,9 +371,6 @@ $description=$foundationdata->getDescription();
         <script src="../js/js-script.js"></script>
         <script src="../js/bootstrap.min.js"></script>
 
-
-
-        <hr>
 
 
 
