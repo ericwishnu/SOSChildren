@@ -98,40 +98,49 @@ $relationship = $_SESSION['relationship'];
 
                                 <div class="row-fluid">
                                     <div class="userProfileMiddle">
-
+                                        <table>
                                         <tr>
                                             <td>Email</td>
+                                            <td> : &nbsp; </td>
                                             <td><? echo $email; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Name</td>
+                                            <td> : &nbsp; </td>
                                             <td><? echo $name; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Address</td>
+                                            <td> : &nbsp; </td>
                                             <td><? echo $address; ?></td>
                                         <tr>
                                             <td>City</td>
+                                            <td> : &nbsp; </td>
                                             <td><? echo $city; ?></td>
                                         </tr>
                                         <tr>
                                             <td>State</td>
+                                            <td> : &nbsp; </td>
                                             <td><? echo $state; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Country</td>
+                                            <td> : &nbsp; </td>
                                             <td><? echo $country; ?></td>
                                         </tr>
                                         <tr>
                                             <td> Postal Code</td>
+                                            <td> : &nbsp; </td>
                                             <td><? echo $postalCode; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Phone</td>
+                                            <td> : &nbsp; </td>
                                             <td><? echo $phone; ?></td>
                                         </tr>
                                         <tr>
-                                            <td>Relationship</td>
+                                            <td valign="top">Relationship</td>
+                                            <td valign="top"> : &nbsp; </td>
                                             <td><? if ($relationship == null) { ?>
                                                     <form name="addneighbour" action="PeopleCtrl.php" method="post">
                                                         <input type="hidden" name="action" value="addneighbour">
@@ -321,28 +330,6 @@ $relationship = $_SESSION['relationship'];
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <hr>
 
 
 

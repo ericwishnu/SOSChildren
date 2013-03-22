@@ -150,14 +150,14 @@ include 'User.php';
                                                             <div class="span2">
                                                              <form action="PeopleCtrl.php" method="post">
                                                                  <input type="hidden" name="action" value="approveneighbour">
-                                                                 <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
+                                                                 <input type="hidden" name="peopleID" value="<? echo $peopleID ?>">
                                                                  <input type="submit" class="btnApprove span12" value="">
                                                              </form>
                                                          </div>
                                                          <div class="span2">
                                                              <form action="PeopleCtrl.php" method="post">
                                                                  <input type="hidden" name="action" value="removeneighbour">
-                                                                 <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
+                                                                 <input type="hidden" name="peopleID" value="<? echo $peopleID ?>">
                                                                  <input type="submit" class="btnDecline span12" value="">
                                                              </form>
                                                          </div>
