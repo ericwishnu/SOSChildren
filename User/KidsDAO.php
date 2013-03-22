@@ -80,7 +80,7 @@ class KidsDAO {
         return $resultArray;
     }
 
-    function listmykids_db($sponsorID) {
+    function listmykids_db($sponsorID) { //test ganti
         $resultArray;
         $this->conf = new Config();
         $this->conf->db_connect();
