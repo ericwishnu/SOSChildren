@@ -37,7 +37,7 @@ class UserDAO {
         }
 
         $query = "INSERT INTO Sponsor (SponsorID, Password, Email, Name, Address, City, State, Country, PostalCode, Phone, Coins, Photo) 
-            VALUES ('$sponsorID', md5('$password'), '$email', '$name', '$address', '$city', '$state', '$country', '$postalcode', '$phone', 0, '$urlphoto')";
+            VALUES ('$sponsorID', md5('$password'), '$email', '$name', '$address', '$city', '$state', '$country', '$postalcode', '$phone', 100, '$urlphoto')";
         $result = $this->conf->db_query($query);
 
         if (!$result) {
