@@ -5,7 +5,7 @@ $userdata = unserialize($_SESSION['userdata']);
 
 $kidsData = unserialize($_SESSION['kidsdataobj']);
 $kidsID = $kidsData->getKidsID();
-$name = $kidsData->getName();
+$kidsName = $kidsData->getName();
 $photo = $kidsData->getPhoto();
 $DOB = $kidsData->getDOB();
 $background = $kidsData->getBackground();
@@ -85,7 +85,7 @@ for ($i = 0; $i < count($foundationname); $i++) {
                         <div class="row-fluid">
 
                             <div class="span11 offset1">
-                                <h1><? echo $name ?></h1>
+                                <h1><? echo $kidsName ?></h1>
 
                                 <form name="foundation" action="FoundationCtrl.php" method="post">
                                     <input type="hidden" name="action" value="foundationprofile"/>
