@@ -81,15 +81,23 @@ include 'User.php';
                                                     </div>
                                                 </div>
 
+<<<<<<< HEAD
                                                 <div class="row span12 input-prepend">
-                                                    <form class="margin-top">
-                                                        <input type="text" class="input-small" value="">
+                                                    <form action="UserCtrl.php" method="post">
+                                                        <input type="hidden" name="action" value="addcoin"/>
+                                                        <input type="text" name="quantityadd" class="input-small">
+=======
+                                           <div class="row span12 input-prepend">
+                                                    <form action="UserCtrl.php" method="post">
+                                                        <input type="hidden" name="action" value="addcoin"/>
+                                                        <input type="text" name="quantityadd" class="input-small"/>
+>>>>>>> Fix all from falin
                                                         <span class="add-on">Coins</span>
-                                                    </form>
+                                                
 
                                                 </div>
                                                 <div class="row">
-                                                    <form>
+                                                   
                                                         <input type="submit" class="buyCoin span10" value="">
                                                     </form>
                                                 </div>

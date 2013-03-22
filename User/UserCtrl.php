@@ -51,8 +51,12 @@ class UserCtrl {
             $this->post();
         } elseif ($page == "coinpage") {
             $this->coinpage();
+        } elseif ($page == "addcoin") {
+            $this->addcoin();
         } elseif ($page == "deletepost") {
             $this->deletePost();
+        } elseif ($page == "addcoin") {
+            $this->addcoin();
         }
     }
 
@@ -289,6 +293,14 @@ class UserCtrl {
 
     private function coinpage() {
         $username = $_SESSION['usernameU'];
+        $_SESSION['mycoinamount'] = $this->user_db_class->getusercoin_db($username);
+        header("location: CoinMenu.php");
+    }
+
+    private function addcoin() {
+        $username = $_SESSION['usernameU'];
+        $quantity = $_POST['quantityadd'];
+        $this->user_db_class->addcoin_db($username, $quantity);
         $_SESSION['mycoinamount'] = $this->user_db_class->getusercoin_db($username);
         header("location: CoinMenu.php");
     }
