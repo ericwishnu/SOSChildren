@@ -57,13 +57,16 @@ $userdata = unserialize($_SESSION['userdata']);
                             </div>
 
                         </div>
+                        
                     </div>
-                    
+                     <?php include 'UserModal.php' ?>
 
 
                 </div>
-                <?php include 'UserModal.php' ?>
+                
+               
             </div>
+            
             <?php include 'Footer.php' ?>
             <?php include 'Script.php' ?>
 
