@@ -147,6 +147,7 @@ class KidsCtrl {
         else
         {
             $_SESSION['fosterKids']="Not Enough Coins";
+            $_SESSION['mycoinamount']=$this->kids_db_class->getusercoin_db($username);
             
             $kidsSelected=$_POST['kidsSelectedID'];
             if(isset($_SESSION['usernameU'])&& $_SESSION['usernameU']!="") 
@@ -163,7 +164,7 @@ class KidsCtrl {
                     $_SESSION['checkFoster']= "false";
                 }
             }
-
+            
             $_SESSION['foundationname'] = serialize($this->kids_db_class->foundationgetname_db ($kidsID));        
 
             $_SESSION['kidsdataobj'] = serialize($this->kids_db_class->kidsprofile_db ($kidsID));        
