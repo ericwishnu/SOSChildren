@@ -35,7 +35,7 @@ class KidsDAO {
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) == 0) {
-            return false;
+            return $resultArray;
         }
 
         while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
@@ -62,7 +62,7 @@ class KidsDAO {
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) == 0) {
-            return false;
+            return $resultArray;
         }
 
         while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
@@ -94,7 +94,7 @@ class KidsDAO {
                 $result = $this->conf->db_query($query);
 
                 if (mysql_num_rows($result) == 0) {
-                    return false;
+                    return $resultArray;
                 }
 
                 while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
@@ -169,6 +169,8 @@ class KidsDAO {
             VALUES ('$sponsorID', '$foundationID', $kidsID, '$currentdatetime', $quantity)";
         $result = $this->conf->db_query($query);
 
+        
+        
         if (!$result) {
             //throw new Exception('Could not register it in database - please try again later.\n');
         }
