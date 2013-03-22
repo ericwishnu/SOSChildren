@@ -76,12 +76,12 @@ include 'User.php';
                                             ?>
 
 
-
+<!--
 
                                             <table style="border:1px solid">
                                                 <tr bgcolor="#c0c0c0">
                                                     <td height="30px" style="min-width: 90px" valign="middle" align="center">Username</td>
-                                                    <!--<td height="30px" style="min-width: 90px" valign="middle" align="center">Password</td>-->
+                                                    <td height="30px" style="min-width: 90px" valign="middle" align="center">Password</td>
                                                     <td height="30px" style="min-width: 90px" valign="middle" align="center">Photo</td>
                                                     <td height="30px" style="min-width: 90px" valign="middle" align="center">e-mail</td>
                                                     <td height="30px" style="min-width: 90px" valign="middle" align="center">Name</td>
@@ -94,7 +94,7 @@ include 'User.php';
                                                     <td height="30px" style="min-width: 90px" valign="middle" align="center">Coins</td>
                                                     <td height="30px" style="min-width: 90px" valign="middle" align="center" colspan="2"></td>
 
-                                                </tr>
+                                                </tr>-->
 
                                                 <?
                                                 for ($i = 0; $i < count($peopleList); $i++) {
@@ -116,39 +116,91 @@ include 'User.php';
                                                     $coins = $temp->getCoins();
                                                     ?>
 
+                                                
+                                                
+                                                        <div style="float:left" >
+                                                            <div>
+                                                                <img  style="width:150px;margin:15px; height:150px; float:left" src="<? echo "../Database/Images/Sponsor/" . $photo; ?>" />
+                                                                <form name="sponsorprofile<?php echo md5($i) ?>" action="PeopleCtrl.php" method="post">
+                                                                    <input type="hidden" name="action" value="seepeopleprofile">
+                                                                    <input type="hidden" name="peopleSelectedID" value="<? echo $peopleID ?>">
+
+                                                                </form>
+                                                            </div>
+
+                                                            <div  >
+                                                                <p style="padding:25px; text-align:left; position: relative; vertical-align: middle; width:400px" >
+                                                                    <a href="javascript: sponsorprofile<?php echo md5($i) ?>()"><font size="5"><?php echo $name; ?></font></br></a>
+                                                                    <script>
+                                                                        function sponsorprofile<?php echo md5($i) ?>() {
+                                                                            document.sponsorprofile<?php echo md5($i) ?>.submit();
+                                                                        }
+                                                                    </script>
+                                                                    <?php echo $email; ?></br>
+                                                                    <?php if ($city != "") echo $city . "</br>"; ?>
+                                                                    <?php if ($state != "") echo $state . "</br>"; ?>
+                                                                    <?php if ($country != "") echo $country . "</br>"; ?>
+                                                                    <?php if ($phone != "") echo $phone . "</br>"; ?>
+
+                                                                </p>
+                                                            </div>
+                                                            <div style="float:right">
+                                                                        
+                                                                  
+                                                               
+                                                              
+                                                                   <form action="PeopleCtrl.php" method="post">
+                                                                       <input type="hidden" name="action" value="approveneighbour">
+                                                                       <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
+                                                                       <input type="submit" value="Approve">
+                                                                   </form>
+                                                                   <form action="PeopleCtrl.php" method="post">
+                                                                       <input type="hidden" name="action" value="removeneighbour">
+                                                                       <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
+                                                                       <input type="submit" value="Decline">
+                                                                   </form>
+                                                              
+                                                            </div>
+                                                        </div>
+                                                        <div style="clear:both">
+
+                                                        </div>
+                                                
+                                                
+<!--                                                
                                                     <tr>
-                                                        <td><? echo $peopleID; ?></td>                    
-                                                        <!--<td><!--?echo $password;?></td>--> 
-                                                        <td align="center"><img src="<? echo "../Database/Images/Sponsor/" . $photo; ?>" width="30"height="30"/></td> 
-                                                        <td><? echo $email; ?></td> 
-                                                        <td><? echo $name; ?></td> 
-                                                        <td><? echo $address; ?></td> 
-                                                        <td><? echo $city; ?></td> 
-                                                        <td><? echo $state; ?></td> 
-                                                        <td align="center"><? echo $country; ?></td> 
-                                                        <td align="center"><? echo $postalCode; ?></td> 
-                                                        <td align="right"><? echo $phone; ?></td> 
-                                                        <td align="center"><? echo $coins; ?></td>
+                                                        <td><?// echo $peopleID; ?></td>                    
+                                                        <td><!--?echo $password;?></td> 
+                                                        <td align="center"><img src="<?// echo "../Database/Images/Sponsor/" . $photo; ?>" width="30"height="30"/></td> 
+                                                        <td><? //echo $email; ?></td> 
+                                                        <td><?// echo $name; ?></td> 
+                                                        <td><?// echo $address; ?></td> 
+                                                        <td><?// echo $city; ?></td> 
+                                                        <td><?// echo $state; ?></td> 
+                                                        <td align="center"><?// echo $country; ?></td> 
+                                                        <td align="center"><?// echo $postalCode; ?></td> 
+                                                        <td align="right"><?// echo $phone; ?></td> 
+                                                        <td align="center"><?// echo $coins; ?></td>
                                                         <td align="center">
                                                             <form action="PeopleCtrl.php" method="post">
                                                                 <input type="hidden" name="action" value="seepeopleprofile">
-                                                                <input type="hidden" name="peopleSelectedID" value="<? echo $peopleID ?>">
+                                                                <input type="hidden" name="peopleSelectedID" value="<?// echo $peopleID ?>">
                                                                 <input type="submit" value="View Profile">
                                                             </form>
                                                         </td>
                                                         <td align="center">
                                                             <form action="PeopleCtrl.php" method="post">
                                                                 <input type="hidden" name="action" value="approveneighbour">
-                                                                <input type="hidden" name="peopleID" value="<? echo $peopleID ?>">
+                                                                <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
                                                                 <input type="submit" value="Approve">
                                                             </form>
                                                             <form action="PeopleCtrl.php" method="post">
                                                                 <input type="hidden" name="action" value="removeneighbour">
-                                                                <input type="hidden" name="peopleID" value="<? echo $peopleID ?>">
+                                                                <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
                                                                 <input type="submit" value="Decline">
                                                             </form>
                                                         </td>
-                                                    </tr>
+                                                    </tr>-->
 
                                                     <?
                                                 }
