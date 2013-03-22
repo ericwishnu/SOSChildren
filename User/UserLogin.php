@@ -80,10 +80,10 @@ if (isset($_SESSION['message'])) {
                 </form>
 
                 <form class="formPadding" action="UserSignUp.php?p_id=1" method="post">
-                    <input class="signUp" type="submit" name="Sign Up" id="signUp"  value=""/>
+                    <input class="signUp formButton" type="submit" name="Sign Up" id="signUp"  value=""/>
                 </form>
                 <form class="formPadding" action="#">
-                    <input class="forgetPass" type="submit" name="forgetPass" id="forgetPass" value=""/>
+                    <input class="forgetPass formButton" type="submit" name="forgetPass" id="forgetPass" value=""/>
                 </form>
 
             </div> <!-- span6 mainBox -->
