@@ -1,10 +1,10 @@
 <?php
 class Config {
     
-    private $db_host = 'localhost:';
+    private $db_host = 'ap-cdbr-azure-east-a.cloudapp.net:';
     private $db_port_num = '3306';
-    private $db_user = 'root';
-    private $db_password = '';
+    private $db_user = 'b03143da9b975b';
+    private $db_password = 'd300461f';
     private $db_name = 'sos';
     private $db_connection;
 
