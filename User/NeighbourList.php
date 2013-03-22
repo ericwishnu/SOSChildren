@@ -17,20 +17,18 @@ $userdata = unserialize($_SESSION['userdata']);
                 float:left;
                 position:inherit;
             }
-            .kidsphoto{
+            .neighbourphoto{
                 width:210px;
                 height:210px;
                 clear:both;
                 text-align: center;
             }
-            .kidsname{
+            .neighbourname{
                 text-align: center;
                 max-width: 210px;
             }
-            .kidsaspiration{
-                text-align: center;
-                max-width: 210px;
-            }
+
+            
         </style>
     </head>
     <body class="Background">

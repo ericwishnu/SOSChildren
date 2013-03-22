@@ -25,7 +25,7 @@ $description=$foundationdata->getDescription();
     <title>Foundation Profile</title>
 </head>
 <body class="Background">
-   <div class="Header" >
+ <div class="Header" >
     <!-- Header class -->
     <div class="row">
         <div class="span12 margin-leftHeader margin-topHeader">
@@ -75,7 +75,7 @@ $description=$foundationdata->getDescription();
                                 <h2><?php echo $names; ?></h2>
                                 <?php echo $city?> - 
                                 <?php echo $country?>
-                            </div>	
+                            </div>  
                         </div>
                     </div>
 
@@ -273,11 +273,13 @@ $description=$foundationdata->getDescription();
                                             <input type="submit" class="browseKids span12" value=""/>
                                         </form>
                                     </div>
-                                    <div class="span2">
+                                    <div class="offset1 span8 input-prepend">
                                         <form action="KidsCtrl.php" method="POST">
+                                            <input type="text" class="input-small marginDonate" id="coinDonate"/>
+                                            <span class="add-on">Coins</span>
                                             <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
                                             <input type="hidden" name="action" value="listkidsbyfoundation"/>
-                                            <input type="submit" class="span12" value=""/>
+                                            <input type="submit" class="span4 donateButton" value=""/>
                                         </form>
                                     </div>
                                 </div>
