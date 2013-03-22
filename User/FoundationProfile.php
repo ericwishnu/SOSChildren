@@ -106,7 +106,7 @@ $description=$foundationdata->getDescription();
                                             <div id="collapseOne" class="accordion-body collapse in">
                                                 <div class="accordion-inner">
                                                     <br>
-                                                    <p class="textJustify">
+                                                    <p>
                                                         Yayasan Lima Roti Dua Ikan Indonesia dimulai dari sebuah persekutuan doa yang berdiri pada sekitar bulan Oktober 2003, yang menamakan diri persekutuan doa Lima Roti Dua Ikan. Pendiri mendapat pewahyuan “ajaib” melalui firman Tuhan dalam Kisah Rasul pasal 6 pada tahun 1998. Dalam Kisah Rasul pasal 6 ada beberapa orang yang dipilih untuk melayani meja (handle finance, TEV) bagi para janda, dan oleh karenanya firman Allah semakin tersebar, jumlah murid bertambah dan sejumlah besar imam (hamba Tuhan) menyerahkan diri dan menjadi percaya. Walaupun arti dari firman itu pada saat itu belum sepenuhnya dimengerti, tetapi nantinya akan menjadi dasar acuan bagi pewahyuan-pewahyuan berikutnya yang diterima oleh pendiri sehingga yayasan pada akhirnya bisa terbentuk.
                                                         Pada bulan Februari 2004 pendiri kembali mendapat pewahyuan susulan melalui firman Tuhan (dalam suatu pergumulan doa di Taman Getsemani, Semarang). Tuhan memberikan ayat di 2 Raja-raja 4:42-44, dan melalui ayat ini pendiri diberikan konfirmasi untuk melayani Tuhan sepenuh waktu. Perintah Tuhan pada waktu itu adalah untuk memberi makan para abdi Allah, supaya mereka bisa melayani bangsa ini dengan maksimal. Tuhan meneguhkan perintah itu dengan memberikan kepada pendiri sebuah “tanda” konfirmasi yang masih disimpan pendiri sampai saat ini.
                                                     </p>
@@ -121,7 +121,7 @@ $description=$foundationdata->getDescription();
                                             </div>
                                             <div id="collapseTwo" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                    <p class="textJustify">
+                                                    <p>
                                                         VISI
                                                         <br>
                                                         Menjadi model lembaga pelayanan holistik pengentasan kemiskinan yang menghadirkan kerajaan Allah
@@ -146,7 +146,7 @@ $description=$foundationdata->getDescription();
                                             </div>
                                             <div id="collapseThree" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                    <p class="textJustify">
+                                                    <p>
                                                         <b>What does the foundation do?</b>
                                                         <br>
                                                         The Five Loaves and Two Fishes foundation is a non profit charitable organization that provide holistic charitable works for the poor and the needy. The people we serve is adult and children of all ages. Also we take care of the elderly and minister to the prisoners at prisons and other detention places.
@@ -182,12 +182,26 @@ $description=$foundationdata->getDescription();
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                                                    <h4>Sejarah & Latar Belakang</h4>
+                                                </a>
+                                            </div>
+                                            <div id="collapseFour" class="accordion-body collapse">
+                                                <div class="accordion-inner">
+                                                    <br>
+                                                    <p>
+                                                        Yayasan Lima Roti Dua Ikan Indonesia dimulai dari sebuah persekutuan doa yang berdiri pada sekitar bulan Oktober 2003, yang menamakan diri persekutuan doa Lima Roti Dua Ikan. Pendiri mendapat pewahyuan “ajaib” melalui firman Tuhan dalam Kisah Rasul pasal 6 pada tahun 1998. Dalam Kisah Rasul pasal 6 ada beberapa orang yang dipilih untuk melayani meja (handle finance, TEV) bagi para janda, dan oleh karenanya firman Allah semakin tersebar, jumlah murid bertambah dan sejumlah besar imam (hamba Tuhan) menyerahkan diri dan menjadi percaya. Walaupun arti dari firman itu pada saat itu belum sepenuhnya dimengerti, tetapi nantinya akan menjadi dasar acuan bagi pewahyuan-pewahyuan berikutnya yang diterima oleh pendiri sehingga yayasan pada akhirnya bisa terbentuk.
+                                                        Pada bulan Februari 2004 pendiri kembali mendapat pewahyuan susulan melalui firman Tuhan (dalam suatu pergumulan doa di Taman Getsemani, Semarang). Tuhan memberikan ayat di 2 Raja-raja 4:42-44, dan melalui ayat ini pendiri diberikan konfirmasi untuk melayani Tuhan sepenuh waktu. Perintah Tuhan pada waktu itu adalah untuk memberi makan para abdi Allah, supaya mereka bisa melayani bangsa ini dengan maksimal. Tuhan meneguhkan perintah itu dengan memberikan kepada pendiri sebuah “tanda” konfirmasi yang masih disimpan pendiri sampai saat ini.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="row-fluid margin-top">
-                                    <h4>Image Slide Show</h4>
-                                    <br>
                                     <div id="myCarousel" class="carousel slide">
                                         <ol class="carousel-indicators">
                                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -196,61 +210,14 @@ $description=$foundationdata->getDescription();
                                         </ol>
                                         <!-- Carousel items -->
                                         <div class="carousel-inner">
-                                            <div class="active item">
-                                                <img class="pictureSlide" src="../img/Foundation/limaRoti/1.jpg">
-                                                <div class="carousel-caption">
-                                                    <h4>Activity</h4>
-                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <img class="pictureSlide" src="../img/Foundation/limaRoti/2.jpg">
-                                                <div class="carousel-caption">
-                                                    <h4>Second Thumbnail label</h4>
-                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <img class="pictureSlide" src="../img/Foundation/limaRoti/3.jpg">
-                                                <div class="carousel-caption">
-                                                    <h4>Second Thumbnail label</h4>
-                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <img  class="pictureSlide" src="../img/Foundation/limaRoti/4.jpg">
-                                                <div class="carousel-caption">
-                                                    <h4>Second Thumbnail label</h4>
-                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <img  class="pictureSlide" src="../img/Foundation/limaRoti/5.jpg">
-                                                <div class="carousel-caption">
-                                                    <h4>Second Thumbnail label</h4>
-                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <img  class="pictureSlide" src="../img/Foundation/limaRoti/6.jpg">
-                                                <div class="carousel-caption">
-                                                    <h4>Second Thumbnail label</h4>
-                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <img  class="pictureSlide" src="../img/Foundation/limaRoti/7.jpg">
-                                                <div class="carousel-caption">
-                                                    <h4>Second Thumbnail label</h4>
-                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                </div>
-                                            </div>
+                                            <div class="active item"><img class="pictureSlide" src="../img/Foundation/limaRoti/1.jpg"></div>
+                                            <div class="item"><img class="pictureSlide" src="../img/Foundation/limaRoti/2.jpg"></div>
+                                            <div class="item"><img class="pictureSlide" src="../img/Foundation/limaRoti/3.jpg"></div>
+                                            <div class="item"><img  class="pictureSlide" src="../img/Foundation/limaRoti/4.jpg"></div>
                                         </div>
                                         <!-- Carousel nav -->
                                         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                                         <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-                                        <hr>
-
                                     </div>
 
                                 </div>
@@ -274,14 +241,15 @@ $description=$foundationdata->getDescription();
                                         </form>
                                     </div>
                                     <div class="offset1 span8 input-prepend">
-                                        <form action="KidsCtrl.php" method="POST">
-                                            <input type="text" class="input-small marginDonate" id="coinDonate"/>
+                                        <form action="FoundationCtrl.php" method="POST">
+                                            <input type="text" name="quantity" class="input-small marginDonate" id="coinDonate"/>
                                             <span class="add-on">Coins</span>
                                             <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
-                                            <input type="hidden" name="action" value="listkidsbyfoundation"/>
+                                            <input type="hidden" name="action" value="donatefoundation"/>
                                             <input type="submit" class="span4 donateButton" value=""/>
                                         </form>
                                     </div>
+                                    
                                 </div>
 
                                 <hr>
@@ -365,13 +333,11 @@ $description=$foundationdata->getDescription();
 
 
 
-
         <div class="Footer margin-top">
             <!-- footer div -->
-            <div id="footer" style="float:right; margin:5px">
-                Copyright © Crying Onion 2013
-            </div>
+
         </div>
+
 
 
 
@@ -382,6 +348,9 @@ $description=$foundationdata->getDescription();
         <script src="../js/js-script.js"></script>
         <script src="../js/bootstrap.min.js"></script>
 
+
+
+        <hr>
 
 
 

@@ -23,7 +23,9 @@ class FoundationCtrl {
             $this->listfoundation();
         } elseif ($page == "foundationprofile") {
             $this->foundationprofile();
-        } 
+        } elseif ($page == "donatefoundation") {
+            $this->donatefoundation();
+        }
     }
 
     private function searchfoundation() {
@@ -54,6 +56,22 @@ class FoundationCtrl {
         $_SESSION['foundationdataobj'] = serialize($this->foundation_db_class->foundationprofile_db($foundationID));
         header("location: FoundationProfile.php");
     }
+    
+    private function donatefoundation() {
+        
+        $username=$_SESSION['usernameU'];
+        $foundationID=$_POST['foundationid'];
+        $quantity=5;
+        
+        $this->foundation_db_class = new FoundationDAO();
+
+        $dbCondition = $this->foundation_db_class->donatefoundation_db ($username, $foundationID, $quantity);
+
+        if($dbCondition==true)
+        header("location: FoundationProfile.php");
+    }
+    
+    
 
  
 }
