@@ -55,16 +55,6 @@ if (count($postlist) > 0) {
                         <? }
                         ?>
                     </div>
-                    <? if ($_SESSION['usernameU'] == $userID) { //cek user bukan ?>
-                        <form onsubmit="return deletepost();" action="UserCtrl.php" method="post">
-                            <input type="hidden" name="action" value="deletepost"/>
-                            <input type="hidden" name="usertype" value="<? echo $usertype ?>"/>
-                            <input type="hidden" name="userid" value="<? echo $userID ?>"/>
-                            <input type="hidden" name="postid" value="<? echo $userpostID; ?>"/>
-                            <input style="float:right" type="submit" value="x"/>
-                            <!--<a style="float:right" href="javascript: deletepost()">x</a>-->
-                        </form>
-                    <? } ?>
                 </td>
             </tr>
 
