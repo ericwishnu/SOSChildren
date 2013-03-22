@@ -5,13 +5,11 @@ $userdata = unserialize($_SESSION['userdata']);
 <!DOCTYPE HTML>
 
 <html>
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../css/mainMenuCss.css">
         <title>Hello <?php echo $userdata[1] ?></title>
-
     </head>
 
     <body class="Background">
@@ -51,7 +49,6 @@ $userdata = unserialize($_SESSION['userdata']);
                         <?php include('UserNavigation.php'); ?>
 
                     </div>
-
 
                     <div class="span9">
 
@@ -110,20 +107,14 @@ $userdata = unserialize($_SESSION['userdata']);
                 </div>
             </div>
 
-
-
             <div class="Footer margin-top ">
                 <!-- footer div -->
                 <div id="footer" style="float:right; margin:5px">
                     Copyright © Crying Onion 2013
                 </div>
-
             </div>
 
-
-
-            <!-- Modal for Widget button 
-            -->
+            <!-- Modal for Widget button -->
 
             <!-- Pick Me Modal Division -->
 
@@ -142,8 +133,7 @@ $userdata = unserialize($_SESSION['userdata']);
                 </div>  
             </div>  
 
-            <!-- 
-                    Recommended Modal Division -->
+            <!-- Recommended Modal Division -->
 
             <div id="Recomended" class="modal hide fade in" style="display: none; ">  
                 <div class="modal-header modalPink modal-radius">  
@@ -159,7 +149,6 @@ $userdata = unserialize($_SESSION['userdata']);
                     <a href="#" class="btn" data-dismiss="modal">Close</a>  
                 </div>  
             </div>  
-
 
             <!-- Emergency Button -->
 
@@ -188,7 +177,6 @@ $userdata = unserialize($_SESSION['userdata']);
             <script src="../js/bootstrap.min.js"></script>
 
     </body>
-
 </html>
 
 <?
