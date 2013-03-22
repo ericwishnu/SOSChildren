@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include "Kids.php";
 $userdata = unserialize($_SESSION['userdata']);

@@ -521,7 +521,7 @@ Post Bar Css--------------------------------------------------*/
     background-position: top;
     background-color: transparent;
     border: transparent;
-
+border-radius: 15px 15px 0px 0px;
     /*    box-shadow: 1px 5px 6px #c0c0c0;
     border-radius: 15px 15px 0px 0px;*/
 
@@ -574,7 +574,51 @@ Post Bar Css--------------------------------------------------*/
     padding-right: 5%;
 }
 
+
+/*Friends division Division------------------------------------------- */
+
+
+.friendsFeedTop{
+    background-image: url(../img/eric/Friends-box-unknowntop.png);
+    background-size: 100% 100%;
+    height: 118px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: transparent;
+    border: transparent;
+
+    /*    box-shadow: 1px 5px 6px #c0c0c0;*/
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+.friendsFeedMiddle{
+    background-image: url(../img/eric/Friends-box-unknown-middle.png);
+    background-size: 100% 100%;
+    min-height: 400px;
+    background-repeat: repeat;
+    background-color: transparent;
+    border: transparent;
+    padding-left: 5%;
+    padding-right: 5%;
+    /*box-shadow: 1px 5px 6px #c0c0c0;*/
+
+}
+
+.friendsFeedBot{
+    background-image: url(../img/eric/Friends-box-unknownbottom.png);
+    background-size: 100% 100%;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: transparent;
+    border: transparent;
+    /*    box-shadow: 1px 5px 6px #c0c0c0;
+    border-radius: 0px 0px 15px 15px;*/
+}
+
 /*Modal division Division------------------------------------------- */
+
 
 .modal-body{
     height: 300px !important;
