@@ -245,66 +245,80 @@ class UserDAO {
             SponsorID = SOME (SELECT UserID2 FROM Neighbours WHERE UserID1 = '$sponsorID' AND Relationship != 'Pending')) 
 AND Sponsor.SponsorID = UserPost.UserID 
 ORDER BY UserPost.DateTime DESC";
-$result1 = $this->conf->db_query($query1);
+        $result1 = $this->conf->db_query($query1);
 
-if (mysql_num_rows($result1) > 0) {
+        if (mysql_num_rows($result1) > 0) {
 
-    while ($row1 = mysql_fetch_array($result1, MYSQL_NUM)) {
+            while ($row1 = mysql_fetch_array($result1, MYSQL_NUM)) {
 
-        $resultArray[] = new PostData('Sponsor', $row1[1], $row1[6], ' ', $row1[2], $row1[3], $row1[4], $row1[0]);
-    }
-}
+                $resultArray[] = new PostData('Sponsor', $row1[1], $row1[6], ' ', $row1[2], $row1[3], $row1[4], $row1[0]);
+            }
+        }
 
-$query2 = "SELECT FoundationPost.*, Foundation.Name FROM FoundationPost, Foundation WHERE
+        $query2 = "SELECT FoundationPost.*, Foundation.Name FROM FoundationPost, Foundation WHERE
 FoundationPost.FoundationID = SOME (SELECT FoundationID FROM Foundation WHERE
     FoundationID = SOME (SELECT FoundationID FROM Donorship WHERE SponsorID = '$sponsorID')) 
 AND Foundation.FoundationID = FoundationPost.FoundationID 
 ORDER BY FoundationPost.DateTime DESC";
-$result2 = $this->conf->db_query($query2);
+        $result2 = $this->conf->db_query($query2);
 
-if (mysql_num_rows($result2) > 0) {
+        if (mysql_num_rows($result2) > 0) {
 
-    while ($row2 = mysql_fetch_array($result2, MYSQL_NUM)) {
+            while ($row2 = mysql_fetch_array($result2, MYSQL_NUM)) {
 
-        $resultArray[] = new PostData('Foundation', $row2[5], $row2[7], ' ', $row2[2], $row2[4], $row2[3], $row2[0]);
-    }
-}
-
-$this->conf->db_close();
-
-return $resultArray;
-}
-
-function getuserdata_db($sponsorID){
-    $this->conf = new Config();
-    $this->conf->db_connect();
-
-    $query = "SELECT SponsorID, Name, Photo FROM Sponsor WHERE SponsorID = '$sponsorID'";
-    $result = $this->conf->db_query($query);
-    if (mysql_num_rows($result) > 0) {
-        while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-                //post id, userid, photo, post content, date time, status
-            $resultArray[] = array($row[0], $row[1], $row[2]);
+                $resultArray[] = new PostData('Foundation', $row2[5], $row2[7], ' ', $row2[2], $row2[4], $row2[3], $row2[0]);
+            }
         }
+
         $this->conf->db_close();
+
         return $resultArray;
     }
-}
 
-function getusercoin_db($sponsorID){
-    $this->conf = new Config();
-    $this->conf->db_connect();
+    function getuserdata_db($sponsorID) {
+        $this->conf = new Config();
+        $this->conf->db_connect();
 
-    $query = "SELECT Coins FROM Sponsor WHERE SponsorID = '$sponsorID'";
-    $result = $this->conf->db_query($query);
-    if (mysql_num_rows($result) > 0) {
-        $temp = mysql_fetch_array($result);
-        return $temp[0];
+        $query = "SELECT SponsorID, Name, Photo FROM Sponsor WHERE SponsorID = '$sponsorID'";
+        $result = $this->conf->db_query($query);
+        if (mysql_num_rows($result) > 0) {
+            while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+                //post id, userid, photo, post content, date time, status
+                $resultArray[] = array($row[0], $row[1], $row[2]);
+            }
+            $this->conf->db_close();
+            return $resultArray;
+        }
     }
 
-    $this->conf->db_close();
-    return null;
-}
+    function getusercoin_db($sponsorID) {
+        $this->conf = new Config();
+        $this->conf->db_connect();
+
+        $query = "SELECT Coins FROM Sponsor WHERE SponsorID = '$sponsorID'";
+        $result = $this->conf->db_query($query);
+        if (mysql_num_rows($result) > 0) {
+            $temp = mysql_fetch_array($result);
+            return $temp[0];
+        }
+
+        $this->conf->db_close();
+        return null;
+    }
+
+    function addcoin_db($sponsorID, $quantity) {
+        $this->conf = new Config();
+        $this->conf->db_connect();
+
+        $query = "UPDATE Sponsor SET Coins = Coins + $quantity WHERE SponsorID = '$sponsorID'";
+        $result = $this->conf->db_query($query);
+
+        if (!$result) {
+            return false;
+        }
+        $this->conf->db_close();
+        return true;
+    }
 
 function addcoin_db($sponsorID,$quantity){
     $this->conf = new Config();
