@@ -182,22 +182,6 @@ $description=$foundationdata->getDescription();
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-group">
-                                            <div class="accordion-heading">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                                                    <h4>Sejarah & Latar Belakang</h4>
-                                                </a>
-                                            </div>
-                                            <div id="collapseFour" class="accordion-body collapse">
-                                                <div class="accordion-inner">
-                                                    <br>
-                                                    <p>
-                                                        Yayasan Lima Roti Dua Ikan Indonesia dimulai dari sebuah persekutuan doa yang berdiri pada sekitar bulan Oktober 2003, yang menamakan diri persekutuan doa Lima Roti Dua Ikan. Pendiri mendapat pewahyuan “ajaib” melalui firman Tuhan dalam Kisah Rasul pasal 6 pada tahun 1998. Dalam Kisah Rasul pasal 6 ada beberapa orang yang dipilih untuk melayani meja (handle finance, TEV) bagi para janda, dan oleh karenanya firman Allah semakin tersebar, jumlah murid bertambah dan sejumlah besar imam (hamba Tuhan) menyerahkan diri dan menjadi percaya. Walaupun arti dari firman itu pada saat itu belum sepenuhnya dimengerti, tetapi nantinya akan menjadi dasar acuan bagi pewahyuan-pewahyuan berikutnya yang diterima oleh pendiri sehingga yayasan pada akhirnya bisa terbentuk.
-                                                        Pada bulan Februari 2004 pendiri kembali mendapat pewahyuan susulan melalui firman Tuhan (dalam suatu pergumulan doa di Taman Getsemani, Semarang). Tuhan memberikan ayat di 2 Raja-raja 4:42-44, dan melalui ayat ini pendiri diberikan konfirmasi untuk melayani Tuhan sepenuh waktu. Perintah Tuhan pada waktu itu adalah untuk memberi makan para abdi Allah, supaya mereka bisa melayani bangsa ini dengan maksimal. Tuhan meneguhkan perintah itu dengan memberikan kepada pendiri sebuah “tanda” konfirmasi yang masih disimpan pendiri sampai saat ini.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
