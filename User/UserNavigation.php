@@ -26,7 +26,7 @@
 </div>
 
 <div class="row-fluid">
-    <form action="#" method="post">
+    <form action="CoinMenu.php" method="post">
         <input type="hidden" name="action" value="coins"/>
         <input type="submit" class="coinButton span12" id="coin" name="coin" value=""/>
     </form>
