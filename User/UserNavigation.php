@@ -19,8 +19,8 @@
 </div>
 
 <div class="row-fluid">
-    <form action="#" method="post">
-        <input type="hidden" name="action" value="notif"/>
+    <form action="PeopleCtrl.php" method="post">
+        <input type="hidden" name="action" value="neighbourrequest"/>
         <input type="submit" class="notificationButton span12" id="notification" name="notification" value=""/>
     </form>
 </div>
