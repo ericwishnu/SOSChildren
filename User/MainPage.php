@@ -14,7 +14,6 @@ $userdata = unserialize($_SESSION['userdata']);
 
     <body class="Background">
         <?php include 'UserHeader.php' ?>
-
         <?php include 'Logo.php' ?>
 
         <div class="row">
