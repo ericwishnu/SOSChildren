@@ -425,7 +425,7 @@ if ($p_id == 1) {
 	<div class="row additionalPaddingCss">
 	<div class="row offset5 span6">
 
-	<form action="UserLogin.php" id="signupform" method="POST">
+	<form action="UserCtrl.php" id="signupform" method="POST">
 	<input type="hidden" name="action" value="usersignup"/>
 	<input type="button" class="backButtonCss pageEight" id="backButton" name="backButton"/>
 	<input type="submit" value="" class="finishButtonCss pageEight" id="skipButton" name="skipButton"/>

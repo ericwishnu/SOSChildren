@@ -137,6 +137,8 @@ class UserCtrl {
     }
     else  {
         $result = $this->user_db_class->signupninja_db($sponsorID, $password, $email, $urlphoto);
+        echo "ninja chiat";
+        echo $result;
     }
     
 
@@ -146,7 +148,9 @@ class UserCtrl {
         header('location: UserLogin.php');
     } else {
         $_SESSION['message'] = "Sign Up Success!";
+        if($sponsortype=="public")
         header('location: UserSignUp.php?p_id=8');
+        else header("location: UserLogin.php");
     }
 }
 
