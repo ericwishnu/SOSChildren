@@ -3,10 +3,10 @@
 
 
     <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-        <?php 
-        $name=$userdata[1];
-        $name2=explode(" ", $name);
-        echo $name2[0]; 
+        <?php
+        $name = $userdata[1];
+        $name2 = explode(" ", $name);
+        echo $name2[0];
         ?>
         <span class="caret"></span>
     </button>
