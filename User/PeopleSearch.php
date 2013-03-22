@@ -99,29 +99,16 @@ $userdata = unserialize($_SESSION['userdata']);
 
                                         </div>
 
-                                        <hr/>
+                                        
 
                                         <!-- NT : For the first post please use row-fluid only while for the second search result please add margin-top  -->
                                         <!-- For user Search Result -->
 
-                                        <div class="row-fluid">
-                                            <div class="userProfilePicture span2">
-                                            </div>
-
-                                            <div class="userProfilePost span9">
-                                            </div>
-                                        </div>
+                                        
 
                                         <!-- For Foundation Search Result -->
 
-                                        <div class="row-fluid margin-top">
-                                            <div class="foundationProfilePicture span2">
-
-                                            </div>
-
-                                            <div class="foundationProfilePost span9">
-                                            </div>
-                                        </div>
+                                     
 
                                     </div>
                                 </div>

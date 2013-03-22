@@ -205,7 +205,7 @@ $phone = $userinfo->getPhone();
 
                                                     <tr>
                                                         <td align="right"> <font size="2"><?php echo $time; ?></font>
-                                                            <hr>
+                                                            
                                                         </td>
                                                     </tr>
 

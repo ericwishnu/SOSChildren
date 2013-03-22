@@ -1,14 +1,14 @@
 
 <script>
-    function validatesearch(){
+    function validatesearch() {
         var x = document.forms["globalsearch"]["keyword"].value;
-        
-        if(x===null || x===""){
+
+        if (x === null || x === "") {
             return false;
         }
-      
+
     }
-    </script>
+</script>
 <form name="globalsearch" id="globalsearch" action="PeopleCtrl.php" method="post" class="form-search" onsubmit="return validatesearch()">
     <input type="hidden" name="action" value="globalsearchpeople">
 

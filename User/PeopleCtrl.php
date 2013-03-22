@@ -65,11 +65,11 @@ class PeopleCtrl {
         if (!$keyword == "") {
             $_SESSION['searchpeopleresult'] = "1";
             $_SESSION['searchpeopledataobj'] = serialize($this->people_db_class->searchpeople_db($searchby, $keyword));
-            header("location: PeopleSearchResult.php");
+            header("location: PeopleSearchResult.php?key=$keyword");
         } else {
             $_SESSION['searchpeopleresult'] = "0";
             $_SESSION['searchpeopledataobj'] = serialize($this->people_db_class->searchpeople_db($searchby, $keyword));
-            header("location: PeopleSearchResult.php");
+            header("location: PeopleSearchResult.php?key=$keyword");
         }
     }
 

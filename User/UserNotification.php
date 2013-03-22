@@ -167,50 +167,17 @@ include 'User.php';
                                                         </div>
                                                 
                                                 
-<!--                                                
-                                                    <tr>
-                                                        <td><?// echo $peopleID; ?></td>                    
-                                                        <td><!--?echo $password;?></td> 
-                                                        <td align="center"><img src="<?// echo "../Database/Images/Sponsor/" . $photo; ?>" width="30"height="30"/></td> 
-                                                        <td><? //echo $email; ?></td> 
-                                                        <td><?// echo $name; ?></td> 
-                                                        <td><?// echo $address; ?></td> 
-                                                        <td><?// echo $city; ?></td> 
-                                                        <td><?// echo $state; ?></td> 
-                                                        <td align="center"><?// echo $country; ?></td> 
-                                                        <td align="center"><?// echo $postalCode; ?></td> 
-                                                        <td align="right"><?// echo $phone; ?></td> 
-                                                        <td align="center"><?// echo $coins; ?></td>
-                                                        <td align="center">
-                                                            <form action="PeopleCtrl.php" method="post">
-                                                                <input type="hidden" name="action" value="seepeopleprofile">
-                                                                <input type="hidden" name="peopleSelectedID" value="<?// echo $peopleID ?>">
-                                                                <input type="submit" value="View Profile">
-                                                            </form>
-                                                        </td>
-                                                        <td align="center">
-                                                            <form action="PeopleCtrl.php" method="post">
-                                                                <input type="hidden" name="action" value="approveneighbour">
-                                                                <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
-                                                                <input type="submit" value="Approve">
-                                                            </form>
-                                                            <form action="PeopleCtrl.php" method="post">
-                                                                <input type="hidden" name="action" value="removeneighbour">
-                                                                <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
-                                                                <input type="submit" value="Decline">
-                                                            </form>
-                                                        </td>
-                                                    </tr>-->
 
                                                     <?
                                                 }
                                                 ?>
-                                            </table>
+                                            
                                             <?
                                         } else {
                                             echo 'Not Avaiable';
                                         }
                                         ?>
+
                                     </div>
                                 </div>
 
