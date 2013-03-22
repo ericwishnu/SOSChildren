@@ -17,6 +17,10 @@ class PeopleCtrl {
     public function run() {
         $page = $_POST['action'];
 
+        $_SESSION['fosterKids']="";
+        $_SESSION['receivedamount']="";
+        $_SESSION['mycoin']="";
+    
         if ($page == "searchpeople") {
             $this->searchpoeple();
         } elseif ($page == "seepeopleprofile") {
@@ -55,6 +59,8 @@ class PeopleCtrl {
             $this->globalsearchpeople();
         } elseif ($page == "preparesearch") {
             $this->preparesearch();
+        } elseif($page=="listneighbour"){
+            $this->listneighbours();
         }
     }
 

@@ -14,10 +14,11 @@ class FoundationDAO {
         $query = "SELECT * FROM foundation WHERE FoundationID = '$username' AND Password = md5('$password')";
         $result = $this->conf->db_query($query);
 
-        $this->conf->db_close();
+        
         if (mysql_num_rows($result) > 0) {
             return true;
         }
+        $this->conf->db_close();
         return false;
     }
 

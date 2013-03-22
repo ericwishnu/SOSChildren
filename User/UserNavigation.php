@@ -1,3 +1,5 @@
+
+
 <div class="row-fluid">
 
     <form name="mainpage" action="UserCtrl.php" method="post"/>
@@ -26,8 +28,8 @@
 </div>
 
 <div class="row-fluid">
-    <form action="#" method="post">
-        <input type="hidden" name="action" value="coins"/>
+    <form action="UserCtrl.php" method="post">
+        <input type="hidden" name="action" value="coinpage"/>
         <input type="submit" class="coinButton span12" id="coin" name="coin" value=""/>
     </form>
 </div>

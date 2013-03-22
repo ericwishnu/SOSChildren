@@ -1,0 +1,60 @@
+.coinHeader{
+	background-image: url(../img/coins/header.png);
+	background-size: 100%;
+	height: 121px;
+	background-repeat: no-repeat;
+}
+
+.checkCoin{
+	background-image: url(../img/coins/checkcoins.png);
+	background-size: 100%;
+	height: 67px;
+	background-repeat: no-repeat;
+	border: none;
+	background-color: transparent;
+}
+
+.textAmount{
+	background-image: url(../img/coins/textamount.png);
+	background-size: 100%;
+	height: 27px;
+	background-repeat: no-repeat;
+}
+
+.boxCoin{
+	background-image: url(../img/coins/box.png);
+	background-size: 100%;
+	height: 56px;
+	background-repeat: no-repeat;
+}
+
+.underlogo{
+	background-image: url(../img/coins/underlogo.png);
+	background-size: 100%;
+	height: 33px;
+	background-repeat: no-repeat;
+	margin-top: 100px;
+}
+
+.buyCoin{
+	background-image: url(../img/coins/buycoins.png);
+	background-size: 100%;
+	height: 69px;
+	background-repeat: no-repeat;
+	border: none;
+	background-color: transparent;
+}
+
+.textBuy{
+	background-image: url(../img/coins/textbuy.png);
+	background-size: 100%;
+	height: 41px;
+	background-repeat: no-repeat;
+}
+
+.bigCoin{
+	background-image: url(../img/coins/bigcoin.png);
+	background-size: 100%;
+	height: 205px;
+	background-repeat: no-repeat;
+}

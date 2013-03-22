@@ -17,6 +17,10 @@ class UserCtrl {
 
     public function run() {
 
+        $_SESSION['fosterKids'] = "";
+        $_SESSION['receivedamount'] = "";
+        $_SESSION['mycoin'] = "";
+
         $page = $_POST['action'];
 
         if ($page == "login") {
@@ -45,6 +49,8 @@ class UserCtrl {
             $this->changePicture();
         } elseif ($page == "addpost") {
             $this->post();
+        } elseif ($page == "coinpage") {
+            $this->coinpage();
         } elseif ($page == "deletepost") {
             $this->deletePost();
         }
@@ -59,10 +65,10 @@ class UserCtrl {
 
         if ($dbCheck == TRUE) {
             $_SESSION['usernameU'] = $_POST['username'];
-            $userdata=$this->user_db_class->getuserdata_db($username);
-            $_SESSION['userdata']=serialize($userdata[0]);
+            $userdata = $this->user_db_class->getuserdata_db($username);
+            $_SESSION['userdata'] = serialize($userdata[0]);
             $_SESSION['newsfeeddataobj'] = serialize($this->user_db_class->viewnewsfeed_db($username));
-           
+
             header('location: MainPage.php');
         } else {
             $_SESSION['message'] = "Login Failed";
@@ -83,29 +89,53 @@ class UserCtrl {
     }
 
     private function signup() {
+        $sponsortype = $_SESSION['sponsortype'];
         $sponsorID = $_SESSION['email'];
         $password = $_SESSION['password1'];
         $email = $_SESSION['email'];
-        $name = $_SESSION['name'];
-        $address = $_SESSION['address'];
-        $city = $_SESSION['city'];
-        $state = $_SESSION['state'];
-        $country = $_SESSION['country'];
-        $postalcode = $_SESSION['zipcode'];
-        $phone = $_SESSION['phone'];
-        $photo=$_FILES['photo']['name'];
+        $name = "";
+        $address = "";
+        $city = "";
+        $state = "";
+        $country = "";
+        $postalcode = "";
+        $phone = "";
+        $photo = "";
+        if ($sponsortype == "public") {
+            $name = $_SESSION['name'];
+
+            $address = $_SESSION['address'];
+            $city = $_SESSION['city'];
+            $state = $_SESSION['state'];
+            $country = $_SESSION['country'];
+            $postalcode = $_SESSION['zipcode'];
+            $phone = $_SESSION['phone'];
+            $photo = $_FILES['photo']['name'];
+        } else {
+
+            $name = "Ninja";
+        }
         mkdir("../Database/Images/Sponsor/" . $sponsorID . "");
         mkdir("../Database/Images/Sponsor/" . $sponsorID . "/__Post");
         //=============
 
-        if ($photo == '' || $photo==null) {
-            $urlphoto = 'DefaultUser.jpg';
+        if ($photo == '' || $photo == null) {
+            if ($sponsortype == "public") {
+                $urlphoto = 'DefaultUser.jpg';
 
-            $defaultpath = "../Database/Images/Sponsor/DefaultUser.jpg";
-            $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/DefaultUser.jpg";
-
+                $defaultpath = "../Database/Images/Sponsor/DefaultUser.jpg";
+                $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/DefaultUser.jpg";
+            } else {
+                $urlphoto = 'DefaultNinja.jpg';
+                $defaultpath = "../Database/Images/Sponsor/DefaultNinja.jpg";
+                $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/DefaultNinja.jpg";
+            }
             if (move_uploaded_file($defaultpath, $filepath)) {
-                $urlphoto = $sponsorID . "/DefaultUser.jpg";
+                if ($sponsortype == "public") {
+                    $urlphoto = $sponsorID . "/DefaultUser.jpg";
+                } else {
+                    $urlphoto = $sponsorID . "/DefaultNinja.jpg";
+                }
             }
         } else {
             $ext = substr($_FILES['photo']['type'], -4);
@@ -120,16 +150,29 @@ class UserCtrl {
                 $urlphoto = $sponsorID . "/photo" . $timestamp . "." . $ext;
             }
         }
-        $this->user_db_class = new userDAO();
-        //echo $sponsorID. $password. $email. $name. $address. $city. $state. $country. $postalcode. $phone;
-        
-        $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone,$urlphoto);
+
+        echo $sponsorID . $password . $email;
+
+        if ($sponsortype == "public") {
+            $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone, $urlphoto);
+        } else {
+            $result = $this->user_db_class->signupninja_db($sponsorID, $password, $email, $urlphoto);
+            echo "ninja chiat";
+            echo $result;
+        }
+
+
+
         if (!$result) {
             $_SESSION['message'] = "Sign Up Failed!";
             header('location: UserLogin.php');
         } else {
             $_SESSION['message'] = "Sign Up Success!";
-            header('location: UserSignUp.php?p_id=8');
+            if ($sponsortype == "public") {
+                header('location: UserSignUp.php?p_id=8');
+            } else {
+                header("location: UserLogin.php");
+            }
         }
     }
 
@@ -141,7 +184,7 @@ class UserCtrl {
 
         if ($photo == "") {
             $urlfile = "";
-           
+
             $dbCondition = $this->user_db_class->addPostNoPhoto_db($userID, $content);
         } else {
             $ext = substr($_FILES['photo']['type'], -4);
@@ -155,13 +198,13 @@ class UserCtrl {
             if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
                 $urlfile = $userID . "/__Post/" . $timestamp . "." . $ext;
             }
-             $dbCondition = $this->user_db_class->addPost_db($userID, $content, $urlfile);
+            $dbCondition = $this->user_db_class->addPost_db($userID, $content, $urlfile);
         }
 
         //$this->user_db_class = new UserDAO();
         echo $photo;
         echo $urlfile;
-       
+
         ///belom kelar
 
         if ($dbCondition == true) {
@@ -242,6 +285,12 @@ class UserCtrl {
         $username = $_POST['id'];
         $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
         header("location: UserChangePicture.php");
+    }
+
+    private function coinpage() {
+        $username = $_SESSION['usernameU'];
+        $_SESSION['mycoinamount'] = $this->user_db_class->getusercoin_db($username);
+        header("location: CoinMenu.php");
     }
 
     private function changePicture() {

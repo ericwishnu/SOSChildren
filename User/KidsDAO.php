@@ -13,7 +13,7 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query = "SELECT * FROM Kids WHERE $searchby LIKE '%$keyword%'";
+        $query = "SELECT * FROM Kids WHERE $searchby LIKE '%$keyword%' AND Name != ALL(SELECT Name FROM Foundation) AND NeededCoin > 0";
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) > 0) {
@@ -31,11 +31,11 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query = "SELECT * FROM Kids";
+        $query = "SELECT * FROM Kids WHERE Name != ALL(SELECT Name FROM Foundation) AND NeededCoin > 0";
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) == 0) {
-            return false;
+            return $resultArray;
         }
 
         while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
@@ -58,11 +58,11 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query = "SELECT * FROM Kids";
+        $query = "SELECT * FROM Kids WHERE Name != ALL(SELECT Name FROM Foundation) AND NeededCoin > 0";
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) == 0) {
-            return false;
+            return $resultArray;
         }
 
         while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
@@ -80,12 +80,12 @@ class KidsDAO {
         return $resultArray;
     }
 
-    function listmykids_db($sponsorID) {
+    function listmykids_db($sponsorID) { //test ganti
         $resultArray;
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query2 = "SELECT * FROM Donorship WHERE SponsorID = '$sponsorID'";
+        $query2 = "SELECT * FROM Donorship WHERE SponsorID = '$sponsorID' AND KidsID = SOME(SELECT KidsID FROM Kids WHERE Name != ALL(SELECT Name FROM Foundation))";
         $result2 = $this->conf->db_query($query2);
 
         if (mysql_num_rows($result2) > 0) {
@@ -94,7 +94,7 @@ class KidsDAO {
                 $result = $this->conf->db_query($query);
 
                 if (mysql_num_rows($result) == 0) {
-                    return false;
+                    return $resultArray;
                 }
 
                 while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
@@ -140,7 +140,7 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
-        $query = "SELECT * FROM Kids WHERE KidsID = $kidsID";
+        $query = "SELECT * FROM Kids WHERE KidsID = $kidsID AND Name != ALL(SELECT Name FROM Foundation)";
         $result = $this->conf->db_query($query);
 
         if (mysql_num_rows($result) > 0) {
@@ -160,15 +160,21 @@ class KidsDAO {
         return null;
     }
 
-    function fosterKid_db($sponsorID, $foundationID, $kidsID) {
+    function fosterKid_db($sponsorID, $foundationID, $kidsID, $quantity) {
         $this->conf = new Config();
         $this->conf->db_connect();
 
         $currentdatetime = date('Y-m-d') . " " . date("H:i:s");
-        $query = "INSERT INTO Donorship (SponsorID, FoundationID, KidsID, DateTime) 
-            VALUES ('$sponsorID', '$foundationID', $kidsID, '$currentdatetime')";
+        $query = "INSERT INTO Donorship (SponsorID, FoundationID, KidsID, DateTime, Quantity) 
+            VALUES ('$sponsorID', '$foundationID', $kidsID, '$currentdatetime', $quantity)";
         $result = $this->conf->db_query($query);
 
+        $query2 = "UPDATE Kids SET NeededCoin = NeededCoin - $quantity WHERE KidsID = $kidsID";
+        $result2 = $this->conf->db_query($query2);
+        
+        $query3 = "UPDATE Sponsor SET Coins = Coins - $quantity WHERE SponsorID = '$sponsorID'";
+        $result3 = $this->conf->db_query($query3);
+        
         if (!$result) {
             //throw new Exception('Could not register it in database - please try again later.\n');
         }
@@ -189,8 +195,8 @@ class KidsDAO {
         return false;
     }
 
-        function foundationgetname_db(){
-                $resultArray;
+    function foundationgetname_db(){
+        $resultArray;
         $this->conf = new Config();
         $this->conf->db_connect();
 
@@ -208,6 +214,36 @@ class KidsDAO {
 
             return $resultArray;
         }
+    }
+    
+    function getusercoin_db($sponsorID){
+        $this->conf = new Config();
+        $this->conf->db_connect();
+
+        $query = "SELECT Coins FROM Sponsor WHERE SponsorID = '$sponsorID'";
+        $result = $this->conf->db_query($query);
+        if (mysql_num_rows($result) > 0) {
+            $temp = mysql_fetch_array($result);
+            return $temp[0];
+        }
+        
+            $this->conf->db_close();
+            return null;
+    }
+    
+    function getkidsneededcoin_db($kidsID){
+        $this->conf = new Config();
+        $this->conf->db_connect();
+
+        $query = "SELECT NeededCoin FROM Kids WHERE KidsID = $kidsID";
+        $result = $this->conf->db_query($query);
+        if (mysql_num_rows($result) > 0) {
+            $temp = mysql_fetch_array($result);
+            return $temp[0];
+        }
+        
+            $this->conf->db_close();
+            return null;
     }
 }
 

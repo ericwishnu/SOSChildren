@@ -61,7 +61,7 @@ class FoundationCtrl {
         
         $username=$_SESSION['usernameU'];
         $foundationID=$_POST['foundationid'];
-        $quantity=5;
+        $quantity=$_POST['quantity'];
         
         $this->foundation_db_class = new FoundationDAO();
 
