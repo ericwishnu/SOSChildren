@@ -140,7 +140,7 @@ $userdata = unserialize($_SESSION['userdata']);
                                                     <?
                                                 }
                                                 else {
-                                                    echo 'Foundation Not Avaiable<br>';
+                                                    //echo 'Foundation Not Avaiable<br>';
                                                 }
                                                 $peopleList = unserialize($_SESSION['searchpeopledataobj']);
 
@@ -214,14 +214,14 @@ $userdata = unserialize($_SESSION['userdata']);
 
                                                     <?
                                                 } else {
-                                                    echo 'People Not Avaiable<br>';
+                                                  //  echo 'People Not Avaiable<br>';
                                                 }
 
                                                 
                                             } else if ($_SESSION['searchpeopleresult'] == "0") {
                                                 echo 'Not Avaiable';
                                             } else {
-                                                echo 'Not Avaiable';
+                                             //   echo 'Not Avaiable';
                                             }
                                             ?>
 
