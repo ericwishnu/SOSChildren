@@ -17,6 +17,10 @@ class UserCtrl {
 
     public function run() {
 
+        $_SESSION['fosterKids']="";
+        $_SESSION['receivedamount']="";
+        $_SESSION['mycoin']="";
+
         $page = $_POST['action'];
 
         if ($page == "login") {
@@ -109,9 +113,9 @@ class UserCtrl {
 
             if (move_uploaded_file($defaultpath, $filepath)) {
                 if($sponsortype=="public"){
-                 $urlphoto = $sponsorID . "/DefaultUser.jpg";
-             }
-             else{
+                   $urlphoto = $sponsorID . "/DefaultUser.jpg";
+               }
+               else{
                 $urlphoto = $sponsorID . "/DefaultNinja.jpg";
             }
 
@@ -149,7 +153,7 @@ class UserCtrl {
     } else {
         $_SESSION['message'] = "Sign Up Success!";
         if($sponsortype=="public")
-        header('location: UserSignUp.php?p_id=8');
+            header('location: UserSignUp.php?p_id=8');
         else header("location: UserLogin.php");
     }
 }
