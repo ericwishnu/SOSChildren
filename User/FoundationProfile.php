@@ -25,7 +25,7 @@ $description=$foundationdata->getDescription();
     <title>Foundation Profile</title>
 </head>
 <body class="Background">
- <div class="Header" >
+   <div class="Header" >
     <!-- Header class -->
     <div class="row">
         <div class="span12 margin-leftHeader margin-topHeader">
@@ -266,11 +266,20 @@ $description=$foundationdata->getDescription();
                                     <p ><?php echo $description?><br/></p>
                                 </br>
                                 <div class="row-fluid"> 
-                                    <form action="KidsCtrl.php" method="POST">
-                                        <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
-                                        <input type="hidden" name="action" value="listkidsbyfoundation"/>
-                                        <input type="submit" class="browseKids span2" value=""/>
-                                    </form>
+                                    <div class="span2">
+                                        <form action="KidsCtrl.php" method="POST">
+                                            <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
+                                            <input type="hidden" name="action" value="listkidsbyfoundation"/>
+                                            <input type="submit" class="browseKids span12" value=""/>
+                                        </form>
+                                    </div>
+                                    <div class="span2">
+                                        <form action="KidsCtrl.php" method="POST">
+                                            <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
+                                            <input type="hidden" name="action" value="listkidsbyfoundation"/>
+                                            <input type="submit" class="span12" value=""/>
+                                        </form>
+                                    </div>
                                 </div>
 
                                 <hr>

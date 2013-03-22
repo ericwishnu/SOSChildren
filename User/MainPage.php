@@ -107,7 +107,7 @@ $userdata = unserialize($_SESSION['userdata']);
 
                     <div class="row-fluid marginfriendButton">
                         <form>
-                            <input type="submit" value="" class="span12 friendButton" id="emergency" name="emergency" data-toggle="modal" href="#Emergency">
+                            <input type="submit" value="" class="span12 friendButton" id="emergency" name="emergency">
                         </form>
                     </div>
 
