@@ -2,7 +2,6 @@
 session_start();
 $p_id = $_GET['p_id'];
 if ($p_id == 1) {
-<<<<<<< HEAD
     $script = '
     <script>
     function setFocus(id){
@@ -56,56 +55,7 @@ if ($p_id == 1) {
 
   </div>
 ';
-=======
-	$script = '
-	<script>
-	function setFocus(id){
-		document.getElementById(id).focus();
-	}
-	</script>
-	';
-	$title = 'Sign up Step One';
-	$body = 'pageOne';
-	$content = '
-	<div class="container">
-
-	<div class="row">
-	<div class="pageOneHeader  span12">
-	</div>
-	</div>
-
-	<div class="row">
-	<div class="pageOneContainer span12">
-
-	<div class="span4 offset2 center">
-	
-	<form action="UserSignUp.php?&p_id=2" id="signupform" method="POST">
-	<input type="hidden" name="sponsortype" value="public"/>
-	
-	<input type="submit" value="" class="pageOneContainerPublic" name="pageOneContainerPublic" id="pageOneContainerPublic" alt="GO Public!">
-	</form>
-	</div>
-
-	<div class="span4">
-	<form>
-	<input type="button" class="pageOneContainerNinja" name="pageOneContainerNinja" id="pageOneContainerNinja" alt="Go Ninja!">
-	</form>
-	</div>
-	</div> <!-- end container div -->
-	</div>
-
-	<!-- footer div -->
-	<div id="footer">
-	<div class="row">
-	<div class="row offset5 span6">
-	</div>
-	</div>
-	</div>
-
-	</div>
-	';
->>>>>>> ae8c12af6b4f4242ab08961419ea3d42b18c011f
-} else if ($p_id == 2) {
+    } else if ($p_id == 2) {
 	$title = 'Sign up Step Two';
 	$body = 'pageTwo';
 	$content = '
