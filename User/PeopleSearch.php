@@ -75,11 +75,11 @@ $userdata = unserialize($_SESSION['userdata']);
                                         <div class="row-fluid">
 
                                             <form class="form-search" action="PeopleCtrl.php" method="post">
-                                                <div class="span4 margin-rightHeader">
-                                                    <input type="text" name="keyword" class="input-medium search-query">
+                                                <div class="span5 margin-rightHeader">
+                                                    <input type="text" name="keyword" class="input-large search-query">
                                                     <input type="hidden" name="action" value="searchpeople">
                                                 </div>
-                                                <div class="span4">
+                                                <div class="span2">
                                                     <div class="control-group ">  
                                                         <div class="controls">  
                                                             <select name="searchby" id="select">
@@ -92,7 +92,7 @@ $userdata = unserialize($_SESSION['userdata']);
                                                     </div>
 
                                                 </div>
-                                                <div class="span3">
+                                                <div class="span3 marginSearchLeft">
                                                     <input type="submit" value="Search" class="btn">
                                                 </div>
                                             </form>

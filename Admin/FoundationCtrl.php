@@ -79,6 +79,13 @@ class FoundationCtrl {
             if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
                 $urlphoto = $foundationID . "/photo." . $ext;
             }
+            
+              
+            $filepath = "../Database/Images/Kids/" . $foundationID . "." . $ext;
+
+            if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
+                $urlfile = $foundationID . "." . $ext;
+            }
 
             $dbCondition = $this->foundation_db_class->addFoundation_db($foundationID, $password, $name, $urlphoto, $address, $city, $state, $country, $postalCode, $accountNo, $phone, $description);
 

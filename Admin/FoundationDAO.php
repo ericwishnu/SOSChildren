@@ -45,6 +45,22 @@ class FoundationDAO {
         if (!$result) {
             throw new Exception('Could not register it in database - please try again later.\n');
         }
+        
+        $query = "INSERT INTO kids (Name, Photo, DOB, Background, Region, Origin, Aspiration, Health, Education, Nutrition) 
+            VALUES ('$name', '$photo', '1990-01-01', '$description', '$country', '$city', 'Foundation', 1, 1, 1)";
+        $result = $this->conf->db_query($query);
+
+        if (!$result) {
+            throw new Exception('Could not register it in database - please try again later.\n');
+        } else {
+            $query1 = "INSERT INTO kidsList (FoundationID, KidsIDinFoundation) 
+                VALUES ('$foundationID', '$foundationID')";
+            $result1 = $this->conf->db_query($query1);
+
+            if (!$result1) {
+                throw new Exception('Could not register it in database - please try again later.\n');
+            }
+        }
         return true;
     }
 
