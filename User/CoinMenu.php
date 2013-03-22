@@ -1,3 +1,8 @@
+<?php
+session_start();
+$userdata = unserialize($_SESSION['userdata']);
+include 'User.php';
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -29,7 +34,7 @@
 
 				<div class="span2 paddingLeft">
 
-					<?php include('UserNavigation.php'); ?>
+					<?php include 'UserNavigation.php'; ?>
 
 				</div>
 
@@ -38,35 +43,7 @@
 				<div class="span9">
 
 					<!-- USER POST DIVISION -->
-					<div class="row-fluid">
-						<div class="userPicture span2">
-						</div>
-
-						<div class="userPost span9">
-							<div class="row-fluid"> 	
-								<div class="span9 postArea">
-
-
-									<form action="#" method="post" name="post" enctype="multipart/form-data"
-									<input type="hidden" name="action" value="postArea" />
-									<textarea class="textArea" name="post"></textarea>
-									<div id="uploadbtn" onclick="getFile()"><i class="icon-picture"></i>&nbsp;Upload Photo</div>
-									<div style='height: 0px; width: 0px;overflow:hidden;'><input id="upfile" type="file" value="upload" onchange="sub(this)"/></div>
-
-
-								</div>
-
-								<!-- Area for inputing a post  -->
-								<div class="span2">
-
-									<input type="hidden" name="action" value="post"/>
-									<input type="submit" class="postButton span10" id="post" name="post" value=""/>
-								</form>
-							</div>
-						</div>
-					</div>
-
-				</div>
+					 <?php include 'PostStatus.php'; ?>
 
 				<div class="row-fluid margin-top">
 					<!-- Main Menu Class -->
