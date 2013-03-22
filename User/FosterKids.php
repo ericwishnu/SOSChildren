@@ -158,7 +158,7 @@ for ($i = 0; $i < count($foundationname); $i++) {
 
                                         <table class="margin-top"><!-- TABLE AFTER FIRST TABLE -->
                                             <tr>
-                                                Total Coins to Donate : <? echo $_SESSION['quantity'] ?> Coins
+                                            <br>Total Coins to Donate : <? echo $_SESSION['quantity'] ?> Coins<br>
                                             </tr>
 
                                             <tr>
