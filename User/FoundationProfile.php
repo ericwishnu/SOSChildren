@@ -106,7 +106,7 @@ $description=$foundationdata->getDescription();
                                             <div id="collapseOne" class="accordion-body collapse in">
                                                 <div class="accordion-inner">
                                                     <br>
-                                                    <p>
+                                                    <p class="textJustify">
                                                         Yayasan Lima Roti Dua Ikan Indonesia dimulai dari sebuah persekutuan doa yang berdiri pada sekitar bulan Oktober 2003, yang menamakan diri persekutuan doa Lima Roti Dua Ikan. Pendiri mendapat pewahyuan “ajaib” melalui firman Tuhan dalam Kisah Rasul pasal 6 pada tahun 1998. Dalam Kisah Rasul pasal 6 ada beberapa orang yang dipilih untuk melayani meja (handle finance, TEV) bagi para janda, dan oleh karenanya firman Allah semakin tersebar, jumlah murid bertambah dan sejumlah besar imam (hamba Tuhan) menyerahkan diri dan menjadi percaya. Walaupun arti dari firman itu pada saat itu belum sepenuhnya dimengerti, tetapi nantinya akan menjadi dasar acuan bagi pewahyuan-pewahyuan berikutnya yang diterima oleh pendiri sehingga yayasan pada akhirnya bisa terbentuk.
                                                         Pada bulan Februari 2004 pendiri kembali mendapat pewahyuan susulan melalui firman Tuhan (dalam suatu pergumulan doa di Taman Getsemani, Semarang). Tuhan memberikan ayat di 2 Raja-raja 4:42-44, dan melalui ayat ini pendiri diberikan konfirmasi untuk melayani Tuhan sepenuh waktu. Perintah Tuhan pada waktu itu adalah untuk memberi makan para abdi Allah, supaya mereka bisa melayani bangsa ini dengan maksimal. Tuhan meneguhkan perintah itu dengan memberikan kepada pendiri sebuah “tanda” konfirmasi yang masih disimpan pendiri sampai saat ini.
                                                     </p>
@@ -121,7 +121,7 @@ $description=$foundationdata->getDescription();
                                             </div>
                                             <div id="collapseTwo" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                    <p>
+                                                    <p class="textJustify">
                                                         VISI
                                                         <br>
                                                         Menjadi model lembaga pelayanan holistik pengentasan kemiskinan yang menghadirkan kerajaan Allah
@@ -146,7 +146,7 @@ $description=$foundationdata->getDescription();
                                             </div>
                                             <div id="collapseThree" class="accordion-body collapse">
                                                 <div class="accordion-inner">
-                                                    <p>
+                                                    <p class="textJustify">
                                                         <b>What does the foundation do?</b>
                                                         <br>
                                                         The Five Loaves and Two Fishes foundation is a non profit charitable organization that provide holistic charitable works for the poor and the needy. The people we serve is adult and children of all ages. Also we take care of the elderly and minister to the prisoners at prisons and other detention places.
