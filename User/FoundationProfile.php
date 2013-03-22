@@ -201,42 +201,62 @@ $description=$foundationdata->getDescription();
                                     </div>
                                 </div>
 
-                            <div class="row-fluid">
-                                <h4>Where to Find ?</h4>
+                                <div class="row-fluid margin-top">
+                                    <div id="myCarousel" class="carousel slide">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        </ol>
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner">
+                                            <div class="active item"><img src=""></div>
+                                            <div class="item">…</div>
+                                            <div class="item">…</div>
+                                        </div>
+                                        <!-- Carousel nav -->
+                                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                                    </div>
+
+                                </div>
+
+                                <div class="row-fluid">
+                                    <h4>Where to Find ?</h4>
 
 
-                                <?php echo $address." - ".$state ?><br/>
-                                <?php echo $city." - ". $country?><br/>
-                                Postal Code : <?php echo $postalCode;?></br>
-                                Phone : <?php echo $phone?> <br/><br/>
-                                <p ><?php echo $description?><br/></p>
-                            </br>
-                            <div class="row-fluid"> 
-                                <form action="KidsCtrl.php" method="POST">
-                                    <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
-                                    <input type="hidden" name="action" value="listkidsbyfoundation"/>
-                                    <input type="submit" class="browseKids span2" value=""/>
-                                </form>
-                            </div>
+                                    <?php echo $address." - ".$state ?><br/>
+                                    <?php echo $city." - ". $country?><br/>
+                                    Postal Code : <?php echo $postalCode;?></br>
+                                    Phone : <?php echo $phone?> <br/><br/>
+                                    <p ><?php echo $description?><br/></p>
+                                </br>
+                                <div class="row-fluid"> 
+                                    <form action="KidsCtrl.php" method="POST">
+                                        <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
+                                        <input type="hidden" name="action" value="listkidsbyfoundation"/>
+                                        <input type="submit" class="browseKids span2" value=""/>
+                                    </form>
+                                </div>
 
-                            <hr>
+                                <hr>
 
 
 
-                            <?php
-                            if (count($foundationPost) > 0) {
-                                for ($i = count($foundationPost) - 1; $i >= 0; $i--) {
-                                    $temp = $foundationPost[$i];
+                                <?php
+                                if (count($foundationPost) > 0) {
+                                    for ($i = count($foundationPost) - 1; $i >= 0; $i--) {
+                                        $temp = $foundationPost[$i];
                                                 // echo $temp[0]."|". $temp[1]."|". $temp[2]."|". $temp[3]."|". $temp[4]."<br/>";
-                                    $id = $temp[0];
-                                    $title = $temp[1];
-                                    $photo = $temp[2];
-                                    $time = $temp[3];
-                                    $content = $temp[4];
-                                    ?>
-                                    <table style="width:100%"  >
-                                        <tr>
-                                            <td><div style="float:left"><a><?php echo $title; ?></a></div>
+                                        $id = $temp[0];
+                                        $title = $temp[1];
+                                        $photo = $temp[2];
+                                        $time = $temp[3];
+                                        $content = $temp[4];
+                                        ?>
+                                        <table style="width:100%"  >
+                                            <tr>
+                                                <td><div style="float:left"><a><?php echo $title; ?></a></div>
 
 <!--                                                            <form   onsubmit="return deletepost();" action="FoundationCtrl.php" method="post">
                                                                 <input type="hidden" name="foundationid" value="<?// echo $_SESSION['usernameF']; ?>"/>
