@@ -97,7 +97,8 @@ $userdata = unserialize($_SESSION['userdata']);
                                     <br/>
                                     <div class="row-fluid">
                                         <?php
-                                        
+                                        if(isset($_SESSION['kidslistdataobj']))
+                                        {
                                         $kidsList = unserialize($_SESSION['kidslistdataobj']);
 
                                         if (count($kidsList) > 0) {
@@ -176,6 +177,9 @@ $userdata = unserialize($_SESSION['userdata']);
                                             ?>
 
                                             <?
+                                        } else {
+                                            echo 'Not Avaiable';
+                                        }
                                         } else {
                                             echo 'Not Avaiable';
                                         }
