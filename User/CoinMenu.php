@@ -67,7 +67,7 @@ include 'User.php';
                                                     </div>
                                                     <div class="row input-prepend">
                                                         <form>
-                                                            <input type="text" value="<? echo $_SESSION['mycoinamout']; ?>" class="offset4 input-small" readonly value=""><span class="add-on">Coins</span>
+                                                            <input type="text" value="<? echo $_SESSION['mycoinamount']; ?>" class="offset4 input-small" readonly value=""><span class="add-on">Coins</span>
                                                         </form>
                                                     </div>
                                                 </div>

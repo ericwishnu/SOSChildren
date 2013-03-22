@@ -273,7 +273,7 @@ class UserDAO {
         $result = $this->conf->db_query($query);
         if (mysql_num_rows($result) > 0) {
             $temp = mysql_fetch_array($result);
-            return $row[0];
+            return $temp[0];
         }
         
             $this->conf->db_close();

@@ -255,7 +255,7 @@ private function prepareChangePicture() {
 
 private function coinpage() {
     $username = $_SESSION['usernameU'];
-    $_SESSION['mycoinamout'] = $this->user_db_class->getusercoin_db($username);
+    $_SESSION['mycoinamount'] = $this->user_db_class->getusercoin_db($username);
     header("location: CoinMenu.php");
 }
 
