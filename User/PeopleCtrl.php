@@ -77,7 +77,7 @@ class PeopleCtrl {
         $username = $_SESSION['usernameU'];
         $peopleID = $_POST['peopleSelectedID'];
         $userType = 'Sponsor';
-
+        
         $_SESSION['peopledataobj'] = serialize($this->people_db_class->peopleprofile_db($peopleID));
         $_SESSION['relationship'] = $this->people_db_class->seeneighbourship_db($username, $peopleID);
         $_SESSION['postlistdataobj'] = serialize($this->people_db_class->viewpersonalpost_db($peopleID, $userType));
