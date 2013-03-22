@@ -158,9 +158,9 @@ class KidsCtrl {
                 $kidstarget = $this->kids_db_class->getkidsneededcoin_db($kidsID);
                 
                 $finalquantity = $quantity - $kidstarget;
-                $_SESSION['receivedamount'] = $finalquantity;
+                $_SESSION['receivedamount'] = $kidstarget;
                 
-                $dbCondition = $this->kids_db_class->fosterKid_db ($username, $foundationID, $kidsID, $finalquantity);
+                $dbCondition = $this->kids_db_class->fosterKid_db ($username, $foundationID, $kidsID, $kidstarget);
                 
                 if(isset($_SESSION['usernameU'])&& $_SESSION['usernameU']!="") 
                 {
