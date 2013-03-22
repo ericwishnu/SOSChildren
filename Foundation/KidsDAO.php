@@ -9,6 +9,7 @@ class KidsDAO {
         $this->conf = new Config();
         $this->conf->db_connect();
 
+        $background=  addslashes("Parent's Job : ".$background);
         $query = "INSERT INTO kids (Name, Photo, DOB, Background, Region, Origin, Aspiration, Health, Education, Nutrition, NeededCoin) 
             VALUES ('$name', '$photo', '$DOB', '$background', '$region', '$origin', '$aspiration', $health, $education, $nutrition, 50)";
         $result = $this->conf->db_query($query);
