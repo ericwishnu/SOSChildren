@@ -5,236 +5,71 @@ $userdata = unserialize($_SESSION['userdata']);
 <!DOCTYPE HTML>
 
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/mainMenuCss.css">
-    <title>Hello <?php echo $userdata[1] ?></title>
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/mainMenuCss.css">
+        <title>Hello <?php echo $userdata[1] ?></title>
+    </head>
 
-<body class="Background">
+    <body class="Background">
+        <?php include 'UserHeader.php' ?>
 
-    <div class="Header" >
-        <!-- Header class -->
         <div class="row">
-            <div class="span12 margin-leftHeader margin-topHeader">
-
-                <div class="row-fluid">
-                    <div class="offset7 span4 margin-rightHeader">
-                        <?php include 'GlobalSearch.php' ?>
-                    </div>
-
-                    <div class="span1">
-                        <?php include 'UserDropdownMenu.php'; ?>
-                    </div>
-                </div>
-
+            <div class="span3 Logo">
+                <!-- Logo Div  -->
             </div>
         </div>
 
-    </div>
+        <div class="row">
 
-    <div class="row">
-        <div class="span3 Logo">
-            <!-- Logo Div  -->
-        </div>
-    </div>
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span2 paddingLeft">
 
-    <div class="row">
+                        <?php include('UserNavigation.php'); ?>
 
-        <div class="container">
-            <div class="row-fluid">
-                <div class="span2 paddingLeft">
+                    </div>
 
-                    <?php include('UserNavigation.php'); ?>
+                    <div class="span9">
 
-                </div>
+                        <?php include 'PostStatus.php'; ?>
 
-                <div class="span9">
+                        <div class="row-fluid margin-top">
+                            <!-- Main Menu Class -->
+                            <div class="span12">
 
-                    <?php include 'PostStatus.php'; ?>
+                                <div class="row-fluid">
+                                    <div class="newsFeedTop">
+                                        <div class="myFont">
+                                            <p class="myFont"> News Feed </p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <div class="row-fluid margin-top">
-                        <!-- Main Menu Class -->
-                        <div class="span12">
+                                <div class="row-fluid">
+                                    <div class="newsFeedMiddle">
+                                        <?php include 'NewsFeed.php'; ?>
 
-                            <div class="row-fluid">
-                                <div class="newsFeedTop">
-                                    <div class="myFont">
-                                        <p class="myFont"> News Feed </p>
+                                    </div>
+                                </div>
+
+                                <div class="row-fluid">
+                                    <div class="newsFeedBot">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row-fluid">
-                                <div class="newsFeedMiddle">
-                                    <?php include 'NewsFeed.php'; ?>
-
-                                </div>
-                            </div>
-
-                            <div class="row-fluid">
-                                <div class="newsFeedBot">
-                                </div>
-                            </div>
                         </div>
-
                     </div>
-                </div>
+                    <?php include 'UserModal.php' ?>
 
-                <div class="span1">
-
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 pickMeButton" id="pickme" name="pickme" data-toggle="modal" href="#pickMeModal">
-                        </form>
-                    </div>
-
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 recommendedButton" id="recommended" name="recommended" data-toggle="modal" href="#Recomended">
-                        </form>
-                    </div>
-
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 emergencyButton" id="emergency" name="emergency" data-toggle="modal" href="#Emergency">
-                        </form>
-                    </div>
-
-
-                    <!-- Friends Widget -->
-
-                    <div class="row-fluid marginfriendButton">
-                        <form action="PeopleCtrl.php" method="post">
-                            <input type="hidden" name="action" value="listneighbour"/>
-                            <input type="submit" value="" class="span12 friendButton" id="emergency" name="emergency">
-                        </form>
-                    </div>
 
                 </div>
-
             </div>
-        </div>
+            <?php include 'Footer.php' ?>
+            <?php include 'Script.php' ?>
 
-        <div class="Footer margin-top ">
-            <!-- footer div -->
-            <div id="footer" style="float:right; margin:5px">
-                Copyright © Crying Onion 2013
-            </div>
-        </div>
-
-        <!-- Modal for Widget button -->
-
-        <!-- Pick Me Modal Division -->
-
-        <div id="pickMeModal" class="modal hide fade in" style="display: none; ">  
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h3>This is a Pick Me Modal Example</h3>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>You can add some text here.</p>                
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-        </div>  
-
-        <!-- Recommended Modal Division -->
-
-        <div id="Recomended" class="modal hide fade in" style="display: none; ">  
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h3>Recommended</h3>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>You can add some text here.</p>                
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-        </div>  
-
-        <!-- Emergency Button -->
-
-        <div id="Emergency" class="modal hide fade in" style="display: none;">
-
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h2>Emergency</h2>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>Add some Text Here</p>
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-
-        </div>  
-
-        <!-- SCRIPT !!!  -->
-
-        <script src="../js/jquery.js"></script>  
-        <script src="../js/bootstrap-modal.js"></script>  
-        <script src="../js/js-script.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
 
     </body>
-    </html>
-
-    <?
-//session_start();
-    ?>
-<!--
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>SOS Children</title>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/mainMenuCss.css">
-    </head>
-    <body> 
-<?
-//include 'UserHeader.php';
-?>
-        <hr>
-        <br>
-
-
-<?
-//include 'PostStatus.php';
-//include 'PeopleSearch.php';
-?><br>
-        <form name="listneighbours" action="PeopleCtrl.php" method="post">
-            <input type="hidden" name="action" value="listneighbours">
-            <a href="javascript: listneighbours()">List Neighbors</a>
-            <script type="text/javascript">
-                function listneighbours()
-                {
-                    document.listneighbours.submit();
-                }
-            </script>
-        </form>
-        <form name="neighbourrequest" action="PeopleCtrl.php" method="post">
-            <input type="hidden" name="action" value="neighbourrequest">
-            <a href="javascript: neighbourrequest()">List Neighbors Request</a>
-            <script type="text/javascript">
-                function neighbourrequest()
-                {
-                    document.neighbourrequest.submit();
-                }
-            </script>
-        </form>
-
-<? // include 'NewsFeed.php' ?>
-
-    </body>
-    </html>-->
+</html>

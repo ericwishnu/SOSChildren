@@ -33,15 +33,15 @@
 }
 
 .dropdown-menu{
-/*    padding: 12px 10px 0 !important;
-min-width: 73px !important;*/
-/*eric*/
-padding: 12px 18px 0 !important;
-min-width: 92px !important;
+    /*    padding: 12px 10px 0 !important;
+    min-width: 73px !important;*/
+    /*eric*/
+    padding: 12px 18px 0 !important;
+    min-width: 92px !important;
 
-top: 84%;
-border-radius: 1px;
-border: 2px solid #2f96b4;
+    top: 84%;
+    border-radius: 1px;
+    border: 2px solid #2f96b4;
 
 
 }
@@ -521,7 +521,7 @@ Post Bar Css--------------------------------------------------*/
     background-position: top;
     background-color: transparent;
     border: transparent;
-border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     /*    box-shadow: 1px 5px 6px #c0c0c0;
     border-radius: 15px 15px 0px 0px;*/
 
