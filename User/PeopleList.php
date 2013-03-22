@@ -34,32 +34,8 @@ $userdata = unserialize($_SESSION['userdata']);
         </style>
     </head>
     <body class="Background">
-
-        <div class="Header" >
-            <!-- Header class -->
-            <div class="row">
-                <div class="span12 margin-leftHeader margin-topHeader">
-
-                    <div class="row-fluid">
-                        <div class="offset7 span4 margin-rightHeader">
-                            <?php include 'GlobalSearch.php' ?>
-                        </div>
-
-                        <div class="span1">
-                            <?php include 'UserDropdownMenu.php'; ?>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="span3 Logo">
-                <!-- Logo Div  -->
-            </div>
-        </div>
+        <?php include 'UserHeader.php' ?>
+        <?php include 'Logo.php' ?>
 
         <div class="row">
 
@@ -129,11 +105,6 @@ $userdata = unserialize($_SESSION['userdata']);
 
                                                             <input type="hidden" name="action" value="seepeopleprofile">
                                                             <input type="hidden" name="peopleSelectedID" value="<? echo $peopleID ?>">
-
-
-
-
-
                                                             <div>
                                                                 <a href="javascript: sponsorprofile<?php echo$i ?>()">
                                                                     <img class="neighbourphoto" src="../Database/Images/Sponsor/<? echo $photo; ?>" />
@@ -148,18 +119,8 @@ $userdata = unserialize($_SESSION['userdata']);
                                                                 }
                                                             </script>
 
-                                                                                                        <!--<input type="submit" value="View Profile"/>-->
-
-
-
                                                         </form>
                                                     </div>
-
-
-
-
-
-
                                                     <?
                                                 }
                                                 ?>
@@ -170,10 +131,7 @@ $userdata = unserialize($_SESSION['userdata']);
                                             }
                                             ?>
 
-
                                         </div>
-
-
                                     </div>
                                 </div>
 
@@ -184,109 +142,12 @@ $userdata = unserialize($_SESSION['userdata']);
                             </div>
                         </div>
                     </div>
-                    <div class="span1">
-
-                        <div class="row-fluid">
-                            <form>
-                                <input type="button" class="span12 pickMeButton" id="pickme" name="pickme" data-toggle="modal" href="#pickMeModal">
-                            </form>
-                        </div>
-
-                        <div class="row-fluid">
-                            <form>
-                                <input type="button" class="span12 recommendedButton" id="recommended" name="recommended" data-toggle="modal" href="#Recomended">
-                            </form>
-                        </div>
-
-                        <div class="row-fluid">
-                            <form>
-                                <input type="button" class="span12 emergencyButton" id="emergency" name="emergency" data-toggle="modal" href="#Emergency">
-                            </form>
-                        </div>
-
-                    </div>
+                    <?php include 'UserModal.php' ?>
                 </div>
-
-
-
             </div>
         </div>
-
-
-
-        <div class="Footer margin-top">
-            <!-- footer div -->
-            <div id="footer" style="float:right; margin:5px">
-                Copyright © Crying Onion 2013
-            </div>
-        </div>
-
-
-
-        <!-- Modal for Widget button 
-        -->
-
-        <!-- Pick Me Modal Division -->
-
-        <div id="pickMeModal" class="modal hide fade in" style="display: none; ">  
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h3>This is a Pick Me Modal Example</h3>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>You can add some text here.</p>                
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-        </div>  
-
-        <!-- 
-                Recommended Modal Division -->
-
-        <div id="Recomended" class="modal hide fade in" style="display: none; ">  
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h3>Recommended</h3>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>You can add some text here.</p>                
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-        </div>  
-
-
-        <!-- Emergency Button -->
-
-        <div id="Emergency" class="modal hide fade in" style="display: none;">
-
-            <div class="modal-header modalPink modal-radius">  
-                <a class="close" data-dismiss="modal">×</a>  
-                <h2>Emergency</h2>  
-            </div>  
-            <div class="modal-body">  
-                <h4>Text in a modal</h4>  
-                <p>Add some Text Here</p>
-            </div>  
-            <div class="modal-footer modalPink">  
-                <a href="#" class="btn btn-success">Call to action</a>  
-                <a href="#" class="btn" data-dismiss="modal">Close</a>  
-            </div>  
-
-        </div>  
-
-        <!-- SCRIPT !!!  -->
-
-        <script src="../js/jquery.js"></script>  
-        <script src="../js/bootstrap-modal.js"></script>  
-        <script src="../js/js-script.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
+        <?php include 'Footer.php' ?>
+        <?php include 'Script.php' ?>
 
 
     </body>
