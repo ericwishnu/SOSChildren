@@ -88,8 +88,8 @@ if (isset($_SESSION['message'])) {
 
             </div> <!-- span6 mainBox -->
 
-              <div class="span5 offset1">
-                <iframe width="560" height="315" src="http://www.youtube.com/embed/S0-fXw2rXZ4" frameborder="2" allowfullscreen></iframe>
+            <div class="span5 offset1">
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/Mhb1dC1LsnM" frameborder="0" allowfullscreen></iframe>
             </div>
         </div> <!-- div row -->
 
