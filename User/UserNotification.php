@@ -10,7 +10,7 @@ include 'User.php';
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/mainMenuCss.css">
     <link rel="stylesheet" type="text/css" href="../css/notifMenu.css">
-    <title>Here's Some Heads Up</title>
+    <title>My Notifications</title>
 
 </head>
 <body class="Background">
