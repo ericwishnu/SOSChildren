@@ -1,6 +1,7 @@
 <?php
 include 'PostData.php';
 
+
 $postlist = unserialize($_SESSION['newsfeeddataobj']);
 
 if (count($postlist) > 0) {
@@ -54,16 +55,16 @@ if (count($postlist) > 0) {
                         <? }
                         ?>
                     </div>
-                    <!-- <?php //if ($_SESSION['usernameU'] == $userID) { //cek user bukan ?>
+                    <? if ($_SESSION['usernameU'] == $userID) { //cek user bukan ?>
                         <form onsubmit="return deletepost();" action="UserCtrl.php" method="post">
                             <input type="hidden" name="action" value="deletepost"/>
-                            <input type="hidden" name="usertype" value="<?php //echo $usertype ?>"/>
-                            <input type="hidden" name="userid" value="<?php //echo $userID ?>"/>
-                            <input type="hidden" name="postid" value="<?php //echo $userpostID; ?>"/>
+                            <input type="hidden" name="usertype" value="<? echo $usertype ?>"/>
+                            <input type="hidden" name="userid" value="<? echo $userID ?>"/>
+                            <input type="hidden" name="postid" value="<? echo $userpostID; ?>"/>
                             <input style="float:right" type="submit" value="x"/>
                             <!--<a style="float:right" href="javascript: deletepost()">x</a>-->
-                        <!-- </form> -->
-                    <!-- <?php //} ?> -->
+                        </form>
+                    <? } ?>
                 </td>
             </tr>
 
@@ -80,8 +81,11 @@ if (count($postlist) > 0) {
                 </td>
             </tr>
             <tr>
-                <td align="right"> <font size="2"><?php echo $datetime; ?></font><hr></td>
+                <td align="right"> <font size="2"><?php echo $datetime; ?></font>
+                    <hr></td>
+
             </tr>
+
 
         </table>
 

@@ -61,7 +61,15 @@ $userdata = unserialize($_SESSION['userdata']);
                                 <div class="row-fluid">
                                     <div class="searchFeedTop">
                                         <div class="myFont">
+                                            <? if ($_SESSION['searchfoundationdataobj']==null && $_SESSION['searchpeopledataobj']==null ) {
+                                              ?>
+                                              <p class="myFont">Search  <?php if (isset($_GET['key'])) echo "\"" . $_GET['key'] . "\"" ?> Result not found</p>
+                                              <?  
+                                            } else{ ?>
+
                                             <p class="myFont">Search  <?php if (isset($_GET['key'])) echo "\"" . $_GET['key'] . "\"" ?> Result</p>
+                                            <? } ?>
+
                                         </div>
                                     </div>
                                 </div>
