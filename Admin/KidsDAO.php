@@ -45,7 +45,7 @@ class KidsDAO {
         if (mysql_num_rows($result) > 0) {
             while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 
-                $resultArray[] = new Kids($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11]);
+                $resultArray[] = new Kids($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11],$row[12]);
             }
             $this->conf->db_close();
             return $resultArray;
