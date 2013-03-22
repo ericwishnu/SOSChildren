@@ -25,7 +25,7 @@ $description=$foundationdata->getDescription();
     <title>Foundation Profile</title>
 </head>
 <body class="Background">
- <div class="Header" >
+   <div class="Header" >
     <!-- Header class -->
     <div class="row">
         <div class="span12 margin-leftHeader margin-topHeader">
@@ -102,9 +102,10 @@ $description=$foundationdata->getDescription();
                                         Yayasan Lima Roti Dua Ikan Indonesia dimulai dari sebuah persekutuan doa yang berdiri pada sekitar bulan Oktober 2003, yang menamakan diri persekutuan doa Lima Roti Dua Ikan. Pendiri mendapat pewahyuan “ajaib” melalui firman Tuhan dalam Kisah Rasul pasal 6 pada tahun 1998. Dalam Kisah Rasul pasal 6 ada beberapa orang yang dipilih untuk melayani meja (handle finance, TEV) bagi para janda, dan oleh karenanya firman Allah semakin tersebar, jumlah murid bertambah dan sejumlah besar imam (hamba Tuhan) menyerahkan diri dan menjadi percaya. Walaupun arti dari firman itu pada saat itu belum sepenuhnya dimengerti, tetapi nantinya akan menjadi dasar acuan bagi pewahyuan-pewahyuan berikutnya yang diterima oleh pendiri sehingga yayasan pada akhirnya bisa terbentuk.
                                         Pada bulan Februari 2004 pendiri kembali mendapat pewahyuan susulan melalui firman Tuhan (dalam suatu pergumulan doa di Taman Getsemani, Semarang). Tuhan memberikan ayat di 2 Raja-raja 4:42-44, dan melalui ayat ini pendiri diberikan konfirmasi untuk melayani Tuhan sepenuh waktu. Perintah Tuhan pada waktu itu adalah untuk memberi makan para abdi Allah, supaya mereka bisa melayani bangsa ini dengan maksimal. Tuhan meneguhkan perintah itu dengan memberikan kepada pendiri sebuah “tanda” konfirmasi yang masih disimpan pendiri sampai saat ini.
                                     </p>
+                                    <hr>
                                 </div>
 
-                                <div class="margin-top row-fluid">
+                                <div class="row-fluid">
                                     <h4>Visi & Misi</h4>
                                     <p>
                                         VISI
@@ -118,59 +119,84 @@ $description=$foundationdata->getDescription();
                                         MOTTO
                                         <br>
                                         Melayani Tuhan dengan memperhatikan sesama (We serve the Lord by serving others)
-
-
                                     </p>
+                                    <hr>
                                 </div>
 
                                 <div class="row-fluid">
-                                   <h4> Q & A </h4>
-                                    What does the foundation do?
+                                 <h4> Q & A </h4>
+                                 <p>
+                                    <b>What does the foundation do?</b>
+                                    <br>
                                     The Five Loaves and Two Fishes foundation is a non profit charitable organization that provide holistic charitable works for the poor and the needy. The people we serve is adult and children of all ages. Also we take care of the elderly and minister to the prisoners at prisons and other detention places.
-                                    How did it get started?
+                                    <br><br>
+                                    <b>How did it get started?</b>
+                                    <br>
                                     It started when Marko Budiman surrender his life to the Lord by gathering several of his friends to begin caring for the poor and the needy in 2004. Soon the number grew bigger and now they can accumulated enough money to do it in a regular basic. Soon the words spread out to other organizations and churches who loves their works for the poor and the needy, and they joined them. What began as a spark of flame has turned into a torch of love.
-                                    Where do the money go?
+                                    <br><br>
+                                    <b>Where do the money go?</b>
+                                    <br>
                                     Since its beginning, the foundation has provided meals, basic needed goods to family shelters, and to numerous humanitarian organization around Jakarta and throughout Indonesia. We also sending our help to many of the disaster struck victims in Indonesia. All the proceed go to the most poor and the needy.
-
-                                </div>
-
-
-                                <div class="row-fluid">
-                                    <h4>Where to Find ?</h4>
-
-
-                                    <?php echo $address." - ".$state ?><br/>
-                                    <?php echo $city." - ". $country?><br/>
-                                    Postal Code : <?php echo $postalCode;?></br>
-                                    Phone : <?php echo $phone?> <br/><br/>
-                                    <p ><?php echo $description?><br/></p>
-                                </br>
-                                <div class="row-fluid"> 
-                                    <form action="KidsCtrl.php" method="POST">
-                                        <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
-                                        <input type="hidden" name="action" value="listkidsbyfoundation"/>
-                                        <input type="submit" class="browseKids span2" value=""/>
-                                    </form>
-                                </div>
-
-                                <hr>
+                                    <br><br>
+                                    <b>Where do you get the money?</b>
+                                    <br>
+                                    Part of the money is donated by inner circle friends who share the same vision and passion. Other funding is donated by various individuals and organizations. Although many things at the foundation are donated, it now currently takes about $ 200,000 per year to run operations throughout Indonesia.
+                                    Although blessing of donations always seem to cover expenses, funding is becoming crucial for this rapidly growing endeavor. Any donations helps. The Five Loaves and Two Fishes volunteers are mission and social workers, they are not fund raisers.
+                                    <br><br>
+                                    <b>Does anyone get paid?</b>
+                                    <br>
+                                    Great blessing to the heart and soul are the only payment. Only one secretary and one mission field officer getting paid. All others, including chairman, managers, and public relation, is volunteer. (starting 2009 everyone in the foundation is volunteer)
+                                    <br><br>
+                                    <b>Who is the volunteers at the foundation?</b>
+                                    <br>
+                                    Volunteers at the foundation are a cross section of the community. They are young and old, male and female. Some works several hours a week, some given more.
+                                    <br><br>
+                                    <b>How can I help?</b>
+                                    <br>
+                                    You can donate money or supplies of goods, or spread the word to those who may be in the position to help.
 
 
+                                </p>
+                                <hr>    
+                            </div>
 
-                                <?php
-                                if (count($foundationPost) > 0) {
-                                    for ($i = count($foundationPost) - 1; $i >= 0; $i--) {
-                                        $temp = $foundationPost[$i];
+
+                            <div class="row-fluid">
+                                <h4>Where to Find ?</h4>
+
+
+                                <?php echo $address." - ".$state ?><br/>
+                                <?php echo $city." - ". $country?><br/>
+                                Postal Code : <?php echo $postalCode;?></br>
+                                Phone : <?php echo $phone?> <br/><br/>
+                                <p ><?php echo $description?><br/></p>
+                            </br>
+                            <div class="row-fluid"> 
+                                <form action="KidsCtrl.php" method="POST">
+                                    <input type="hidden" name="foundationid" value="<?php echo $foundationID?>"/>
+                                    <input type="hidden" name="action" value="listkidsbyfoundation"/>
+                                    <input type="submit" class="browseKids span2" value=""/>
+                                </form>
+                            </div>
+
+                            <hr>
+
+
+
+                            <?php
+                            if (count($foundationPost) > 0) {
+                                for ($i = count($foundationPost) - 1; $i >= 0; $i--) {
+                                    $temp = $foundationPost[$i];
                                                 // echo $temp[0]."|". $temp[1]."|". $temp[2]."|". $temp[3]."|". $temp[4]."<br/>";
-                                        $id = $temp[0];
-                                        $title = $temp[1];
-                                        $photo = $temp[2];
-                                        $time = $temp[3];
-                                        $content = $temp[4];
-                                        ?>
-                                        <table style="width:100%"  >
-                                            <tr>
-                                                <td><div style="float:left"><a><?php echo $title; ?></a></div>
+                                    $id = $temp[0];
+                                    $title = $temp[1];
+                                    $photo = $temp[2];
+                                    $time = $temp[3];
+                                    $content = $temp[4];
+                                    ?>
+                                    <table style="width:100%"  >
+                                        <tr>
+                                            <td><div style="float:left"><a><?php echo $title; ?></a></div>
 
 <!--                                                            <form   onsubmit="return deletepost();" action="FoundationCtrl.php" method="post">
                                                                 <input type="hidden" name="foundationid" value="<?// echo $_SESSION['usernameF']; ?>"/>
