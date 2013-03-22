@@ -146,51 +146,36 @@ include 'User.php';
                                                             </p>
                                                         </div>
 
-
-<<<<<<< HEAD
-                                                        <div style="float:right">
-                                                           <form action="PeopleCtrl.php" method="post">
-                                                               <input type="hidden" name="action" value="approveneighbour">
-                                                               <input type="hidden" name="peopleID" value="<? echo $peopleID ?>">
-                                                               <input type="submit" value="Approve">
-                                                           </form>
-                                                           <form action="PeopleCtrl.php" method="post">
-                                                               <input type="hidden" name="action" value="removeneighbour">
-                                                               <input type="hidden" name="peopleID" value="<? echo $peopleID ?>">
-                                                               <input type="submit" value="Decline">
-                                                           </form>
-=======
                                                         <div class="row-fluid marginBtnNotif">
                                                             <div class="span2">
-                                                               <form action="PeopleCtrl.php" method="post">
-                                                                   <input type="hidden" name="action" value="approveneighbour">
-                                                                   <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
-                                                                   <input type="submit" class="btnApprove span12" value="">
-                                                               </form>
-                                                           </div>
-                                                           <div class="span2">
-                                                               <form action="PeopleCtrl.php" method="post">
-                                                                   <input type="hidden" name="action" value="removeneighbour">
-                                                                   <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
-                                                                   <input type="submit" class="btnDecline span12" value="">
-                                                               </form>
-                                                           </div>
->>>>>>> DONE Approve and Reject
+                                                             <form action="PeopleCtrl.php" method="post">
+                                                                 <input type="hidden" name="action" value="approveneighbour">
+                                                                 <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
+                                                                 <input type="submit" class="btnApprove span12" value="">
+                                                             </form>
+                                                         </div>
+                                                         <div class="span2">
+                                                             <form action="PeopleCtrl.php" method="post">
+                                                                 <input type="hidden" name="action" value="removeneighbour">
+                                                                 <input type="hidden" name="peopleID" value="<?// echo $peopleID ?>">
+                                                                 <input type="submit" class="btnDecline span12" value="">
+                                                             </form>
+                                                         </div>
 
-                                                       </div>
-                                                   </div>
-                                                   <div style="clear:both">
+                                                     </div>
+                                                 </div>
+                                                 <div style="clear:both">
 
-                                                   </div>
-
+                                                 </div>
 
 
-                                                   <?
-                                               }
-                                               ?>
 
-                                               <?
-                                           } else {
+                                                 <?
+                                             }
+                                             ?>
+
+                                             <?
+                                         } else {
                                             echo 'Not Avaiable';
                                         }
                                         ?>
