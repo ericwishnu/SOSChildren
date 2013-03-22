@@ -15,6 +15,11 @@ class KidsCtrl {
     }
 
     public function run() {
+
+    $_SESSION['fosterKids']="";
+    $_SESSION['receivedamount']="";
+    $_SESSION['mycoin']="";
+
         $page = $_POST['action'];
         
         if ($page == "searchkids") {

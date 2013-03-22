@@ -1,9 +1,4 @@
-<?
-$_SESSION['fosterKids']="";
-$_SESSION['receivedamount']="";
-$_SESSION['mycoin']="";
 
-?>
 
 <div class="row-fluid">
 
