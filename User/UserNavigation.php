@@ -1,3 +1,10 @@
+<?
+$_SESSION['fosterKids']="";
+$_SESSION['receivedamount']="";
+$_SESSION['mycoinamount']="";
+
+?>
+
 <div class="row-fluid">
 
     <form name="mainpage" action="UserCtrl.php" method="post"/>
