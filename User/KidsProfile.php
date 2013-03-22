@@ -279,3 +279,4 @@ for ($i = 0; $i < count($foundationname); $i++) {
             <script src="../js/bootstrap.min.js"></script>
         </body>
         </html>
+f

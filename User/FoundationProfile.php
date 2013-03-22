@@ -25,7 +25,7 @@ $description=$foundationdata->getDescription();
     <title>Foundation Profile</title>
 </head>
 <body class="Background">
-   <div class="Header" >
+ <div class="Header" >
     <!-- Header class -->
     <div class="row">
         <div class="span12 margin-leftHeader margin-topHeader">
@@ -202,6 +202,8 @@ $description=$foundationdata->getDescription();
                                 </div>
 
                                 <div class="row-fluid margin-top">
+                                    <h4>Image Slide Show</h4>
+                                    <br>
                                     <div id="myCarousel" class="carousel slide">
                                         <ol class="carousel-indicators">
                                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

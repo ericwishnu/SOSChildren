@@ -71,12 +71,12 @@
 }
 
 .pictureSlide{
-	max-width: 800px;
-	max-height: 600px;
+	width: 700px;
+	height: 440px;
 }
 
 .carousel{
-	margin-left: 25px !important;
+	margin-left: 13px !important;
 }
 
 .carousel-control.left{
@@ -84,5 +84,5 @@
 }
 
 .carousel-control.right{
-	right: 45px !important;
+	right: 21px !important;
 }
