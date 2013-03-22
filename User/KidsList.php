@@ -97,6 +97,7 @@ $userdata = unserialize($_SESSION['userdata']);
                                     <br/>
                                     <div class="row-fluid">
                                         <?php
+                                        
                                         $kidsList = unserialize($_SESSION['kidslistdataobj']);
 
                                         if (count($kidsList) > 0) {
