@@ -205,7 +205,7 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                 
 
 
-                                <div class="row">
+                                <div class="row-fluid">
                                     <div class="accordion margin-top" id="accordion2">
                                         <div class="accordion-group">
                                             <div class="accordion-heading">
@@ -270,12 +270,13 @@ for ($i = 0; $i < count($foundationname); $i++) {
 
 
 
-            <div class="Footer margin-top">
-                <!-- footer div -->
-                <div id="footer" style="float:right; margin:5px">
-                    Copyright © Crying Onion 2013
-                </div>
-            </div>
+
+    <div class="Footer margin-top">
+        <!-- footer div -->
+        <div id="footer" style="float:right; margin:5px">
+            Copyright © Crying Onion 2013
+        </div>
+    </div>
             <!-- SCRIPT !!!  -->
 
             <script src="../js/jquery.js"></script>  
@@ -284,4 +285,3 @@ for ($i = 0; $i < count($foundationname); $i++) {
             <script src="../js/bootstrap.min.js"></script>
         </body>
         </html>
-f
