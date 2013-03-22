@@ -62,9 +62,7 @@ class FoundationCtrl {
         $username=$_SESSION['usernameU'];
         $foundationID=$_POST['foundationid'];
         $quantity=$_POST['quantity'];
-        
-        $this->foundation_db_class = new FoundationDAO();
-
+ 
         $dbCondition = $this->foundation_db_class->donatefoundation_db ($username, $foundationID, $quantity);
 
         if($dbCondition==true)
