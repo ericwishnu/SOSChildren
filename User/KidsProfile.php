@@ -34,6 +34,7 @@ for ($i = 0; $i < count($foundationname); $i++) {
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/mainMenuCss.css">
     <link rel="stylesheet" type="text/css" href="../css/kidsProfile.css">
+    
     <title>Kids Profile</title>
 </head>
 <body class="Background">
@@ -187,7 +188,7 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                                         ?>
                                                         <input type="text" name="quantity" class="input-small marginDonate" id="coinDonate"/>
                                                         <span class="add-on">Coins</span>
-                                                        <input type="submit" class="span4 donateButton" value=""/>
+                                                        <input type="submit" class="span12 donateButton" value=""/>
 
                                                         <?
                                                     }

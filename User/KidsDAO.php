@@ -169,9 +169,7 @@ class KidsDAO {
             VALUES ('$sponsorID', '$foundationID', $kidsID, '$currentdatetime', $quantity)";
         $result = $this->conf->db_query($query);
 
-        $query2 = "UPDATE Kids SET 
-                    NeededCoin -= $quantity 
-                 WHERE KidsID = $kidsID";
+        $query2 = "UPDATE Kids SET NeededCoin = NeededCoin - $quantity WHERE KidsID = $kidsID";
         $result2 = $this->conf->db_query($query2);
         
         if (!$result) {

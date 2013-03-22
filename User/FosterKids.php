@@ -159,6 +159,7 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                             ?> 
                                         </td>
                                     </tr>
+                                    
                                 </table>                     
 
 
@@ -168,10 +169,15 @@ for ($i = 0; $i < count($foundationname); $i++) {
 
                                     <table class="margin-top"><!-- TABLE AFTER FIRST TABLE -->
                                         <tr>
+                                            Total Coins to Donate : <? echo $_SESSION['quantity'] ?> Coins
+                                        </tr>
+                                        
+                                        <tr>
                                             <td valign="top" frame="box"align="left" rowspan="7" width="200px">
 
                                                 <input type="submit" value="Yes" class="myFont-button">
                                                 <input type="button" value="No" onclick="no()" class="myFont-button"><br/>
+                                                <input type="hidden" name="quantity" value="<?echo $_SESSION['quantity']?>">
                                                 <input type="hidden" name="kidsSelected" value="<? echo $kidsData->getKidsID() ?>">
                                                 <input type="hidden" name="foundationID" value="<? echo $kidsData->getFoundationID() ?>"/>
                                                 <input type="hidden" name="kidsID" value="<? echo $kidsData->getKidsID() ?>">

@@ -113,6 +113,7 @@ class KidsCtrl {
     {
         $_SESSION['checkFoster']= "";
         $kidsSelected=$_POST['kidsSelectedID'];
+        $_SESSION['quantity'] = $_POST['quantity'];
         $_SESSION['kidsdataobj'] = serialize($this->getKidsData($kidsSelected));
         header("location: FosterKids.php");
     }
