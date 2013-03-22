@@ -25,8 +25,6 @@ class UserCtrl {
             $this->mainpage();
         } else if ($page == "usersignup") {
             $this->signup();
-        } else if ($page == "usersignupNinja") {
-            $this->signup();
         } else if ($page == "viewprofile") {
             $this->viewProfile();
         } elseif ($page == "settings") {
@@ -135,57 +133,6 @@ class UserCtrl {
         }
     }
 
-    private function signupNinja() {
-        $sponsorID = $_SESSION['email'];
-        $password = $_SESSION['password1'];
-        $email = $_SESSION['email'];
-        $name = $_SESSION['name'];
-        $address = $_SESSION['address'];
-        $city = $_SESSION['city'];
-        $state = $_SESSION['state'];
-        $country = $_SESSION['country'];
-        $postalcode = $_SESSION['zipcode'];
-        $phone = $_SESSION['phone'];
-        $photo=$_FILES['photo']['name'];
-        mkdir("../Database/Images/Sponsor/" . $sponsorID . "");
-        mkdir("../Database/Images/Sponsor/" . $sponsorID . "/__Post");
-        //=============
-
-        if ($photo == '' || $photo==null) {
-            $urlphoto = 'DefaultUser.jpg';
-
-            $defaultpath = "../Database/Images/Sponsor/DefaultUser.jpg";
-            $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/DefaultUser.jpg";
-
-            if (move_uploaded_file($defaultpath, $filepath)) {
-                $urlphoto = $sponsorID . "/DefaultUser.jpg";
-            }
-        } else {
-            $ext = substr($_FILES['photo']['type'], -4);
-
-            if (substr($ext, 0, 1) == "/") {
-                $ext = substr($ext, -3);
-            }
-            $timestamp = md5(time());
-            $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/photo" . $timestamp . "." . $ext;
-
-            if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
-                $urlphoto = $sponsorID . "/photo" . $timestamp . "." . $ext;
-            }
-        }
-        $this->user_db_class = new userDAO();
-        //echo $sponsorID. $password. $email. $name. $address. $city. $state. $country. $postalcode. $phone;
-        
-        $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone,$urlphoto);
-        if (!$result) {
-            $_SESSION['message'] = "Sign Up Failed!";
-            header('location: UserLogin.php');
-        } else {
-            $_SESSION['message'] = "Sign Up Success!";
-            header('location: UserSignUp.php?p_id=8');
-        }
-    }
-    
     private function post() {
         $userID = $_POST['id'];
         $photo = $_FILES['photo']['name'];
