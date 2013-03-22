@@ -67,7 +67,17 @@ for ($i = 0; $i < count($foundationname); $i++) {
 
                                 <div class="span11 offset1">
                                     <h1><? echo $kidsName ?></h1>
-                                    <? echo $foundation . " - " . $kidsData->getRegion() ?><br/>
+                                    <form name="foundation" action="FoundationCtrl.php" method="post">
+                                        <input type="hidden" name="action" value="foundationprofile"/>
+                                        <input type="hidden" name="foundationSelectedID" value="<?php echo $foundationID ?>"/>
+
+                                    </form>
+                                    <a href="javascript: foundation()"><? echo $foundation ?></a> 
+                                    <script>
+                                        function foundation() {
+                                            document.foundation.submit();
+                                        }
+                                    </script><br/>
                                     Aspiration <? echo $aspiration ?>
                                 </div>  
                             </div>
@@ -195,27 +205,7 @@ for ($i = 0; $i < count($foundationname); $i++) {
                     </div>
                 </div>
 
-                <div class="span1">
-
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 pickMeButton" id="pickme" name="pickme" data-toggle="modal" href="#pickMeModal">
-                        </form>
-                    </div>
-
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 recommendedButton" id="recommended" name="recommended" data-toggle="modal" href="#Recomended">
-                        </form>
-                    </div>
-
-                    <div class="row-fluid">
-                        <form>
-                            <input type="button" class="span12 emergencyButton" id="emergency" name="emergency" data-toggle="modal" href="#Emergency">
-                        </form>
-                    </div>
-
-                </div>
+                <?php include 'UserModal.php'; ?>
 
             </div>
         </div>
@@ -224,18 +214,9 @@ for ($i = 0; $i < count($foundationname); $i++) {
 
 
 
-        <div class="Footer margin-top">
-            <!-- footer div -->
-            <div id="footer" style="float:right; margin:5px">
-                Copyright © Crying Onion 2013
-            </div>
-        </div>
-        <!-- SCRIPT !!!  -->
+        <?php include 'Footer.php' ?>
+        <?php include 'Script.php' ?>
 
-        <script src="../js/jquery.js"></script>  
-        <script src="../js/bootstrap-modal.js"></script>  
-        <script src="../js/js-script.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
 
 
 
