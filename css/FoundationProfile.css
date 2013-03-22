@@ -69,3 +69,8 @@
         background-color: transparent;
 	background-repeat: no-repeat;
 }
+
+.pictureSlide{
+	width: 800px;
+	height: 600px;
+}
