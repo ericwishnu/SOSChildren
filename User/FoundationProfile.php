@@ -25,7 +25,7 @@ $description=$foundationdata->getDescription();
     <title>Foundation Profile</title>
 </head>
 <body class="Background">
- <div class="Header" >
+   <div class="Header" >
     <!-- Header class -->
     <div class="row">
         <div class="span12 margin-leftHeader margin-topHeader">
@@ -212,14 +212,61 @@ $description=$foundationdata->getDescription();
                                         </ol>
                                         <!-- Carousel items -->
                                         <div class="carousel-inner">
-                                            <div class="active item"><img class="pictureSlide" src="../img/Foundation/limaRoti/1.jpg"></div>
-                                            <div class="item"><img class="pictureSlide" src="../img/Foundation/limaRoti/2.jpg"></div>
-                                            <div class="item"><img class="pictureSlide" src="../img/Foundation/limaRoti/3.jpg"></div>
-                                            <div class="item"><img  class="pictureSlide" src="../img/Foundation/limaRoti/4.jpg"></div>
+                                            <div class="active item">
+                                                <img class="pictureSlide" src="../img/Foundation/limaRoti/1.jpg">
+                                                <div class="carousel-caption">
+                                                    <h4>Activity</h4>
+                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="pictureSlide" src="../img/Foundation/limaRoti/2.jpg">
+                                                <div class="carousel-caption">
+                                                    <h4>Second Thumbnail label</h4>
+                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img class="pictureSlide" src="../img/Foundation/limaRoti/3.jpg">
+                                                <div class="carousel-caption">
+                                                    <h4>Second Thumbnail label</h4>
+                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img  class="pictureSlide" src="../img/Foundation/limaRoti/4.jpg">
+                                                <div class="carousel-caption">
+                                                    <h4>Second Thumbnail label</h4>
+                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img  class="pictureSlide" src="../img/Foundation/limaRoti/5.jpg">
+                                                <div class="carousel-caption">
+                                                    <h4>Second Thumbnail label</h4>
+                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img  class="pictureSlide" src="../img/Foundation/limaRoti/6.jpg">
+                                                <div class="carousel-caption">
+                                                    <h4>Second Thumbnail label</h4>
+                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img  class="pictureSlide" src="../img/Foundation/limaRoti/7.jpg">
+                                                <div class="carousel-caption">
+                                                    <h4>Second Thumbnail label</h4>
+                                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                         <!-- Carousel nav -->
                                         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                                         <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                                        <hr>
+
                                     </div>
 
                                 </div>

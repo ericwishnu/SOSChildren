@@ -86,3 +86,7 @@
 .carousel-control.right{
 	right: 21px !important;
 }
+
+.carousel-caption{
+	right: 10px !important;
+}
