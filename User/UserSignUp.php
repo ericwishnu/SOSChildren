@@ -24,7 +24,7 @@ if ($p_id == 1) {
 
         <div class="span4 offset2 center">
         
-          <form action="UserSignUp.php?&p_id=2" id="signupform" method="POST">
+          <form action="UserSignUp.php?p_id=2" id="signupform" method="POST">
           <input type="hidden" name="sponsortype" value="public"/>
                 
             <input type="submit" value="" class="pageOneContainerPublic" name="pageOneContainerPublic" id="pageOneContainerPublic" alt="GO Public!">
@@ -32,8 +32,9 @@ if ($p_id == 1) {
         </div>
 
         <div class="span4">
-          <form>
-            <input type="button" class="pageOneContainerNinja" name="pageOneContainerNinja" id="pageOneContainerNinja" alt="Go Ninja!">
+          <form action="UserSignUp.php?p_id=2" id="signupform" method="POST">
+            <input type="hidden" name="sponsortype" value="ninja"/>
+            <input type="submit" value="" class="pageOneContainerNinja" name="pageOneContainerNinja" id="pageOneContainerNinja" alt="Go Ninja!">
           </form>
         </div>
       </div> <!-- end container div -->

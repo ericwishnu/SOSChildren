@@ -106,7 +106,13 @@ class UserCtrl {
             $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/DefaultUser.jpg";
 
             if (move_uploaded_file($defaultpath, $filepath)) {
-                $urlphoto = $sponsorID . "/DefaultUser.jpg";
+                if($sponsortype=="public"){
+                     $urlphoto = $sponsorID . "/DefaultUser.jpg";
+                }
+                else{
+                    $urlphoto = $sponsorID . "/DefaultNinja.jpg";
+                }
+               
             }
         } else {
             $ext = substr($_FILES['photo']['type'], -4);
