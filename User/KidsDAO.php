@@ -169,7 +169,10 @@ class KidsDAO {
             VALUES ('$sponsorID', '$foundationID', $kidsID, '$currentdatetime', $quantity)";
         $result = $this->conf->db_query($query);
 
-        
+        $query2 = "UPDATE Kids SET 
+                    NeededCoin -= $quantity 
+                 WHERE KidsID = $kidsID";
+        $result2 = $this->conf->db_query($query2);
         
         if (!$result) {
             //throw new Exception('Could not register it in database - please try again later.\n');

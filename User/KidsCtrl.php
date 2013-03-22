@@ -122,10 +122,11 @@ class KidsCtrl {
         $username=$_SESSION['usernameU'];
         $foundationID=$_POST['foundationID'];
         $kidsID=$_POST['kidsID'];
+        $quantity=$_POST['quantity'];
         
         $this->kids_db_class = new KidsDAO();
 
-        $dbCondition = $this->kids_db_class->fosterKid_db ($username, $foundationID, $kidsID);
+        $dbCondition = $this->kids_db_class->fosterKid_db ($username, $foundationID, $kidsID, $quantity);
 
         if($dbCondition == true)
         {

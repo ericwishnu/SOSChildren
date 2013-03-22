@@ -82,6 +82,37 @@ class FoundationDAO {
         }
     }
     
+    function donatefoundation_db($sponsorID, $foundationID, $quantity) {
+        $this->conf = new Config();
+        $this->conf->db_connect();
+
+        $kidsID;
+        
+        $query2 = "SELECT KidsID FROM Kids WHERE Name = ALL(SELECT Name FROM Foundation WHERE FoundationID = '$foundationID')";
+        $result2 = $this->conf->db_query($query2);
+
+        if (mysql_num_rows($result2) == 0) {
+            return false;
+        }
+        while ($row = mysql_fetch_array($result2, MYSQL_NUM)) {
+            
+            $kidsID = $row[0];
+        }
+        
+        
+        
+        $currentdatetime = date('Y-m-d') . " " . date("H:i:s");
+        $query = "INSERT INTO Donorship (SponsorID, FoundationID, KidsID, DateTime, Quantity) 
+            VALUES ('$sponsorID', '$foundationID', $kidsID, '$currentdatetime', $quantity)";
+        $result = $this->conf->db_query($query);
+
+        if (!$result) {
+            //throw new Exception('Could not register it in database - please try again later.\n');
+        }
+
+        return true;
+    }
+    
   
 
 }
