@@ -47,8 +47,6 @@ class UserCtrl {
             $this->post();
         } elseif ($page == "coinpage") {
             $this->coinpage();
-        } elseif ($page == "showmycoin") {
-            $this->showmycoin();
         } elseif ($page == "deletepost") {
             $this->deletePost();
         }
@@ -256,12 +254,8 @@ private function prepareChangePicture() {
 }
 
 private function coinpage() {
-    $_SESSION['coinstatus']= "page1";
-    header("location: CoinMenu.php");
-}
-
-private function showmycoin() {
-    $_SESSION['coinstatus']= "page2";
+    $username = $_SESSION['usernameU'];
+    $_SESSION['mycoinamout'] = $this->user_db_class->getusercoin_db($username);
     header("location: CoinMenu.php");
 }
 

@@ -255,7 +255,7 @@ class UserDAO {
 
         $query = "SELECT SponsorID, Name, Photo FROM Sponsor WHERE SponsorID = '$sponsorID'";
         $result = $this->conf->db_query($query);
-       if (mysql_num_rows($result) > 0) {
+        if (mysql_num_rows($result) > 0) {
             while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
                 //post id, userid, photo, post content, date time, status
                 $resultArray[] = array($row[0], $row[1], $row[2]);
@@ -264,6 +264,22 @@ class UserDAO {
             return $resultArray;
         }
     }
+    
+    function getusercoin_db($sponsorID){
+        $this->conf = new Config();
+        $this->conf->db_connect();
+
+        $query = "SELECT Coins FROM Sponsor WHERE SponsorID = '$sponsorID'";
+        $result = $this->conf->db_query($query);
+        if (mysql_num_rows($result) > 0) {
+            $temp = mysql_fetch_array($result);
+            return $row[0];
+        }
+        
+            $this->conf->db_close();
+            return null;
+    }
+    
 }
 
 ?>

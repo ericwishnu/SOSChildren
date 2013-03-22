@@ -6,7 +6,6 @@ include 'User.php';
 <!DOCTYPE HTML>
 
 <html>
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
@@ -60,7 +59,7 @@ include 'User.php';
                                                 </div>
                                                 <div class="span4 offset2">
                                                     <form action="UserCtrl.php" method="post">
-                                                        <input type="hidden" name="action" value="showmycoin"/>
+                                                        <input type="hidden" name="action" value="coinpage"/>
                                                         <input type="submit" class="span12 checkCoin" value="">
                                                     </form>
                                                     <div class="row">
@@ -68,7 +67,7 @@ include 'User.php';
                                                     </div>
                                                     <div class="row input-prepend">
                                                         <form>
-                                                            <input type="text" class="offset4 input-small" readonly value=""><span class="add-on">Coins</span>
+                                                            <input type="text" value="<? echo $_SESSION['mycoinamout']; ?>" class="offset4 input-small" readonly value=""><span class="add-on">Coins</span>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -122,5 +121,6 @@ include 'User.php';
             <?php include 'Script.php' ?>
 
     </body>
+
 
 </html>
