@@ -45,6 +45,8 @@ class UserCtrl {
             $this->changePicture();
         } elseif ($page == "addpost") {
             $this->post();
+        } elseif ($page == "coinpage") {
+            $this->coinpage();
         } elseif ($page == "deletepost") {
             $this->deletePost();
         }
@@ -62,7 +64,7 @@ class UserCtrl {
             $userdata=$this->user_db_class->getuserdata_db($username);
             $_SESSION['userdata']=serialize($userdata[0]);
             $_SESSION['newsfeeddataobj'] = serialize($this->user_db_class->viewnewsfeed_db($username));
-           
+
             header('location: MainPage.php');
         } else {
             $_SESSION['message'] = "Login Failed";
@@ -107,185 +109,190 @@ class UserCtrl {
 
             if (move_uploaded_file($defaultpath, $filepath)) {
                 if($sponsortype=="public"){
-                     $urlphoto = $sponsorID . "/DefaultUser.jpg";
-                }
-                else{
-                    $urlphoto = $sponsorID . "/DefaultNinja.jpg";
-                }
-               
+                 $urlphoto = $sponsorID . "/DefaultUser.jpg";
+             }
+             else{
+                $urlphoto = $sponsorID . "/DefaultNinja.jpg";
             }
-        } else {
-            $ext = substr($_FILES['photo']['type'], -4);
 
-            if (substr($ext, 0, 1) == "/") {
-                $ext = substr($ext, -3);
-            }
-            $timestamp = md5(time());
-            $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/photo" . $timestamp . "." . $ext;
-
-            if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
-                $urlphoto = $sponsorID . "/photo" . $timestamp . "." . $ext;
-            }
         }
-        $this->user_db_class = new userDAO();
-        //echo $sponsorID. $password. $email. $name. $address. $city. $state. $country. $postalcode. $phone;
-        
-        $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone,$urlphoto);
-        if (!$result) {
-            $_SESSION['message'] = "Sign Up Failed!";
-            header('location: UserLogin.php');
-        } else {
-            $_SESSION['message'] = "Sign Up Success!";
-            header('location: UserSignUp.php?p_id=8');
+    } else {
+        $ext = substr($_FILES['photo']['type'], -4);
+
+        if (substr($ext, 0, 1) == "/") {
+            $ext = substr($ext, -3);
+        }
+        $timestamp = md5(time());
+        $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/photo" . $timestamp . "." . $ext;
+
+        if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
+            $urlphoto = $sponsorID . "/photo" . $timestamp . "." . $ext;
         }
     }
+    $this->user_db_class = new userDAO();
+        //echo $sponsorID. $password. $email. $name. $address. $city. $state. $country. $postalcode. $phone;
 
-    private function post() {
-        $userID = $_POST['id'];
-        $photo = $_FILES['photo']['name'];
-        $content = $_POST['content'];
+    $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone,$urlphoto);
+    if (!$result) {
+        $_SESSION['message'] = "Sign Up Failed!";
+        header('location: UserLogin.php');
+    } else {
+        $_SESSION['message'] = "Sign Up Success!";
+        header('location: UserSignUp.php?p_id=8');
+    }
+}
+
+private function post() {
+    $userID = $_POST['id'];
+    $photo = $_FILES['photo']['name'];
+    $content = $_POST['content'];
 
 
-        if ($photo == "") {
-            $urlfile = "";
-           
-            $dbCondition = $this->user_db_class->addPostNoPhoto_db($userID, $content);
-        } else {
-            $ext = substr($_FILES['photo']['type'], -4);
+    if ($photo == "") {
+        $urlfile = "";
 
-            if (substr($ext, 0, 1) == "/") {
-                $ext = substr($ext, -3);
-            }
-            $timestamp = md5(time());
-            $filepath = "../Database/Images/Sponsor/" . $userID . "/__Post/" . $timestamp . "." . $ext;
+        $dbCondition = $this->user_db_class->addPostNoPhoto_db($userID, $content);
+    } else {
+        $ext = substr($_FILES['photo']['type'], -4);
 
-            if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
-                $urlfile = $userID . "/__Post/" . $timestamp . "." . $ext;
-            }
-             $dbCondition = $this->user_db_class->addPost_db($userID, $content, $urlfile);
+        if (substr($ext, 0, 1) == "/") {
+            $ext = substr($ext, -3);
         }
+        $timestamp = md5(time());
+        $filepath = "../Database/Images/Sponsor/" . $userID . "/__Post/" . $timestamp . "." . $ext;
+
+        if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
+            $urlfile = $userID . "/__Post/" . $timestamp . "." . $ext;
+        }
+        $dbCondition = $this->user_db_class->addPost_db($userID, $content, $urlfile);
+    }
 
         //$this->user_db_class = new UserDAO();
-        echo $photo;
-        echo $urlfile;
-       
+    echo $photo;
+    echo $urlfile;
+
         ///belom kelar
 
-        if ($dbCondition == true) {
+    if ($dbCondition == true) {
             //$_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($userID));
             // $_SESSION['userpost'] = serialize($this->user_db_class->listPost_db($userID));
-            $_SESSION['newsfeeddataobj'] = serialize($this->user_db_class->viewnewsfeed_db($userID));
-            header("location: MainPage.php");
-        } else {
+        $_SESSION['newsfeeddataobj'] = serialize($this->user_db_class->viewnewsfeed_db($userID));
+        header("location: MainPage.php");
+    } else {
 
             //$_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($userID));
             //$_SESSION['userpost'] = serialize($this->user_db_class->listPost_db($userID));
-            $_SESSION['newsfeeddataobj'] = serialize($this->user_db_class->viewnewsfeed_db($userID));
-            header("location: MainPage.php");
-        }
+        $_SESSION['newsfeeddataobj'] = serialize($this->user_db_class->viewnewsfeed_db($userID));
+        header("location: MainPage.php");
     }
+}
 
-    private function deletePost() {
-        $postid = $_POST['postid'];
-        $this->user_db_class->deletePost_db($postid);
+private function deletePost() {
+    $postid = $_POST['postid'];
+    $this->user_db_class->deletePost_db($postid);
 
-        $userID = $_POST['userid'];
+    $userID = $_POST['userid'];
         //$user=$this->user_db_class->accountinfo_db($userID);
         //$_SESSION['userdataobj']=  serialize(array($user->getName(),$user->getPhoto()));
-        $_SESSION['userpost'] = serialize($this->user_db_class->listPost_db($userID));
-        header("location: UserProfile.php");
-    }
+    $_SESSION['userpost'] = serialize($this->user_db_class->listPost_db($userID));
+    header("location: UserProfile.php");
+}
 
-    private function settings() {
-        $username = $_SESSION['usernameU'];
-        $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
-        header("location: UserSettings.php");
-    }
+private function settings() {
+    $username = $_SESSION['usernameU'];
+    $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
+    header("location: UserSettings.php");
+}
 
-    private function viewProfile() {
-        $username = $_SESSION['usernameU'];
-        $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
-        $_SESSION['userpost'] = serialize($this->user_db_class->listPost_db($username));
-        header("location: UserProfile.php");
-    }
+private function viewProfile() {
+    $username = $_SESSION['usernameU'];
+    $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
+    $_SESSION['userpost'] = serialize($this->user_db_class->listPost_db($username));
+    header("location: UserProfile.php");
+}
 
-    private function preEditProfile() {
-        $username = $_SESSION['usernameU'];
-        $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
-        header("location: UserEditProfile.php");
-    }
+private function preEditProfile() {
+    $username = $_SESSION['usernameU'];
+    $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
+    header("location: UserEditProfile.php");
+}
 
-    private function editProfile() {
-        $username = $_SESSION['usernameU'];
+private function editProfile() {
+    $username = $_SESSION['usernameU'];
         //$password = $_POST['password1'];
-        $email = $_POST['email'];
-        $name = $_POST['name'];
-        $address = $_POST['address'];
-        $city = $_POST['city'];
-        $state = $_POST['state'];
-        $country = $_POST['country'];
-        $postalCode = $_POST['postalcode'];
-        $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $country = $_POST['country'];
+    $postalCode = $_POST['postalcode'];
+    $phone = $_POST['phone'];
 
-        $this->user_db_class->editprofile_db($username, $name, $address, $city, $state, $country, $postalCode, $email, $phone);
-        header("location: UserSettings.php");
+    $this->user_db_class->editprofile_db($username, $name, $address, $city, $state, $country, $postalCode, $email, $phone);
+    header("location: UserSettings.php");
+}
+
+private function prepareChangePassword() {
+    $username = $_POST['id'];
+    $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
+    header("location: UserChangePassword.php");
+}
+
+private function changePassword() {
+    $username = $_POST['id'];
+    $password = $_POST['password1'];
+    $this->user_db_class->changepassword_db($username, $password);
+    $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
+    header("location: UserSettings.php");
+}
+
+private function prepareChangePicture() {
+    $username = $_POST['id'];
+    $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
+    header("location: UserChangePicture.php");
+}
+
+private function coinpage() {
+        $_SESSION['coinstatus']= "page1";
+        header("location: CoinMenu.php");
     }
 
-    private function prepareChangePassword() {
-        $username = $_POST['id'];
-        $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
-        header("location: UserChangePassword.php");
-    }
+private function changePicture() {
+    $sponsorID = $_POST['id'];
+    $photo = $_FILES['photo']['name'];
+    $prevphoto = $_POST['prevphoto'];
 
-    private function changePassword() {
-        $username = $_POST['id'];
-        $password = $_POST['password1'];
-        $this->user_db_class->changepassword_db($username, $password);
-        $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
-        header("location: UserSettings.php");
-    }
-
-    private function prepareChangePicture() {
-        $username = $_POST['id'];
-        $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($username));
-        header("location: UserChangePicture.php");
-    }
-
-    private function changePicture() {
-        $sponsorID = $_POST['id'];
-        $photo = $_FILES['photo']['name'];
-        $prevphoto = $_POST['prevphoto'];
-
-        if ($photo == "") {
-            $urlphoto = $prevphoto;
-        } else {
-            mkdir("../Database/Images/Sponsor/" . $sponsorID . "");
+    if ($photo == "") {
+        $urlphoto = $prevphoto;
+    } else {
+        mkdir("../Database/Images/Sponsor/" . $sponsorID . "");
 
             //=============
-            $ext = substr($_FILES['photo']['type'], -4);
+        $ext = substr($_FILES['photo']['type'], -4);
 
-            if (substr($ext, 0, 1) == "/") {
-                $ext = substr($ext, -3);
-            }
-            $timestamp = md5(time());
-            $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/" . $timestamp . "." . $ext;
-
-            if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
-                $urlphoto = $sponsorID . "/" . $timestamp . "." . $ext;
-            }
+        if (substr($ext, 0, 1) == "/") {
+            $ext = substr($ext, -3);
         }
+        $timestamp = md5(time());
+        $filepath = "../Database/Images/Sponsor/" . $sponsorID . "/" . $timestamp . "." . $ext;
 
-        $dbCondition = $this->user_db_class->changepicture_db($sponsorID, $urlphoto);
-
-        if ($dbCondition == true) {
-
-            $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($sponsorID));
-            header("location: UserSettings.php");
+        if (move_uploaded_file($_FILES['photo']['tmp_name'], $filepath)) {
+            $urlphoto = $sponsorID . "/" . $timestamp . "." . $ext;
         }
+    }
+
+    $dbCondition = $this->user_db_class->changepicture_db($sponsorID, $urlphoto);
+
+    if ($dbCondition == true) {
 
         $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($sponsorID));
         header("location: UserSettings.php");
     }
+
+    $_SESSION['userdataobj'] = serialize($this->user_db_class->accountinfo_db($sponsorID));
+    header("location: UserSettings.php");
+}
 
 }
 

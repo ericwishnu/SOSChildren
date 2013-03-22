@@ -120,7 +120,8 @@
 										<div class="span4 underlogo"></div>
 									</div>
 									<div class="span4 offset2">
-										<form>
+										<form action="UserCtrl.php" method="post">
+											<input type="hidden" name="action" value="showmycoin"/>
 											<input type="submit" class="span12 checkCoin" value="">
 										</form>
 										<div class="row">
