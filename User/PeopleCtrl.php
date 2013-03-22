@@ -55,6 +55,8 @@ class PeopleCtrl {
             $this->globalsearchpeople();
         } elseif ($page == "preparesearch") {
             $this->preparesearch();
+        } elseif($page=="listneighbour"){
+            $this->listneighbours();
         }
     }
 

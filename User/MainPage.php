@@ -106,7 +106,8 @@ $userdata = unserialize($_SESSION['userdata']);
                     <!-- Friends Widget -->
 
                     <div class="row-fluid marginfriendButton">
-                        <form>
+                        <form action="PeopleCtrl.php" method="post">
+                            <input type="hidden" name="action" value="listneighbour"/>
                             <input type="submit" value="" class="span12 friendButton" id="emergency" name="emergency">
                         </form>
                     </div>
