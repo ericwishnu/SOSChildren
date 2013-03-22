@@ -42,7 +42,7 @@ $userdata = unserialize($_SESSION['userdata']);
                                 <div class="row-fluid">
                                     <div class="searchFeedTop">
                                         <div class="myFont">
-                                            <p class="myFont">Search</p>
+                                            <p class="myFont">Search People</p>
                                         </div>
                                     </div>
                                 </div>
