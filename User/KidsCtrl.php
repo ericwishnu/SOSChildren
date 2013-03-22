@@ -127,13 +127,14 @@ class KidsCtrl {
         
         $this->kids_db_class = new KidsDAO();
 
-        if($this->user_db_class->getusercoin_db($username) > $quantity)
+        if($this->kids_db_class->getusercoin_db($username) >= $quantity)
         {
             $dbCondition = $this->kids_db_class->fosterKid_db ($username, $foundationID, $kidsID, $quantity);
 
             if($dbCondition == true)
             {
                 $username=$_SESSION['usernameU'];
+                $_SESSION['fosterKids']="Success";
                 $_SESSION['mykidslistdataobj'] = serialize($this->kids_db_class->listMyKids_db ($username));
                 header("location: ListMyKids.php");
             }
@@ -151,7 +152,7 @@ class KidsCtrl {
             if(isset($_SESSION['usernameU'])&& $_SESSION['usernameU']!="") 
             {
                 $sponsorID = $_SESSION['usernameU'];
-                $dbCondition = $this->kids_db_class->checkFoster_db ($sponsorID, $kidsSelected);
+                $dbCondition = $this->kids_db_class->checkFoster_db ($username, $kidsID);
 
                 if($dbCondition == true)
                 {
@@ -163,9 +164,9 @@ class KidsCtrl {
                 }
             }
 
-            $_SESSION['foundationname'] = serialize($this->kids_db_class->foundationgetname_db ($kidsSelected));        
+            $_SESSION['foundationname'] = serialize($this->kids_db_class->foundationgetname_db ($kidsID));        
 
-            $_SESSION['kidsdataobj'] = serialize($this->kids_db_class->kidsprofile_db ($kidsSelected));        
+            $_SESSION['kidsdataobj'] = serialize($this->kids_db_class->kidsprofile_db ($kidsID));        
 
             header("location: KidsProfile.php");
         }

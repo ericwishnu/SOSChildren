@@ -116,11 +116,6 @@ for ($i = 0; $i < count($foundationname); $i++) {
                                             </tr>
 
                                             <tr>
-                                                <td><img src="../img/kidsinfo/kidsicon_origin.png" alt="Smiley face" height="42" width="42"></td>
-                                                <td> &nbsp; <? echo $kidsData->getOrigin() ?></td>
-                                            </tr>
-
-                                            <tr>
                                                 <td><img src="../img/kidsinfo/kidsicon_parentsjob.png" alt="Smiley face" height="42" width="42"></td>
                                                 <td valign="center"> &nbsp; <? echo $kidsData->getBackground() ?></td>
                                             </tr>
