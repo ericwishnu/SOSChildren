@@ -132,7 +132,15 @@ class UserCtrl {
     $this->user_db_class = new userDAO();
         //echo $sponsorID. $password. $email. $name. $address. $city. $state. $country. $postalcode. $phone;
 
-    $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone,$urlphoto);
+    if($sponsortype=="public"){
+        $result = $this->user_db_class->signup_db($sponsorID, $password, $email, $name, $address, $city, $state, $country, $postalcode, $phone,$urlphoto);
+    }
+    else  {
+        $result = $this->user_db_class->signupninja_db($sponsorID, $password, $email, $urlphoto);
+    }
+    
+
+
     if (!$result) {
         $_SESSION['message'] = "Sign Up Failed!";
         header('location: UserLogin.php');

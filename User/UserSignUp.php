@@ -2,60 +2,55 @@
 session_start();
 $p_id = $_GET['p_id'];
 if ($p_id == 1) {
-    $script = '
-    <script>
-    function setFocus(id){
-     document.getElementById(id).focus();
-    }
-    </script>
-    ';
-    $title = 'Sign up Step One';
-    $body = 'pageOne';
-    $content = '
-<div class="container">
+	$script = '
+	<script>
+	function setFocus(id){
+		document.getElementById(id).focus();
+	}
+	</script>
+	';
+	$title = 'Sign up Step One';
+	$body = 'pageOne';
+	$content = '
+	<div class="container">
 
-    <div class="row">
-      <div class="pageOneHeader  span12">
-      </div>
-    </div>
+	<div class="row">
+	<div class="pageOneHeader  span12">
+	</div>
+	</div>
 
-    <div class="row">
-      <div class="pageOneContainer span12">
+	<div class="row">
+	<div class="pageOneContainer span12">
 
-        <div class="span4 offset2 center">
-        
-          <form action="UserSignUp.php?p_id=2" id="signupform" method="POST">
-          <input type="hidden" name="sponsortype" value="public"/>
-                
-            <input type="submit" value="" class="pageOneContainerPublic" name="pageOneContainerPublic" id="pageOneContainerPublic" alt="GO Public!">
-          </form>
-        </div>
+	<div class="span4 offset2 center">
 
-        <div class="span4">
-          <form action="UserSignUp.php?p_id=2" id="signupform" method="POST">
-            <input type="hidden" name="sponsortype" value="ninja"/>
-            <input type="submit" value="" class="pageOneContainerNinja" name="pageOneContainerNinja" id="pageOneContainerNinja" alt="Go Ninja!">
-          </form>
-        </div>
-      </div> <!-- end container div -->
-    </div>
+	<form action="UserSignUp.php?p_id=2" id="signupform" method="POST">
+	<input type="hidden" name="sponsortype" value="public"/>
 
-    <!-- footer div -->
-    <div id="footer">
-      <div class="row">
-        <div class="row offset5 span6">
-          <form>
-            <input type="button" class="backButtonCss pageOne" id="backButton" name="backButton">
-            <input type="button" class="skipButtonCss pageOne" id="skipButton" name="skipButton">
-            <input type="button" class="nextButtonCss pageOne" id="nextButton" name="nextButton">
-          </form>
-        </div>
-      </div>
-    </div>
+	<input type="submit" value="" class="pageOneContainerPublic" name="pageOneContainerPublic" id="pageOneContainerPublic" alt="GO Public!">
+	</form>
+	</div>
 
-  </div>
-';
-    } else if ($p_id == 2) {
+	<div class="span4">
+	<form action="UserSignUp.php?p_id=nin1" id="signupform" method="POST">
+	<input type="hidden" name="sponsortype" value="ninja"/>
+	<input type="submit" value="" class="pageOneContainerNinja" name="pageOneContainerNinja" id="pageOneContainerNinja" alt="Go Ninja!">
+	</form>
+	</div>
+	</div> <!-- end container div -->
+	</div>
+
+	<!-- footer div -->
+	<div id="footer">
+	<div class="row">
+	<div class="row offset5 span6">
+	</div>
+	</div>
+	</div>
+
+	</div>
+	';
+} else if ($p_id == 2) {
 	$title = 'Sign up Step Two';
 	$body = 'pageTwo';
 	$content = '
@@ -332,6 +327,115 @@ if ($p_id == 1) {
 	</div>
 
 	</div>';
+} else if ($p_id == nin1) {
+	$title = 'Sign up Ninja Step 1';
+	$body = 'pageTwo';
+	$content = ' <div class="container">
+
+	<div class="row">
+	<div class="pageTwoHeaderninja span12">
+	</div>
+
+	</div>
+
+	<div class="row">
+	<div class="pageTwoContainer span12">
+
+
+	<div class="span4 pageTwoContainerBox offset3">
+
+	<div class="emailAddressCss">
+	<form action="UserSignUp.php?p_id=nin2" id="signupform" method="POST">
+	<input type="email" class="input-xlarge emailAddressCss" name="emailAddress" id="emailAddress" 
+	placeholder="email@domain.com">
+	</form>
+	</div>
+
+	</div> <!-- end of span 4 -->
+	</div> <!-- end of container -->
+	</div>
+
+	<!-- footer div -->
+	<div id="footer">
+	<div class="row additionalPaddingCss">
+	<div class="row offset5 span6">
+	<form>
+	<input type="button" class="backButtonCss pageTwo" id="backButton" name="backButton">
+	<input type="button" class="skipButtonCss pageTwo" id="skipButton" name="skipButton">
+	<input type="submit" value="" class="nextButtonCss pageTwo" id="nextButton" name="nextButton">
+	</form>
+	</div>
+	</div>
+	</div>
+
+	</div>
+	';
+
+} else if ($p_id == nin2) {
+	$title = 'Sign up Ninja Step 2';
+	$body = 'pageThree';
+	$content = '<div class="container">
+	<div class="row">
+	<div class="pageThreeHeaderninja span12">
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="pageThreeContainer span12">
+	<div class="pageThreeContainerBox span7 offset3">
+
+	<div class="row passwordCss span12">
+	<form action="UserSignUp.php?p_id=nin3" id="signupform"  method="POST">
+	<input type="password" class="input-large" id="userPassword" name="password1" placeholder="input password">
+	
+	</div>	
+
+	<div class="row rePasswordCss span12">
+	
+	<input type="password" class="input-large" id="reUserPassword" name="password2" placeholder="re-type password">
+	
+	</div>
+
+	</div>	
+	</div>
+	</div>
+
+	<div id="footer">
+	<div class="row additionalPaddingCss">
+	<div class="row offset5 span6">
+	<input type="button" class="backButtonCss pageThree" id="backButton" name="backButton">
+	<input type="button" class="skipButtonCss pageThree"id="skipButton" name="skipButton">
+	<input type="submit" value="" class="nextButtonCss pageThree" id="nextButton" name="nextButton">
+	</form>
+	</div>
+	</div>
+	</div>
+
+
+	</div>';
+} else if ($p_id == nin3) {
+	$title = 'Sign up Ninja Step 3';
+	$body = 'pageEight';
+	$content = '	<div class="container">
+	<div class="row">
+	<div class="pageEightHeaderNinja span12">
+	</div>
+	</div>
+	<div id="footer">
+	<div class="row additionalPaddingCss">
+	<div class="row offset5 span6">
+
+	<form action="UserLogin.php" id="signupform" method="POST">
+	<input type="hidden" name="action" value="usersignup"/>
+	<input type="button" class="backButtonCss pageEight" id="backButton" name="backButton"/>
+	<input type="submit" value="" class="finishButtonCss pageEight" id="skipButton" name="skipButton"/>
+	
+	</form>
+	</div>
+	</div>
+	</div>
+
+	</div>';
 }
 ?>
 
@@ -361,6 +465,13 @@ if ($p_id == 1) {
 		else if(p_id==6){
 			document.getElementById('phoneCode').focus();
 		}
+		else if(p_id==nin1){
+			document.getElementById('emailAddress').focus();
+		}  
+		else if(p_id==nin2){
+			document.getElementById('userPassword').focus();
+		} 
+
 		
 	}
 	</script>
@@ -422,6 +533,15 @@ if ($p_id == 1) {
 		echo $content;
 	} else if ($p_id == "8") {
             // $_SESSION['photo'] = serialize($_FILES['photo']['name']);
+		echo $content;
+	} else if ($p_id == "nin1") {
+
+		$_SESSION['email'] = $_POST['emailAddress'];
+		echo $content;
+	} else if ($p_id == "nin2") {
+		$_SESSION['password1'] = $_POST['password1'];
+		echo $content;
+	} else if ($p_id == "nin3") {
 		echo $content;
 	}
 	?>
