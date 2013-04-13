@@ -17,10 +17,10 @@ class PeopleCtrl {
     public function run() {
         $page = $_POST['action'];
 
-        $_SESSION['fosterKids']="";
-        $_SESSION['receivedamount']="";
-        $_SESSION['mycoin']="";
-    
+        $_SESSION['fosterKids'] = "";
+        $_SESSION['receivedamount'] = "";
+        $_SESSION['mycoin'] = "";
+
         if ($page == "searchpeople") {
             $this->searchpoeple();
         } elseif ($page == "seepeopleprofile") {
@@ -59,7 +59,7 @@ class PeopleCtrl {
             $this->globalsearchpeople();
         } elseif ($page == "preparesearch") {
             $this->preparesearch();
-        } elseif($page=="listneighbour"){
+        } elseif ($page == "listneighbour") {
             $this->listneighbours();
         }
     }
@@ -83,7 +83,7 @@ class PeopleCtrl {
         $username = $_SESSION['usernameU'];
         $peopleID = $_POST['peopleSelectedID'];
         $userType = 'Sponsor';
-        
+
         $_SESSION['peopledataobj'] = serialize($this->people_db_class->peopleprofile_db($peopleID));
         $_SESSION['relationship'] = $this->people_db_class->seeneighbourship_db($username, $peopleID);
         $_SESSION['postlistdataobj'] = serialize($this->people_db_class->viewpersonalpost_db($peopleID, $userType));
@@ -266,8 +266,8 @@ class PeopleCtrl {
 
     private function globalsearchpeople() {
         $keyword = $_POST['keyword'];
-       
-            
+
+
         if ($keyword != "") {
             $_SESSION['globalsearchresult'] = "1";
             $_SESSION['searchpeopledataobj'] = serialize($this->people_db_class->globalsearchpeople_db($keyword));
@@ -279,9 +279,10 @@ class PeopleCtrl {
         }
     }
 
-    private function preparesearch(){
+    private function preparesearch() {
         header("location: PeopleSearch.php");
     }
+
 }
 
 ?>
